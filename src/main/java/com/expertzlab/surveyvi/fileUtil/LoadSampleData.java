@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,26 +31,29 @@ public class LoadSampleData {
 
     }
 
-    public List loadData() throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
+    public List loadData() throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         List arrayList = new ArrayList();
        String header = readHeader();
-       String[] array = null;
+       String[] harray = null;
        if(header != null) {
-           array = header.split("|");
+           harray = header.split("|");
        }
         Participant pt = null;
        String record = null;
+
        while(( record = readData()) != null) {
 
-           //split record
-           if (clazz.getName().equals("Participant")) {
+           String[] rArray = record.split("|");
+           for(int i=0; i<harray.length; i++) {
+               if (clazz.getName().equals("Participant")) {
 
-               Class<?> loadedClass = Class.forName(clazz.getName());
-               pt = (Participant) loadedClass.newInstance();
+                   Class<?> loadedClass = Class.forName(clazz.getName());
+                   pt = (Participant) loadedClass.newInstance();
+               }
+               Method m = clazz.getMethod("set" + harray[i], String.class);
+               m.invoke(pt, rArray[i]);
            }
-
-           //pt.setName();
-           //pt.setAge();
+           arrayList.add(pt);
        }
         return arrayList;
     }
