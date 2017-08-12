@@ -38,20 +38,17 @@ public class LoadSampleData {
        if(header != null) {
            harray = header.split("|");
        }
-        Participant pt = null;
+       Participant pt = null;
        String record = null;
 
        while(( record = readData()) != null) {
 
            String[] rArray = record.split("|");
-           for(int i=0; i<harray.length; i++) {
-               if (clazz.getName().equals("Participant")) {
-
-                   Class<?> loadedClass = Class.forName(clazz.getName());
-                   pt = (Participant) loadedClass.newInstance();
+           DataSetter ds = null;
+           switch (clazz.getName()){
+               case "Participant":{
+                   ds = new ParticipantDataSetter(clazz, harray, rArray);
                }
-               Method m = clazz.getMethod("set" + harray[i], String.class);
-               m.invoke(pt, rArray[i]);
            }
            arrayList.add(pt);
        }

@@ -1,0 +1,4 @@
+name|age|gender|address
+sam|32|M|palarivattam
+raj|33|M|Thammanam
+awin|26|M|Aluva
