@@ -1,9 +1,8 @@
-package com.expertzlab.surveyvi.fileUtil;
-
-import com.expertzlab.surveyvi.fileUtil.LoadSampleData;
+package com.expertzlab.surveyvi.fileutil;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
 import java.util.*;
 
 /**
@@ -12,7 +11,7 @@ import java.util.*;
 public class DataPopulation {
     static Map map = new HashMap();
     static File file;
-    public static void main(String[] args) throws IOException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, SQLException {
         file = new File("classtype-datafile-mapping.properties");
         Scanner s = new Scanner(file);
         while (s.hasNext())
@@ -22,9 +21,10 @@ public class DataPopulation {
             Class clazz = Class.forName(strArray[0]);
             LoadSampleData ld = new LoadSampleData(strArray[1],clazz);
             List list = ld.loadData();
-            map.put(clazz,list);
+            map.put(clazz.getName(),list);
         }
-
+        WriteSampleData wsd = new WriteSampleData(map);
+        wsd.writeData();
 
     }
 }

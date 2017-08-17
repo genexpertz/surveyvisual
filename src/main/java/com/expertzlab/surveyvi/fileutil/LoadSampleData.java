@@ -1,13 +1,9 @@
-package com.expertzlab.surveyvi.fileUtil;
+package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Participant;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +14,7 @@ public class LoadSampleData {
 
     String fileName;
     FileReader fileReader;
+    BufferedReader bfr;
     Class clazz;
     File file = null;
     char[] chArray = new char[100];
@@ -27,6 +24,7 @@ public class LoadSampleData {
        file = new File(fileName);
         this.fileName = fileName;
         fileReader = new FileReader(file);
+        bfr = new BufferedReader(fileReader);
         this.clazz = clazz;
 
     }
@@ -36,35 +34,35 @@ public class LoadSampleData {
        String header = readHeader();
        String[] harray = null;
        if(header != null) {
-           harray = header.split("|");
+           harray = header.split("\\|");
        }
        Participant pt = null;
        String record = null;
-
+       int count = 0;
        while(( record = readData()) != null) {
 
-           String[] rArray = record.split("|");
+           String[] rArray = record.split("\\|");
            DataSetter ds = null;
            switch (clazz.getName()){
-               case "Participant":{
+               case "com.expertzlab.surveyvi.model.Participant":{
                    ds = new ParticipantDataSetter(clazz, harray, rArray);
                }
            }
+           count++;
+           pt = ds.run();
+           pt.setId(count);
            arrayList.add(pt);
        }
         return arrayList;
     }
 
     private String readHeader() throws IOException {
-        int rs = fileReader.read(chArray);
-        if(rs > 1){
-            return new String(chArray);
-        } else {
-            return null;
-        }
+              String line = bfr.readLine();
+        return line;
     }
 
     private String readData() throws IOException {
-        return "";
+        String line = bfr.readLine();
+        return line;
     }
 }

@@ -2,18 +2,18 @@ package com.expertzlab.surveyvi.model;
 
 public class Participant
 {
-    int participantId;
+    int Id;
     String name;
     int age;
     String gender;
     String address;
 
-    public int getParticipantId() {
-        return participantId;
+    public int getId() {
+        return Id;
     }
 
-    public void setParticipantId(int participantId) {
-        this.participantId = participantId;
+    public void setId(int id) {
+        this.Id = id;
     }
 
     public String getName() {
@@ -30,6 +30,9 @@ public class Participant
 
     public void setAge(int age) {
         this.age = age;
+    }
+    public void setAge(String age) {
+        this.age = Integer.parseInt( age);
     }
 
     public String getGender() {

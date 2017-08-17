@@ -1,6 +1,4 @@
-package com.expertzlab.surveyvi.fileUtil;
-
-import java.sql.SQLException;
+package com.expertzlab.surveyvi.fileutil;
 
 /**
  * Created by preethup on 12/8/17.

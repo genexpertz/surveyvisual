@@ -1,4 +1,4 @@
-package com.expertzlab.surveyvi.fileUtil;
+package com.expertzlab.surveyvi.fileutil;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,22 +12,22 @@ import java.util.Map;
  */
 public class WriteSampleData {
 
+    private static final String PARTICIPANT = "com.expertzlab.surveyvi.model.Participant";
     Map<Class,List> map;
     Connection con;
 
    public WriteSampleData(Map<Class,List> map) throws SQLException {
 
-        this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/surveyvisual", "preethup", "preethup");
+        this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/surveyvisual", "root", "pp");
         this.map = map;
     }
 
     void writeData()
     {
         for (HashMap.Entry<Class,List> entry : map.entrySet()) {
-            switch (((Class)entry.getKey()).getName()) {
-                case "Participant":
+            if (PARTICIPANT.equals(entry.getKey())) {
                     ParticipantDataWriter pdw = new ParticipantDataWriter(con, entry.getValue());
-                    pdw.start();
+                    pdw.run();
             }
         }
     }
