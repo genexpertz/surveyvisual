@@ -27,7 +27,7 @@ public class WriteSampleData {
         for (HashMap.Entry<Class,List> entry : map.entrySet()) {
             if (PARTICIPANT.equals(entry.getKey())) {
                     ParticipantDataWriter pdw = new ParticipantDataWriter(con, entry.getValue());
-                    pdw.run();
+                    pdw.start();
             }
         }
     }

@@ -6,12 +6,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by preethup on 12/8/17.
  */
-public class ParticipantDataWriter {
+public class ParticipantDataWriter extends Thread {
 
     Connection con;
     List<Object> list;
@@ -27,10 +26,11 @@ public class ParticipantDataWriter {
     {
 
         try {
-        for(Object pt : list) {
-
+            ParticipantRandomizer pr = new ParticipantRandomizer();
+            list = pr.getRandomizedList(list);
+        for(Object pt :list) {
             System.out.println("In new thread");
-            PreparedStatement statement = con.prepareStatement("insert into Participant values(?,?,?,?,?) ");
+            PreparedStatement statement = con.prepareStatement("insert into participant values(?,?,?,?,?) ");
             statement.setInt(1,((Participant)pt).getId());
             statement.setString(2,((Participant)pt).getName());
             statement.setInt(3,((Participant)pt).getAge());
