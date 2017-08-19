@@ -2,6 +2,10 @@ package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Participant;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -12,13 +16,20 @@ import java.util.Random;
 public class ParticipantRandomizer {
     int pos1;
     int pos2;
-    int recordcount =1000;
+    int recordcount =10000;
+    long lastId = 0;
 
-
+    public ParticipantRandomizer(Connection con ) throws SQLException {
+        Statement stmt = con.createStatement();
+        ResultSet res = stmt.executeQuery("Select max(id) from participant");
+        while (res.next()){
+            lastId = res.getLong(1);
+        }
+    }
    public List getRandomizedList(List list) {
        List l1 = new ArrayList(recordcount);
 
-       for (int i = 1; i <= recordcount; i++) {
+       for (long i = lastId+1; i <= recordcount; i++) {
 
            Random r = new Random();
            pos1 = r.nextInt(list.size());

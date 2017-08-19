@@ -26,12 +26,12 @@ public class ParticipantDataWriter extends Thread {
     {
 
         try {
-            ParticipantRandomizer pr = new ParticipantRandomizer();
+            ParticipantRandomizer pr = new ParticipantRandomizer(con);
             list = pr.getRandomizedList(list);
         for(Object pt :list) {
             System.out.println("In new thread");
             PreparedStatement statement = con.prepareStatement("insert into participant values(?,?,?,?,?) ");
-            statement.setInt(1,((Participant)pt).getId());
+            statement.setLong(1,((Participant)pt).getId());
             statement.setString(2,((Participant)pt).getName());
             statement.setInt(3,((Participant)pt).getAge());
             statement.setString(4,((Participant)pt).getGender());

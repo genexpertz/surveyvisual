@@ -2,17 +2,17 @@ package com.expertzlab.surveyvi.model;
 
 public class Participant
 {
-    int Id;
+    long Id;
     String name;
     int age;
     String gender;
     String address;
 
-    public int getId() {
+    public long getId() {
         return Id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.Id = id;
     }
 
