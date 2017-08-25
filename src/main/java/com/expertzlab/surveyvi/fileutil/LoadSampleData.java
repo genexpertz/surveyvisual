@@ -1,6 +1,7 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Participant;
+import com.expertzlab.surveyvi.model.*;
+
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -37,6 +38,10 @@ public class LoadSampleData {
            harray = header.split("\\|");
        }
        Participant pt = null;
+       Agent agt = null;
+       Project pro = null;
+       Program pgm = null;
+       Company com =null;
        String record = null;
        int count = 0;
        while(( record = readData()) != null) {
@@ -46,12 +51,42 @@ public class LoadSampleData {
            switch (clazz.getName()){
                case "com.expertzlab.surveyvi.model.Participant":{
                    ds = new ParticipantDataSetter(clazz, harray, rArray);
+                   pt = (Participant) ds.run();
+                   pt.setId(count);
+                   arrayList.add(pt);
+                   break;
+               }
+               case "com.expertzlab.surveyvi.model.Agent":{
+                   ds = new AgentDataSetter(clazz, harray, rArray);
+                   agt = (Agent) ds.run();
+                   agt.setId(count);
+                   arrayList.add(agt);
+                   break;
+               }
+               case "com.expertzlab.surveyvi.model.Program":{
+                   ds = new ProgramDataSetter(clazz, harray, rArray);
+                   pgm = (Program) ds.run();
+                   pgm.setId(count);
+                   arrayList.add(pgm);
+                   break;
+               }
+               case "com.expertzlab.surveyvi.model.Project":{
+                   ds = new ProjectDataSetter(clazz, harray, rArray);
+                   pro = (Project) ds.run();
+                   pro.setId(count);
+                   arrayList.add(pro);
+                   break;
+               }
+               case "com.expertzlab.surveyvi.model.Company":{
+                   ds = new CompanyDataSetter(clazz, harray, rArray);
+                   com = (Company) ds.run();
+                   com.setId(count);
+                   arrayList.add(com);
+                   break;
                }
            }
            count++;
-           pt = ds.run();
-           pt.setId(count);
-           arrayList.add(pt);
+
        }
         return arrayList;
     }

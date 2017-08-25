@@ -1,7 +1,23 @@
 package com.expertzlab.surveyvi.model;
 
-class Project
+public class Project
 {
-    int projectId;
-    String projectName;
+    long id;
+    String name;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

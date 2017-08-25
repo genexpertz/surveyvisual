@@ -2,23 +2,23 @@ package com.expertzlab.surveyvi.model;
 
 class Answer
 {
-    int questionId;
+    long id;
+    long questionId;
     int weightage;
-    int ansId;
 
-    public int getAnsId() {
-        return ansId;
+    public long getId() {
+        return id;
     }
 
-    public void setAnsId(int ansId) {
-        this.ansId = ansId;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public int getQuestionId() {
+    public long getQuestionId() {
         return questionId;
     }
 
-    public void setQuestionId(int questionId) {
+    public void setQuestionId(long questionId) {
         this.questionId = questionId;
     }
 

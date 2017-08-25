@@ -1,0 +1,10 @@
+name
+oneDayCamp
+mondayCampaign
+sundayCampaign
+tuesdayCampaign
+wednesdayCampaign
+thursdayCampaign
+fridayCampaign
+saturdayCampaign
+theaterAdd

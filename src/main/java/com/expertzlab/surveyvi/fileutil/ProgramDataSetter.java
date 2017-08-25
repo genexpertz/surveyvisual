@@ -1,35 +1,34 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Participant;
+import com.expertzlab.surveyvi.model.Program;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * Created by preethup on 11/8/17.
+ * Created by preethup on 25/8/17.
  */
-class ParticipantDataSetter extends DataSetter{
-
+public class ProgramDataSetter extends DataSetter{
     Class clazz;
     String[] hArray;
     String[] rArray;
 
-    ParticipantDataSetter(Class clazz, String[] hArray, String[] rArray) {
-      this.clazz =clazz;
-      this.hArray = hArray;
-      this.rArray = rArray;
+    ProgramDataSetter(Class clazz, String[] hArray, String[] rArray) {
+        this.clazz =clazz;
+        this.hArray = hArray;
+        this.rArray = rArray;
     }
-    public Participant run() {
-        Participant pt =null;
+    public Program run() {
+        Program pgm =null;
         Class<?> loadedClass = null;
         try {
-        loadedClass = Class.forName(clazz.getName());
-        pt = (Participant) loadedClass.newInstance();
-        for(int i = 0; i< hArray.length; i++) {
+            loadedClass = Class.forName(clazz.getName());
+            pgm = (Program) loadedClass.newInstance();
+            for(int i = 0; i< hArray.length; i++) {
 
-            Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
-            m.invoke(pt, rArray[i]);
-        }
+                Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
+                m.invoke(pgm, rArray[i]);
+            }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -41,7 +40,7 @@ class ParticipantDataSetter extends DataSetter{
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
-        return pt;
+        return pgm;
     }
 
     public String capitalizeFirstLetter(String str){

@@ -1,34 +1,42 @@
 package com.expertzlab.surveyvi.model;
 
-class Agent
+public class Agent
 {
-    int id;
-    String agentName;
-    int projectId;
+    long id;
+    String name;
+    //long projectId;
 
-    public int getId() {
+    @Override
+    public String toString() {
+        return "Agent{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getAgentName() {
-        return agentName;
+    public String getName() {
+        return name;
     }
 
-    public void setAgentName(String agentName) {
-        this.agentName = agentName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getProjectId() {
+    /*public long getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(int projectId) {
+    public void setProjectId(long projectId) {
         this.projectId = projectId;
     }
-
+*/
 
 }
