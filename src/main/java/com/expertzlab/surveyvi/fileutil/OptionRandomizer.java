@@ -1,6 +1,7 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Project;
+import com.expertzlab.surveyvi.model.Event;
+import com.expertzlab.surveyvi.model.Option;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -13,15 +14,15 @@ import java.util.Random;
 /**
  * Created by preethup on 23/8/17.
  */
-public class ProjectRandomizer {
+public class OptionRandomizer {
     int pos1;
     int pos2;
-    int recordcount =10;
+    int recordcount =2;
     long lastId = 1;
 
-    ProjectRandomizer(Connection con ) throws SQLException {
+    OptionRandomizer(Connection con ) throws SQLException {
         Statement stmt = con.createStatement();
-        ResultSet res = stmt.executeQuery("Select max(id) from project");
+        ResultSet res = stmt.executeQuery("Select max(id) from option");
         while (res.next()){
             lastId = res.getLong(1);
         }
@@ -33,12 +34,13 @@ public class ProjectRandomizer {
 
             Random r = new Random();
             pos1 = r.nextInt(list.size());
-            Project p1 = (Project) list.get(pos1);
+            Option p1 = (Option) list.get(pos1);
             pos2 = r.nextInt(list.size());
-            Project p2 = (Project) list.get(pos2);
-            Project p3 = new Project();
+            Option p2 = (Option) list.get(pos2);
+            Option p3 = new Option();
             p3.setId(i);
-            p3.setName(p1.getName());
+            p3.setQuestionId(p1.getQuestionId());
+            p3.setWeightage(p1.getWeightage());
             l1.add(p3);
         }
 

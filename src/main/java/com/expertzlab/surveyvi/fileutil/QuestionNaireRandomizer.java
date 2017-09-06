@@ -1,6 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Participant;
+import com.expertzlab.surveyvi.model.QuestionNaire;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -13,15 +13,15 @@ import java.util.Random;
 /**
  * Created by preethup on 19/8/17.
  */
-public class ParticipantRandomizer {
+public class QuestionNaireRandomizer {
     int pos1;
     int pos2;
     int recordcount =1000;
     long lastId = 0;
 
-    public ParticipantRandomizer(Connection con ) throws SQLException {
+    public QuestionNaireRandomizer(Connection con ) throws SQLException {
         Statement stmt = con.createStatement();
-        ResultSet res = stmt.executeQuery("Select max(id) from participant");
+        ResultSet res = stmt.executeQuery("Select max(id) from questionnaire");
         while (res.next()){
             lastId = res.getLong(1);
         }
@@ -33,15 +33,12 @@ public class ParticipantRandomizer {
 
            Random r = new Random();
            pos1 = r.nextInt(list.size());
-           Participant p1 = (Participant) list.get(pos1);
+           QuestionNaire p1 = (QuestionNaire) list.get(pos1);
            pos2 = r.nextInt(list.size());
-           Participant p2 = (Participant) list.get(pos2);
-           Participant p3 = new Participant();
-           p3.setId(i);
-           p3.setName(p1.getName() + " " + p2.getName() + pos1);
-           p3.setAge(pos1 > pos2 ? p1.getAge() : p2.getAge());
-           p3.setGender(pos1 < pos2 ? p1.getGender() : p2.getGender());
-           p3.setAddress(p1.getAddress());
+           QuestionNaire p2 = (QuestionNaire) list.get(pos2);
+           QuestionNaire p3 = new QuestionNaire();
+           p3.setProgramId(i);
+           p3.setQuestions(p1.getQuestions());
            l1.add(p3);
        }
 

@@ -15,7 +15,7 @@ import java.util.Random;
 public class AgentRandomizer {
     int pos1;
     int pos2;
-    int recordcount =100;
+    int recordcount =1000;
     long lastId = 0;
 
     public AgentRandomizer(Connection con ) throws SQLException {

@@ -1,5 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
+import com.expertzlab.surveyvi.model.Event;
 import com.expertzlab.surveyvi.model.Program;
 
 import java.sql.Connection;
@@ -10,12 +11,12 @@ import java.util.List;
 /**
  * Created by preethup on 23/8/17.
  */
-public class ProgramDataWriter extends Thread {
+public class EventDataWriter extends Thread {
     Connection con;
     List<Object> list;
 
 
-    public ProgramDataWriter(Connection con, List<Object> list)
+    public EventDataWriter(Connection con, List<Object> list)
     {
         this.con = con;
         this.list = list;
@@ -25,14 +26,15 @@ public class ProgramDataWriter extends Thread {
     {
 
         try {
-            ProgramRandomizer pr = new ProgramRandomizer(con);
-            list = pr.getRandomizedList(list);
+            EventRandomizer er = new EventRandomizer(con);
+            list = er.getRandomizedList(list);
 
-            for(Object pgm :list) {
+            for(Object evt :list) {
                 System.out.println("In new thread");
-                PreparedStatement statement = con.prepareStatement("insert into program values(?,?) ");
-                statement.setLong(1,((Program)pgm).getId());
-                statement.setString(2,((Program)pgm).getName());
+                PreparedStatement statement = con.prepareStatement("insert into event values(?,?,?) ");
+                statement.setLong(1,((Event)evt).getId());
+                statement.setLong(2,((Event)evt).getAgentId());
+                statement.setLong(3,((Event)evt).getProjectId());
                 statement.execute();
                 System.out.println("Executed successfully");
             }

@@ -11,38 +11,37 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by preethup on 19/8/17.
+ * Created by preethup on 23/8/17.
  */
 public class ProgramRandomizer {
     int pos1;
     int pos2;
-    int recordcount =10;
-    long lastId = 0;
+    int recordcount =2;
+    long lastId = 1;
 
-    public ProgramRandomizer(Connection con ) throws SQLException {
+    ProgramRandomizer(Connection con ) throws SQLException {
         Statement stmt = con.createStatement();
         ResultSet res = stmt.executeQuery("Select max(id) from program");
         while (res.next()){
             lastId = res.getLong(1);
         }
     }
-   public List getRandomizedList(List list) {
-       List l1 = new ArrayList(recordcount);
+    public List getRandomizedList(List list) {
+        List l1 = new ArrayList(recordcount);
 
-       for (long i = lastId+1; i <= recordcount; i++) {
+        for (long i = lastId+1; i <= recordcount; i++) {
 
-           Random r = new Random();
-           pos1 = r.nextInt(list.size());
-           Program p1 = (Program) list.get(pos1);
-           pos2 = r.nextInt(list.size());
-           Program p2 = (Program) list.get(pos2);
-           Program p3 = new Program();
-           p3.setId(i);
-           p3.setName(p1.getName() + " " + p2.getName() + pos1);
-           l1.add(p3);
-       }
+            Random r = new Random();
+            pos1 = r.nextInt(list.size());
+            Program p1 = (Program) list.get(pos1);
+            pos2 = r.nextInt(list.size());
+            Program p2 = (Program) list.get(pos2);
+            Program p3 = new Program();
+            p3.setId(i);
+            p3.setName(p1.getName());
+            l1.add(p3);
+        }
 
-           return l1;
-       }
-
+        return l1;
+    }
 }

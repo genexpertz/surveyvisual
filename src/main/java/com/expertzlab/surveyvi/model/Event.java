@@ -1,6 +1,6 @@
 package com.expertzlab.surveyvi.model;
 
-class Event
+public class Event
 {
     long id;
     int projectId;

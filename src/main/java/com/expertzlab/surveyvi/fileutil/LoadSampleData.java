@@ -41,7 +41,14 @@ public class LoadSampleData {
        Agent agt = null;
        Project pro = null;
        Program pgm = null;
+       Event evt = null;
        Company com =null;
+       User usr = null;
+       Question qus = null;
+       QuestionNaire qusnaire = null;
+       Answer ans = null;
+       Option op = null;
+       TargetClass tar = null;
        String record = null;
        int count = 0;
        while(( record = readData()) != null) {
@@ -77,11 +84,60 @@ public class LoadSampleData {
                    arrayList.add(pro);
                    break;
                }
+               case "com.expertzlab.surveyvi.model.Event":{
+                   ds = new EventDataSetter(clazz, harray, rArray);
+                   evt = (Event) ds.run();
+                   evt.setId(count);
+                   arrayList.add(evt);
+                   break;
+               }
                case "com.expertzlab.surveyvi.model.Company":{
                    ds = new CompanyDataSetter(clazz, harray, rArray);
                    com = (Company) ds.run();
                    com.setId(count);
                    arrayList.add(com);
+                   break;
+               }
+               case "com.expertzlab.surveyvi.model.User":{
+                   ds = new UserDataSetter(clazz, harray, rArray);
+                   usr = (User) ds.run();
+                   usr.setId(count);
+                   arrayList.add(usr);
+                   break;
+               }
+               case "com.expertzlab.surveyvi.model.Question":{
+                   ds = new QuestionDataSetter(clazz, harray, rArray);
+                   qus = (Question) ds.run();
+                   qus.setId(count);
+                   arrayList.add(qus);
+                   break;
+               }
+               case "com.expertzlab.surveyvi.model.QuestionNaire":{
+                   ds = new QuestionNaireDataSetter(clazz, harray, rArray);
+                   qusnaire = (QuestionNaire) ds.run();
+                   qusnaire.setId((long) count);
+                   arrayList.add(qusnaire);
+                   break;
+               }
+               case "com.expertzlab.surveyvi.model.Answer":{
+                   ds = new AnswerDataSetter(clazz, harray, rArray);
+                   ans = (Answer) ds.run();
+                   ans.setId(count);
+                   arrayList.add(ans);
+                   break;
+               }
+               case "com.expertzlab.surveyvi.model.Option":{
+                   ds = new OptionDataSetter(clazz, harray, rArray);
+                   op = (Option) ds.run();
+                   op.setId(count);
+                   arrayList.add(op);
+                   break;
+               }
+               case "com.expertzlab.surveyvi.model.TargetClass":{
+                   ds = new TargetClassDataSetter(clazz, harray, rArray);
+                   tar = (TargetClass) ds.run();
+                   tar.setId(count);
+                   arrayList.add(tar);
                    break;
                }
            }

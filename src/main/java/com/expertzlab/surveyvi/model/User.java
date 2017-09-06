@@ -1,6 +1,6 @@
 package com.expertzlab.surveyvi.model;
 
-class User
+public class User
 {
     long id;
     String firstName;

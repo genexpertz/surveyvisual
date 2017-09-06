@@ -1,16 +1,16 @@
 package com.expertzlab.surveyvi.model;
 
-class Question
+public class Question
 {
-    long questionId;
+    long id;
     String description;
 
-    public long getQuestionId() {
-        return questionId;
+    public long getId() {
+        return id;
     }
 
-    public void setQuestionId(long questionId) {
-        this.questionId = questionId;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getDescription() {

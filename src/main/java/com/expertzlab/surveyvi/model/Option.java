@@ -1,10 +1,12 @@
 package com.expertzlab.surveyvi.model;
 
-public class Answer
-{
+/**
+ * Created by preethup on 6/9/17.
+ */
+public class Option {
     long id;
     long questionId;
-    //int weightage;
+    int weightage;
 
     public long getId() {
         return id;
@@ -22,13 +24,11 @@ public class Answer
         this.questionId = questionId;
     }
 
-    /*public int getWeightage() {
+    public int getWeightage() {
         return weightage;
     }
 
     public void setWeightage(int weightage) {
         this.weightage = weightage;
     }
-*/
-
 }

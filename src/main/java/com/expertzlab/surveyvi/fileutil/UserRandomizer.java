@@ -13,13 +13,13 @@ import java.util.Random;
 /**
  * Created by preethup on 19/8/17.
  */
-public class ParticipantRandomizer {
+public class UserRandomizer {
     int pos1;
     int pos2;
     int recordcount =1000;
     long lastId = 0;
 
-    public ParticipantRandomizer(Connection con ) throws SQLException {
+    public UserRandomizer(Connection con ) throws SQLException {
         Statement stmt = con.createStatement();
         ResultSet res = stmt.executeQuery("Select max(id) from participant");
         while (res.next()){

@@ -39,7 +39,7 @@ public class CompanyRandomizer {
             Company p3 = new Company();
             p3.setId(i);
             p3.setName(p1.getName() + " " + p2.getName() + pos1);
-            p3.setAddress(p1.getAddress() + " " + pos2);
+            p3.setAddress(p1.getAddress());
             l1.add(p3);
         }
 

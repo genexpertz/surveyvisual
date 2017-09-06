@@ -1,8 +1,14 @@
 package com.expertzlab.surveyvi.model;
 
-class Target
+public class TargetClass
 {
+    long id;
     long refAnsId;
+
+    public long getId() { return id; }
+
+    public void setId(long id) { this.id = id; }
+
     float percentage;
 
     public long getRefAnsId() {

@@ -2,9 +2,13 @@ package com.expertzlab.surveyvi.model;
 
 public class QuestionNaire {
 
+    Long id;
     Question[] questions;
-    String programId;
+    Long programId;
 
+    public Long getId() {  return id; }
+
+    public void setId(Long id) { this.id = id; }
     public Question[] getQuestions() {
         return questions;
     }
@@ -13,11 +17,11 @@ public class QuestionNaire {
         this.questions = questions;
     }
 
-    public String getProgramId() {
+    public Long getProgramId() {
         return programId;
     }
 
-    public void setProgramId(String programId) {
+    public void setProgramId(long programId) {
         this.programId = programId;
     }
 }

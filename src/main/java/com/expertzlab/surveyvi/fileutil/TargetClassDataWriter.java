@@ -1,0 +1,44 @@
+package com.expertzlab.surveyvi.fileutil;
+
+import com.expertzlab.surveyvi.model.TargetClass;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+/**
+ * Created by preethup on 12/8/17.
+ */
+public class TargetClassDataWriter extends Thread {
+
+    Connection con;
+    List<Object> list;
+
+
+    public TargetClassDataWriter(Connection con, List<Object> list)
+    {
+        this.con = con;
+        this.list = list;
+
+    }
+    public void run()
+    {
+
+        try {
+            TargetClassRandomizer tr = new TargetClassRandomizer(con);
+            list = tr.getRandomizedList(list);
+        for(Object tar :list) {
+            System.out.println("In new thread");
+            PreparedStatement statement = con.prepareStatement("insert into target values(?,?,?,?,?) ");
+            statement.setLong(1,((TargetClass)tar).getRefAnsId());
+            statement.setString(2, String.valueOf(((TargetClass)tar).getPercentage()));
+            statement.execute();
+            System.out.println("Executed successfully");
+        }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
