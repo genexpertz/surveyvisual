@@ -1,33 +1,34 @@
 package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Event;
-import com.expertzlab.surveyvi.model.Participant;
 import com.expertzlab.surveyvi.model.Project;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 
 /**
  * Created by preethup on 13/9/17.
  */
 public class ParicipantDataReader {
 
-    Class clazz;
-    String[] hArray;
-    String[] rArray;
+    Connection con;
 
-    ParicipantDataReader(Class clazz, String[] hArray, String[] rArray) {
-        this.clazz =clazz;
-        this.hArray = hArray;
-        this.rArray = rArray;
+    public ParicipantDataReader(Connection con)
+    {
+        this.con = con;
+
     }
+   public void getAttendedParticipantList(Event id) throws SQLException {
 
-   public void getAttendedParticipantList(Event id){
+       PreparedStatement statement = con.prepareStatement("select * from participant where attendance = yes");
 
 
    }
 
-   public void getAllParticipant(Project id){
+   public void getAllParticipant(Project id) throws SQLException {
+       PreparedStatement statement = con.prepareStatement("select * from participant");
 
    }
 }
