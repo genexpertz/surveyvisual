@@ -1,6 +1,7 @@
 package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Agent;
+import com.expertzlab.surveyvi.model.Attendance;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -21,7 +22,7 @@ public class AttendanceRandomizer {
 
     public AttendanceRandomizer(Connection con ) throws SQLException {
         Statement stmt = con.createStatement();
-        ResultSet res = stmt.executeQuery("Select max(id) from agent");
+        ResultSet res = stmt.executeQuery("Select max(id) from attendance");
         while (res.next()){
             lastId = res.getLong(1);
         }
@@ -33,13 +34,14 @@ public class AttendanceRandomizer {
 
             Random r = new Random();
             pos1 = r.nextInt(list.size());
-            Agent p1 = (Agent) list.get(pos1);
+            Attendance p1 = (Attendance) list.get(pos1);
             pos2 = r.nextInt(list.size());
-            Agent p2 = (Agent) list.get(pos2);
-            Agent p3 = new Agent();
+            Attendance p2 = (Attendance) list.get(pos2);
+            Attendance p3 = new Attendance();
             p3.setId(i);
-            p3.setName(p1.getName() + " " + p2.getName() + pos1);
-           // p3.setProjectId(pos1 > pos2 ? p1.getProjectId() : p2.getProjectId());
+            p3.setParticipantId((pos1 > pos2 ? p1.getParticipantId() : p2.getParticipantId()));
+            p3.setEventId((pos1 > pos2 ? p1.getEventId() : p2.getEventId()));
+            p3.setAttendance(p1.getAttendance());
             l1.add(p3);
         }
 
