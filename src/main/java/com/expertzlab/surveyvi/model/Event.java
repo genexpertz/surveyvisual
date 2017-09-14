@@ -3,8 +3,8 @@ package com.expertzlab.surveyvi.model;
 public class Event
 {
     long id;
-    int projectId;
-    int agentId;
+    String projectId;
+    String agentId;
 
     public long getId() {
         return id;
@@ -14,19 +14,19 @@ public class Event
         this.id = id;
     }
 
-    public int getProjectId() {
-        return projectId;
+    public String getProjectId() {
+        return String.valueOf(projectId);
     }
 
-    public void setProjectId(int projectId) {
+    public void setProjectId(String projectId) {
         this.projectId = projectId;
     }
 
-    public int getAgentId() {
-        return agentId;
+    public String getAgentId() {
+        return String.valueOf(agentId);
     }
 
-    public void setAgentId(int agentId) {
+    public void setAgentId(String agentId) {
         this.agentId = agentId;
     }
 }

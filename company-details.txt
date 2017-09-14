@@ -1,5 +1,5 @@
 name|address
-ascend|Eranakulam
+ascend|eranakulam
 hyber|bangalur
 dell|tvm
 hp|chennai

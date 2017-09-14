@@ -1,4 +1,4 @@
-fistname|lastname|age|username|password
+firstName|lastName|age|username|password
 Emily|Emma|21|JacobEmily|Emma267
 Michael|Madison|23|MichaelEmma|Madison547
 Joshua|Abigail|54|JoshuaAbigail|Abigail75
@@ -48,4 +48,4 @@ Jordan|Maria|45|Jordan|Maria3
 Gavin|Trinity|34|Gavin|Trinity5
 Connor|Lillian|32|Connor|Lillian2
 Aiden|Mackenzie|22|Aiden|Mackenzie1
-
+Gavints|Brooke|34|Gavints|Trinity5m

@@ -34,7 +34,7 @@ public class OptionDataWriter extends Thread {
                 PreparedStatement statement = con.prepareStatement("insert into option values(?,?,?) ");
                 statement.setLong(1,((Option)op).getId());
                 statement.setLong(2,((Option)op).getQuestionId());
-                statement.setLong(3,((Option)op).getWeightage());
+                statement.setLong(3,((Option)op).getWeight());
                 statement.execute();
                 System.out.println("Executed successfully");
             }

@@ -6,11 +6,10 @@ package com.expertzlab.surveyvi.model;
 public class Option {
     long id;
     long questionId;
-    int weightage;
+    int weight;
+    String description;
 
-    public long getId() {
-        return id;
-    }
+    public long getId() { return id; }
 
     public void setId(long id) {
         this.id = id;
@@ -24,11 +23,19 @@ public class Option {
         this.questionId = questionId;
     }
 
-    public int getWeightage() {
-        return weightage;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setWeightage(int weightage) {
-        this.weightage = weightage;
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

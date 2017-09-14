@@ -33,8 +33,8 @@ public class EventDataWriter extends Thread {
                 System.out.println("In new thread");
                 PreparedStatement statement = con.prepareStatement("insert into event values(?,?,?) ");
                 statement.setLong(1,((Event)evt).getId());
-                statement.setLong(2,((Event)evt).getAgentId());
-                statement.setLong(3,((Event)evt).getProjectId());
+                statement.setString(2,((Event)evt).getProjectId());
+                statement.setString(3,((Event)evt).getAgentId());
                 statement.execute();
                 System.out.println("Executed successfully");
             }

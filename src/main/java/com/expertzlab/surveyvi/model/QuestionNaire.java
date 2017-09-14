@@ -24,4 +24,12 @@ public class QuestionNaire {
     public void setProgramId(long programId) {
         this.programId = programId;
     }
+
+    public QuestionNaire split(String op) {
+
+        QuestionNaire qus = new QuestionNaire();
+        String[] hArray = op.split("-");
+        qus.setId((long) Integer.parseInt(hArray[0]));
+        return qus;
+    }
 }

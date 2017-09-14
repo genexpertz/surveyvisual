@@ -26,8 +26,15 @@ public class OptionDataSetter extends DataSetter{
             op = (Option) loadedClass.newInstance();
             for(int i = 0; i< hArray.length; i++) {
 
-                Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
-                m.invoke(op, rArray[i]);
+                if (hArray[0].equals("id")) {
+                    Method m = clazz.getMethod("set" + capitalizeFirstLetter(hArray[i]), Long.class);
+                    m.invoke(op, rArray[i]);
+                }
+                else {
+                    Method m = clazz.getMethod("set" + capitalizeFirstLetter(hArray[i]), String.class);
+                    m.invoke(op, rArray[i]);
+                }
+
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

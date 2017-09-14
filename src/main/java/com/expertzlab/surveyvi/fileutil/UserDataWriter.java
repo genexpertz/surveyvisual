@@ -28,15 +28,15 @@ public class UserDataWriter extends Thread {
         try {
             UserRandomizer ur = new UserRandomizer(con);
             list = ur.getRandomizedList(list);
-        for(Object pt :list) {
+        for(Object usr :list) {
             System.out.println("In new thread");
             PreparedStatement statement = con.prepareStatement("insert into user values(?,?,?,?,?,?) ");
-            statement.setLong(1,((User)pt).getId());
-            statement.setString(2,((User)pt).getFirstName());
-            statement.setString(3,((User)pt).getFirstName());
-            statement.setInt(4,((User)pt).getAge());
-            statement.setString(5,((User)pt).getUsername());
-            statement.setString(6,((User)pt).getPassword());
+            statement.setLong(1,((User)usr).getId());
+            statement.setString(2,((User)usr).getFirstName());
+            statement.setString(3,((User)usr).getFirstName());
+            statement.setInt(4,((User)usr).getAge());
+            statement.setString(5,((User)usr).getUsername());
+            statement.setString(6,((User)usr).getPassword());
             statement.execute();
             System.out.println("Executed successfully");
         }

@@ -30,10 +30,11 @@ public class AnswerDataWriter extends Thread {
             list = pr.getRandomizedList(list);
         for(Object pt :list) {
             System.out.println("In new thread");
-            PreparedStatement statement = con.prepareStatement("insert into answer values(?,?,?) ");
+            PreparedStatement statement = con.prepareStatement("insert into answer values(?,?,?,?) ");
             statement.setLong(1,((Answer)pt).getId());
-            statement.setLong(2,((Answer)pt).getQuestionId());
-            statement.setInt(3,((Answer)pt).getWeightage());
+            statement.setLong(2,((Answer)pt).getParticipantId());
+            statement.setLong(3,((Answer)pt).getQuestionId());
+            statement.setLong(4,((Answer)pt).getOptionId());
             statement.execute();
             System.out.println("Executed successfully");
         }

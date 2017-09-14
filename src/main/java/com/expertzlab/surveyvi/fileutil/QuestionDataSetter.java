@@ -21,14 +21,21 @@ class QuestionDataSetter extends DataSetter{
     }
     public Question run() {
         Question qus =null;
+        String record = null;
         Class<?> loadedClass = null;
         try {
         loadedClass = Class.forName(clazz.getName());
         qus = (Question) loadedClass.newInstance();
-        for(int i = 0; i< hArray.length; i++) {
+        int len =  rArray.length;
+        for(int i = 0; i< len; i++) {
 
-            Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
+            System.out.println("rArraay["+i+"] - "+rArray[i]);
+            System.out.println("hArraay["+i+"] - "+hArray[i]);
+
+            Method    m = clazz.getMethod("set" + capitalizeFirstLetter(hArray[i]), String.class);
             m.invoke(qus, rArray[i]);
+
+
         }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

@@ -20,15 +20,26 @@ class UserDataSetter extends DataSetter{
       this.rArray = rArray;
     }
     public User run() {
-        User pt =null;
+        User usr =null;
         Class<?> loadedClass = null;
         try {
         loadedClass = Class.forName(clazz.getName());
-        pt = (User) loadedClass.newInstance();
+        usr = (User) loadedClass.newInstance();
         for(int i = 0; i< hArray.length; i++) {
 
-            Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
-            m.invoke(pt, rArray[i]);
+            if (hArray[i].equals("id")) {
+                Method m = clazz.getMethod("set" + capitalizeFirstLetter(hArray[i]), Long.class);
+                m.invoke(usr, rArray[i]);
+            }
+            else if(hArray[i].equals("age")){
+                Method m = clazz.getMethod("set" + capitalizeFirstLetter(hArray[i]), int.class);
+                m.invoke(usr, rArray[i]);
+            }
+            else {
+                Method m = clazz.getMethod("set" + capitalizeFirstLetter(hArray[i]), String.class);
+                m.invoke(usr, rArray[i]);
+            }
+
         }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -41,7 +52,7 @@ class UserDataSetter extends DataSetter{
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
-        return pt;
+        return usr;
     }
 
     public String capitalizeFirstLetter(String str){

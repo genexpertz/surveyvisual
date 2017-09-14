@@ -16,7 +16,7 @@ import java.util.Random;
 public class AnswerRandomizer {
     int pos1;
     int pos2;
-    int recordcount =1000;
+    int recordcount =100;
     long lastId = 0;
 
     public AnswerRandomizer(Connection con ) throws SQLException {
@@ -35,11 +35,12 @@ public class AnswerRandomizer {
            pos1 = r.nextInt(list.size());
            Answer p1 = (Answer) list.get(pos1);
            pos2 = r.nextInt(list.size());
-           Answer p2 = (Answer) list.get(pos2);
+
            Answer p3 = new Answer();
            p3.setId(i);
+           p3.setParticipantId(p1.getParticipantId());
            p3.setQuestionId(p1.getQuestionId());
-           p3.setWeightage(p1.getWeightage());
+           p3.setOptionId(p1.getOptionId());
            l1.add(p3);
        }
 

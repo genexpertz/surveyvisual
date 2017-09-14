@@ -17,7 +17,7 @@ import java.util.Random;
 public class OptionRandomizer {
     int pos1;
     int pos2;
-    int recordcount =2;
+    int recordcount =16;
     long lastId = 1;
 
     OptionRandomizer(Connection con ) throws SQLException {
@@ -40,7 +40,7 @@ public class OptionRandomizer {
             Option p3 = new Option();
             p3.setId(i);
             p3.setQuestionId(p1.getQuestionId());
-            p3.setWeightage(p1.getWeightage());
+            p3.setWeight(p1.getWeight());
             l1.add(p3);
         }
 

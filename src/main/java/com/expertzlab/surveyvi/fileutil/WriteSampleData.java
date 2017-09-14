@@ -1,9 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
 
-import com.expertzlab.surveyvi.model.*;
-
-import java.awt.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -24,10 +21,10 @@ public class WriteSampleData {
     private static final String COMPANY = "com.expertzlab.surveyvi.model.Company";
     private static final String USER = "com.expertzlab.surveyvi.model.User";
     private static final String QUESTION = "com.expertzlab.surveyvi.model.Question";
-    private static final String QUESTIONNAIRE = "com.expertzlab.surveyvi.model.Questionnaire";
+   // private static final String QUESTIONNAIRE = "com.expertzlab.surveyvi.model.Questionnaire";
     private static final String ANSWER = "com.expertzlab.surveyvi.model.Answer";
     private static final String OPTION = "com.expertzlab.surveyvi.model.Option";
-    private static final String TARGETCLASS = "com.expertzlab.surveyvi.model.Target";
+
 
 
     Map<Class,List> map;
@@ -70,10 +67,10 @@ public class WriteSampleData {
                 QuestionDataWriter qdw = new QuestionDataWriter(con, entry.getValue());
                 qdw.start();
             }
-            else if (QUESTIONNAIRE.equals(entry.getKey())) {
+           /* else if (QUESTIONNAIRE.equals(entry.getKey())) {
                 QuestionNaireDataWriter qadw = new QuestionNaireDataWriter(con, entry.getValue());
                 qadw.start();
-            }
+            }*/
             else if (ANSWER.equals(entry.getKey())) {
                 AnswerDataWriter ansdw = new AnswerDataWriter(con, entry.getValue());
                 ansdw.start();
@@ -86,10 +83,7 @@ public class WriteSampleData {
                 OptionDataWriter opdw = new OptionDataWriter(con, entry.getValue());
                 opdw.start();
             }
-            else if (TARGETCLASS.equals(entry.getKey())) {
-                TargetClassDataWriter tdw = new TargetClassDataWriter(con, entry.getValue());
-                tdw.start();
-            }
+
             }
         }
     }

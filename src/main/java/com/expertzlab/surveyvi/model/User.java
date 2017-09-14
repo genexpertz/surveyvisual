@@ -1,13 +1,12 @@
 package com.expertzlab.surveyvi.model;
 
-public class User
-{
-    long id;
-    String firstName;
-    String lastName;
-    int age;
-    String username;
-    String password;
+public class User {
+    private long id;
+    private String firstName;
+    private String lastName;
+    private int age;
+    private String username;
+    private String password;
 
     public long getId() {
         return id;

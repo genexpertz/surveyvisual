@@ -2,7 +2,6 @@ package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.*;
 
-
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -45,10 +44,9 @@ public class LoadSampleData {
        Company com =null;
        User usr = null;
        Question qus = null;
-       QuestionNaire qusnaire = null;
+       //QuestionNaire qusnaire = null;
        Answer ans = null;
        Option op = null;
-       TargetClass tar = null;
        String record = null;
        int count = 0;
        while(( record = readData()) != null) {
@@ -98,7 +96,7 @@ public class LoadSampleData {
                    arrayList.add(com);
                    break;
                }
-               case "com.expertzlab.surveyvi.model.User":{
+               case "com.expertzlab.surveyvi.model.UserExt":{
                    ds = new UserDataSetter(clazz, harray, rArray);
                    usr = (User) ds.run();
                    usr.setId(count);
@@ -112,13 +110,13 @@ public class LoadSampleData {
                    arrayList.add(qus);
                    break;
                }
-               case "com.expertzlab.surveyvi.model.QuestionNaire":{
+               /*case "com.expertzlab.surveyvi.model.QuestionNaire":{
                    ds = new QuestionNaireDataSetter(clazz, harray, rArray);
                    qusnaire = (QuestionNaire) ds.run();
                    qusnaire.setId((long) count);
                    arrayList.add(qusnaire);
                    break;
-               }
+               }*/
                case "com.expertzlab.surveyvi.model.Answer":{
                    ds = new AnswerDataSetter(clazz, harray, rArray);
                    ans = (Answer) ds.run();
@@ -126,18 +124,11 @@ public class LoadSampleData {
                    arrayList.add(ans);
                    break;
                }
-               case "com.expertzlab.surveyvi.model.Option":{
+               case "com.expertzlab.surveyvi.model.Option": {
                    ds = new OptionDataSetter(clazz, harray, rArray);
                    op = (Option) ds.run();
                    op.setId(count);
                    arrayList.add(op);
-                   break;
-               }
-               case "com.expertzlab.surveyvi.model.TargetClass":{
-                   ds = new TargetClassDataSetter(clazz, harray, rArray);
-                   tar = (TargetClass) ds.run();
-                   tar.setId(count);
-                   arrayList.add(tar);
                    break;
                }
            }
