@@ -31,13 +31,30 @@ public class ParicipantDataReader {
        List list = new ArrayList();
        PreparedStatement statement = con.prepareStatement("select * from participant p join attendance a on p.id = a.participantId where a.attendance = yes");
        ResultSet res = statement.executeQuery();
-       Iterator itr =res.Iterator();
+       String[] hArray = prepareParticipantHeaderArray();
+       String[] rArray = new String[10];
        while (res.next()){
-           list.add(res);
+
+           prepareParticipantRecordArray(rArray,res);
+           ParticipantDataSetter pds = new ParticipantDataSetter(Participant.class,hArray,rArray);
+           Participant p = pds.run();
+           list.add(p);
        }
        res.close();
        System.out.println("Executed successfully");
 
+       return list;
+   }
+
+   private void prepareParticipantRecordArray(String[] rArray, ResultSet res) throws SQLException {
+       rArray[0] = res.getString("id");
+       rArray[1] = res.getString("name");
+   }
+
+   private String[] prepareParticipantHeaderArray(){
+       String[] hArray = new String[10];
+       hArray[0]= "id";
+       return  hArray;
    }
 
    public void getAllParticipant(Project id) throws SQLException {

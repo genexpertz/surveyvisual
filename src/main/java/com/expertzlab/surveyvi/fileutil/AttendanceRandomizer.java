@@ -41,7 +41,7 @@ public class AttendanceRandomizer {
             Event e1 = (Event) list.get(pos1) ;
             Attendance p3 = new Attendance();
             p3.setId(i);
-            p3.setParticipantId( p1.getParticipantId());
+            p3.setParticipantId( (int)p1.getId());
             p3.setEventId(e1.getEventId());
             if (pos1>pos2) {
                 p3.setAttendance("yes");
@@ -50,9 +50,7 @@ public class AttendanceRandomizer {
                 p3.setAttendance("no");
             }
             l1.add(p3);
-
         }
-
         return l1;
     }
 }
