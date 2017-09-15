@@ -36,7 +36,6 @@ public class AttendanceDataWriter extends Thread{
                 statement.setInt(2,((Attendance)att).getParticipantId());
                 statement.setInt(3,((Attendance)att).getEventId());
                 statement.setString(4,((Attendance)att).getAttendance());
-                //statement.setLong(3,((Agent)agt).getProjectId());
                 statement.execute();
                 System.out.println("Executed successfully");
             }

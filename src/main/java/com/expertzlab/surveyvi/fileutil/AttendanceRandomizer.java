@@ -1,7 +1,8 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Agent;
 import com.expertzlab.surveyvi.model.Attendance;
+import com.expertzlab.surveyvi.model.Event;
+import com.expertzlab.surveyvi.model.Participant;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -34,15 +35,22 @@ public class AttendanceRandomizer {
 
             Random r = new Random();
             pos1 = r.nextInt(list.size());
-            Attendance p1 = (Attendance) list.get(pos1);
+            Attendance a1 = (Attendance) list.get(pos1);
             pos2 = r.nextInt(list.size());
-            Attendance p2 = (Attendance) list.get(pos2);
+            Participant p1 = (Participant) list.get(pos2);
+            Event e1 = (Event) list.get(pos1) ;
             Attendance p3 = new Attendance();
             p3.setId(i);
-            p3.setParticipantId((pos1 > pos2 ? p1.getParticipantId() : p2.getParticipantId()));
-            p3.setEventId((pos1 > pos2 ? p1.getEventId() : p2.getEventId()));
-            p3.setAttendance(p1.getAttendance());
+            p3.setParticipantId( p1.getParticipantId());
+            p3.setEventId(e1.getEventId());
+            if (pos1>pos2) {
+                p3.setAttendance("yes");
+            }
+            else {
+                p3.setAttendance("no");
+            }
             l1.add(p3);
+
         }
 
         return l1;
