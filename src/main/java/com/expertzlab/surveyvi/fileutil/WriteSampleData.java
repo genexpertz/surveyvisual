@@ -1,10 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
 
-import com.expertzlab.surveyvi.model.Attendance;
-import com.expertzlab.surveyvi.model.Event;
-import com.expertzlab.surveyvi.model.Participant;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
