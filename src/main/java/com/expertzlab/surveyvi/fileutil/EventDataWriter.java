@@ -31,10 +31,13 @@ public class EventDataWriter extends Thread {
 
             for(Object evt :list) {
                 System.out.println("In new thread");
-                PreparedStatement statement = con.prepareStatement("insert into event values(?,?,?) ");
+                PreparedStatement statement = con.prepareStatement("insert into event values(?,?,?,?,?,?) ");
                 statement.setLong(1,((Event)evt).getId());
-                statement.setString(2,((Event)evt).getProjectId());
-                statement.setString(3,((Event)evt).getAgentId());
+                statement.setString(2,((Event)evt).getEventName());
+                statement.setString(3,((Event)evt).getPlace());
+                statement.setString(4,((Event)evt).getDate());
+                statement.setString(5,((Event)evt).getProjectId());
+                statement.setString(6,((Event)evt).getAgentId());
                 statement.execute();
                 System.out.println("Executed successfully");
             }

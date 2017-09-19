@@ -1,6 +1,5 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Attendance;
 import com.expertzlab.surveyvi.model.Event;
 import com.expertzlab.surveyvi.model.Participant;
 import com.expertzlab.surveyvi.model.Project;
@@ -17,17 +16,21 @@ import java.util.List;
 /**
  * Created by preethup on 13/9/17.
  */
-public class ParicipantDataReader {
+public class ParticipantDataReader {
 
 
     Connection con;
+    Event eventId;
+    List list;
 
-    public ParicipantDataReader(Connection con)
+    public ParticipantDataReader(Connection con,Event eventId,List list)
     {
-        this.con = con;
 
+        this.con = con;
+        this.eventId = eventId;
+        this.list = list;
     }
-   public List getAttendedParticipantList(Event id) throws SQLException {
+   public List getAttendedParticipantList(Event eventId) throws SQLException {
        List list = new ArrayList();
        PreparedStatement statement = con.prepareStatement("select * from participant p join attendance a on p.id = a.participantId where a.attendance = yes");
        ResultSet res = statement.executeQuery();
@@ -52,12 +55,16 @@ public class ParicipantDataReader {
    }
 
    private String[] prepareParticipantHeaderArray(){
-       String[] hArray = new String[10];
+       String[] hArray = new String[4];
        hArray[0]= "id";
+       hArray[1]="name";
+       hArray[2]="age";
+       hArray[3]="gender";
+       hArray[4]="address";
        return  hArray;
    }
 
-   public void getAllParticipant(Project id) throws SQLException {
+   public List getAllParticipant(Project id) throws SQLException {
        List<Participant> list1 = new ArrayList();
        PreparedStatement statement = con.prepareStatement("select * from participant");
        ResultSet res1 = statement.executeQuery();
@@ -65,7 +72,7 @@ public class ParicipantDataReader {
         Participant pt = null;
        while (res1.next()){
            pt= new Participant();
-           pt.setId(res1.getLong("Id"));
+           pt.setId(res1.getLong("id"));
            pt.setName(res1.getString("name"));
            pt.setAge(res1.getInt("age"));
            pt.setAddress(res1.getString("address"));
@@ -73,6 +80,7 @@ public class ParicipantDataReader {
            list1.add(pt);
        }
        System.out.println("Executed successfully");
+       return list1;
    }
 
     public static Iterator iterator() {

@@ -2,6 +2,7 @@ package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Event;
 import com.expertzlab.surveyvi.model.Option;
+import com.expertzlab.surveyvi.model.Question;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -17,12 +18,12 @@ import java.util.Random;
 public class OptionRandomizer {
     int pos1;
     int pos2;
-    int recordcount =16;
+    int recordcount =20;
     long lastId = 1;
 
     OptionRandomizer(Connection con ) throws SQLException {
         Statement stmt = con.createStatement();
-        ResultSet res = stmt.executeQuery("Select max(id) from option");
+        ResultSet res = stmt.executeQuery("Select max(id) from options");
         while (res.next()){
             lastId = res.getLong(1);
         }
@@ -39,7 +40,7 @@ public class OptionRandomizer {
             Option p2 = (Option) list.get(pos2);
             Option p3 = new Option();
             p3.setId(i);
-            p3.setQuestionId(p1.getQuestionId());
+            p3.setQuestionId(p2.getQuestionId());
             p3.setWeight(p1.getWeight());
             l1.add(p3);
         }

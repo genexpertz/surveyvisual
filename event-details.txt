@@ -1,6 +1,6 @@
-eventName|place|projectId|date|agentId
-stamp out smoking|ernakulam|1|11/2/2010/|1
-smoke free district|kollam|2|10/3/2011|2
+eventName|place|date|projectId|agentId
+stamp out smoking|ernakulam|11/2/2010/|1|1
+smoke free district|kollam|10/3/2011|2|2
 free your lungs|alappuzha|11/2/2009|3|3
 cardiosmart|kozhikkodu|1/10/2010|4|4
 smoke less breathe more|kollam|21/12/2005|5|5
@@ -10,42 +10,13 @@ good bye lighters|thiruvananthapuram|30/12/2008|8|8
 less puffs more hugs|kottayam|22/5/2010|9|9
 say no to tobacco|malappuram|17/6/2007|10|10
 tobacco and diabetics|kasargodu|27/9/2010|1|11
-quit cigarette|kannur|2|12
-smoking & cancer|palakkad|3|13
-tobacco free school|malappuram|4|14
-stop smoking start repairing|kottayam|5|15
-go smoke free|idukki|6|16
-no to tobacco yes to life|wayanad|7|17
-say no to tobacco|malappuram|8|18
-oral cancer awareness|palakkad||9|19
-smoking and immunity|thiruvananthapuram|10|20
-smoke free panchayath|kasargodu|1|21
-|kottayam|2|22
-|ernakulam|3|23campain
-|malappuram|4|24
-|kasargodu|5|25
-|ernakulam|6|26
-|thiruvananthapuram|7|27
-|idukki|8|28
-|kasargodu|9|29
-|alappuzha|10|30
-|kottayam|1|31
-|kollam|2|32
-|kasargodu|3|33
-|idukki|4|34
-|ernakulam|5|35
-|palakkad|6|36
-|kasargodu|7|37
-|idukki|8|38
-|kottayam|9|39
-|ernakulam|10|40
-|thiruvananthapuram|1|41
-|alappuzha|2|42
-|kasargodu|3|43
-|alappuzha|4|44
-|palakkad|5|45
-|thiruvananthapuram|6|46
-|idukki|7|47
-|kasargodu|8|48
-|kottayam|9|49
-|ernakulam|10|50
+quit cigarette|kannur|31/12/2003|2|12
+smoking & cancer|palakkad|11/6/2011|3|13
+tobacco free school|malappuram|17/9/2004|4|14
+stop smoking start repairing|kottayam|4/5/2005|5|15
+go smoke free|idukki|2/2/2006|6|16
+no to tobacco yes to life|9/11/2001|wayanad|7|17
+say no to tobacco|malappuram|21/10/2005|8|18
+oral cancer awareness|palakkad|2/5/2007|9|19
+smoking and immunity|thiruvananthapuram|21/5/2009|10|20
+smoke free panchayath|kasargodu|22/5/2004|1|21

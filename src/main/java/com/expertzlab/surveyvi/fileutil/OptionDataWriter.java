@@ -31,7 +31,7 @@ public class OptionDataWriter extends Thread {
 
             for(Object op :list) {
                 System.out.println("In new thread");
-                PreparedStatement statement = con.prepareStatement("insert into option values(?,?,?) ");
+                PreparedStatement statement = con.prepareStatement("insert into options values(?,?,?) ");
                 statement.setLong(1,((Option)op).getId());
                 statement.setLong(2,((Option)op).getQuestionId());
                 statement.setLong(3,((Option)op).getWeight());

@@ -8,6 +8,7 @@ public class Question {
     Option option3;
     Option option4;
     String record = null;
+    private long questionId;
 
     public int getId() { return id; }
 
@@ -64,8 +65,11 @@ public class Question {
         option.setQuestionId(id);
         String[] ids = rArray[0].split(":");
         option.setId(Integer.parseInt(ids[0]));
-        option.setDescription(ids[1]);
         option.setWeight(Integer.parseInt(rArray[1]));
         return option;
+    }
+
+    public long getQuestionId() {
+        return questionId;
     }
 }

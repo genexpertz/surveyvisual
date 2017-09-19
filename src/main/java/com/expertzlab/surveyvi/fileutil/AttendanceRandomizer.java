@@ -30,7 +30,8 @@ public class AttendanceRandomizer {
     }
     public List getRandomizedList(List list) {
         List l1 = new ArrayList(recordcount);
-
+//event list iter
+        //part list iter
         for (long i = lastId+1; i <= recordcount; i++) {
 
             Random r = new Random();

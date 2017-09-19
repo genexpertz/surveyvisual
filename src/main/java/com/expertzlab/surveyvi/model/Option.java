@@ -7,7 +7,7 @@ public class Option {
     long id;
     long questionId;
     int weight;
-    String description;
+
 
     public long getId() { return id; }
 
@@ -31,11 +31,5 @@ public class Option {
         this.weight = weight;
     }
 
-    public String getDescription() {
-        return description;
-    }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

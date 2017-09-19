@@ -37,7 +37,7 @@ public class QuestionRandomizer {
            pos2 = r.nextInt(list.size());
            Question p2 = (Question) list.get(pos2);
            Question p3 = new Question();
-           p3.setId((int) i);
+           p3.setId(p1.getId());
            p3.setDescription(p1.getDescription());
            p3.setOption1(p1.getOption1());
            p3.setOption2(p1.getOption2());
