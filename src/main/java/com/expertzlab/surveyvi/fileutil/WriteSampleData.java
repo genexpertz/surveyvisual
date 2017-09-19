@@ -1,6 +1,11 @@
 package com.expertzlab.surveyvi.fileutil;
 
 
+import com.expertzlab.surveyvi.model.Event;
+import com.expertzlab.surveyvi.model.Participant;
+import com.expertzlab.surveyvi.model.Program;
+import com.expertzlab.surveyvi.model.Project;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -85,10 +90,16 @@ public class WriteSampleData {
                 opdw.start();
             }
             else if (ATTENDANCE.equals(entry.getKey())) {
+
+            AttendanceService attendanceService = new AttendanceService(con);
+            attendanceService.markAttendance();
+            attendanceService.close();
+
+
                 //Use Event Reader
-                EventDataReader edr = new EventDataReader(con,projectId,list);
+
                 //Use Participant reader passing event id get attendedParticipant list
-                ParticipantDataReader pdr =  new ParticipantDataReader(con,eventId,list);
+
                 AttendanceDataWriter attdw = new AttendanceDataWriter(con, partlist, eventlist,questionlist);
                 attdw.start();
             }

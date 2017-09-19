@@ -3,6 +3,8 @@ package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Event;
 import com.expertzlab.surveyvi.model.Participant;
+import com.expertzlab.surveyvi.model.Program;
+import com.expertzlab.surveyvi.model.Project;
 
 import java.sql.Connection;
 import java.util.Iterator;
@@ -16,12 +18,9 @@ import java.util.ListIterator;
 public class AnsweringService{
 
     Connection con;
-    List event;
-    List participant;
-    List questions;
 
-    public AnsweringService(Connection con, List event, List participant, List questions){
-
+    public AnsweringService(Connection con){
+        this.con = con;
     }
 
     Iterator eventitr;
@@ -30,14 +29,24 @@ public class AnsweringService{
 
     public void answerQuestion(String eventId, String particpantid){
 
-        eventitr = event.iterator();
-        while (eventitr.hasNext()){
+        ProgramDataReader pgdr = new ProgramDataReader(con);
 
-            participantitr = participant.iterator();
-                while (participantitr.hasNext()){
-
-
+        while (pgdr.hasNext()){
+            Program p = pgdr.get();
+            ProjectDataReader prdr = new ProjectDataReader(con, p.getId());
+            while(prdr.hasNext()){
+                Project pj = prdr.get();
+                EventDataReader edr = new EventDataReader(con,pj.getId());
+                while(edr.hasNext()){
+                    Event e = edr.get();
+                    ParticipantDataReader pdr =  new ParticipantDataReader(con,e.id,"ATTENDED");
+                    while(pdr.hasAttendedNext()){
+                        Participant pt = pdr.get();
+                        QuestionDataReader qdr = QuestionDataReader();
+                        AnsweringService ans = new AnsweringService(con,eventid, participantid, questList);
+                    }
                 }
+            }
 
         }
 

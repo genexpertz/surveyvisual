@@ -44,4 +44,8 @@ public class ParticipantDataWriter extends Thread {
         }
     }
 
+    public void markAttendance(){
+        //Exeutequery to store the attendance randomely (true / false)
+    }
+
 }

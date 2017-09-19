@@ -22,7 +22,6 @@ public class EventDataReader {
     public EventDataReader(Connection con)
     {
         this.con = con;
-
     }
    public List EventList(Event id) throws SQLException {
        List list = new ArrayList();
