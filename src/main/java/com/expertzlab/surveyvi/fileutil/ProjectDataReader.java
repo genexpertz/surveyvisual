@@ -1,6 +1,5 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Event;
 import com.expertzlab.surveyvi.model.Project;
 
 import java.sql.Connection;
@@ -12,60 +11,74 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Created by preethup on 13/9/17.
+ * Created by preethup on 19/9/17.
  */
 public class ProjectDataReader {
 
-
     Connection con;
-    Event eventId;
-    List list;
+    ResultSet res;
 
-    public ProjectDataReader(Connection con)
+    public boolean hasNext() {
+
+        try {
+            return res.next();
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public ProjectDataReader(Connection con, long id)
     {
+
         this.con = con;
     }
-    public List getAttendedProjectList(Event eventId) throws SQLException {
-        List list = new ArrayList();
+    public List getProjectList() throws SQLException {
         PreparedStatement statement = con.prepareStatement("select * from project");
-        ResultSet res = statement.executeQuery();
-        String[] hArray = prepareProjectHeaderArray();
-        String[] rArray = new String[10];
-        while (res.next()){
-
-            prepareProjectRecordArray(rArray,res);
-            ProjectDataSetter pds = new ProjectDataSetter(Project.class,hArray,rArray);
-            Project p = pds.run();
-            list.add(p);
-        }
-        res.close();
-        System.out.println("Executed successfully");
-
+        res = statement.executeQuery();
+        List list = new ArrayList();
+        list.add(res);
         return list;
+
     }
 
-    private void prepareProjectRecordArray(String[] rArray, ResultSet res) throws SQLException {
-        rArray[0] = res.getString("id");
-        rArray[1] = res.getString("name");
+    public void close() throws SQLException{
+        res.close();
+        System.out.println("Executed successfully");
+    }
+
+    public Project get(){
+        String[] hArray = prepareProjectHeaderArray();
+        String[] rArray = new String[10];
+
+        prepareProjectArray(rArray,res);
+        ProjectDataSetter prds = new ProjectDataSetter(Project.class,hArray,rArray);
+        Project p = prds.run();
+        return p;
+    }
+
+    private void prepareProjectArray(String[] rArray, ResultSet res) {
     }
 
     private String[] prepareProjectHeaderArray(){
         String[] hArray = new String[2];
         hArray[0]= "id";
         hArray[1]="name";
+        hArray[3]="progId";
         return  hArray;
     }
 
-    public List getAllProject(Project id) throws SQLException {
+    public List getAllProject() throws SQLException {
         List<Project> list1 = new ArrayList();
         PreparedStatement statement = con.prepareStatement("select * from project");
         ResultSet res1 = statement.executeQuery();
         //Iterator itr =res1.Iterator();
-        Project pr = null;
+        Project pt = null;
         while (res1.next()){
-            pr= new Project();
-            pr.setId(res1.getLong("id"));
-            pr.setName(res1.getString("name"));
+            pt = new Project();
+            pt.setId(res1.getLong("id"));
+            pt.setName(res1.getString("name"));
+            pt.setProgId(res1.getString("progId"));
+            list1.add(pt);
         }
         System.out.println("Executed successfully");
         return list1;
@@ -75,4 +88,3 @@ public class ProjectDataReader {
         return null;
     }
 }
-

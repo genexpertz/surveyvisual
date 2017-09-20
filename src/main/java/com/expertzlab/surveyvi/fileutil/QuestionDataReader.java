@@ -2,6 +2,7 @@ package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Event;
 import com.expertzlab.surveyvi.model.Participant;
+import com.expertzlab.surveyvi.model.Question;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,7 +16,7 @@ import java.util.List;
 /**
  * Created by preethup on 13/9/17.
  */
-public class ParticipantDataReader {
+public class QuestionDataReader {
 
 
     Connection con;
@@ -30,13 +31,13 @@ public class ParticipantDataReader {
         }
     }
 
-    public ParticipantDataReader(Connection con, long id, String all)
+    public QuestionDataReader(Connection con)
     {
 
         this.con = con;
     }
-    public List getParticipantList() throws SQLException {
-        PreparedStatement statement = con.prepareStatement("select * from participant");
+    public List getQuestionList() throws SQLException {
+        PreparedStatement statement = con.prepareStatement("select * from question");
         res = statement.executeQuery();
         List list = new ArrayList();
         list.add(res);
@@ -49,43 +50,45 @@ public class ParticipantDataReader {
         System.out.println("Executed successfully");
     }
 
-    public Participant get(){
-        String[] hArray = prepareParticipantHeaderArray();
+    public Event get(){
+        String[] hArray = prepareQuestionHeaderArray();
         String[] rArray = new String[10];
 
-        prepareParticipantArray(rArray,res);
-        ParticipantDataSetter eds = new ParticipantDataSetter(Participant.class,hArray,rArray);
-        Participant p = eds.run();
+        prepareQuestionArray(rArray,res);
+        EventDataSetter eds = new EventDataSetter(Participant.class,hArray,rArray);
+        Event p = eds.run();
         return p;
     }
 
 
-    private void prepareParticipantArray(String[] rArray, ResultSet res) {
+    private void prepareQuestionArray(String[] rArray, ResultSet res) {
     }
 
-    private String[] prepareParticipantHeaderArray(){
+    private String[] prepareQuestionHeaderArray(){
         String[] hArray = new String[5];
         hArray[0]= "id";
-        hArray[1]="name";
-        hArray[2]="age";
-        hArray[3]="gender";
-        hArray[4]="address";
+        hArray[1]="description";
+        hArray[2]="option1";
+        hArray[3]="option2";
+        hArray[4]="option3";
+        hArray[5]="option4";
         return  hArray;
     }
 
-    public List getAllParticipant() throws SQLException {
-        List<Participant> list1 = new ArrayList();
-        PreparedStatement statement = con.prepareStatement("select * from participant");
+    public List getAllQuestion() throws SQLException {
+        List<Question> list1 = new ArrayList();
+        PreparedStatement statement = con.prepareStatement("select * from question");
         ResultSet res1 = statement.executeQuery();
         //Iterator itr =res1.Iterator();
-        Participant pt = null;
+        Question pt = null;
         while (res1.next()){
-            pt = new Participant();
-            pt.setId(res1.getLong("id"));
-            pt.setName(res1.getString("name"));
-            pt.setAge(res1.getInt("age"));
-            pt.setAddress(res1.getString("address"));
-            pt.setGender(res1.getString("gender"));
+            pt = new Question();
+            pt.setId(res1.getInt("id"));
+            pt.setDescription(res1.getString("description"));
+            pt.setOption1(res1.getString("option1"));
+            pt.setOption2(res1.getString("option2"));
+            pt.setOption3(res1.getString("option3"));
+            pt.setOption4(res1.getString("option4"));
             list1.add(pt);
         }
         System.out.println("Executed successfully");

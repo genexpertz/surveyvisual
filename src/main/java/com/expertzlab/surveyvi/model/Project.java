@@ -4,6 +4,7 @@ public class Project
 {
     long id;
     String name;
+    String progId;
 
     public long getId() {
         return id;
@@ -20,4 +21,14 @@ public class Project
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getProgId() {
+        return progId;
+    }
+
+    public void setProgId(String progId) {
+        this.progId = progId;
+    }
+
+
 }

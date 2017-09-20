@@ -23,7 +23,7 @@ public class AttendanceDataWriter extends Thread{
     long lastId = 0;
 
 
-    public AttendanceDataWriter(Connection con, List event, List participant)
+    public AttendanceDataWriter(Connection con)
     {
         this.con = con;
         this.list = list;

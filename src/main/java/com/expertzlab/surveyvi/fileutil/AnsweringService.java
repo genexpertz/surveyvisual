@@ -8,8 +8,7 @@ import com.expertzlab.surveyvi.model.Project;
 
 import java.sql.Connection;
 import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+
 
 /**
  * Created by preethup on 15/9/17.
@@ -19,7 +18,7 @@ public class AnsweringService{
 
     Connection con;
 
-    public AnsweringService(Connection con){
+    public AnsweringService(Connection con, Event e, Participant pt, QuestionDataReader qdr){
         this.con = con;
     }
 
@@ -40,10 +39,10 @@ public class AnsweringService{
                 while(edr.hasNext()){
                     Event e = edr.get();
                     ParticipantDataReader pdr =  new ParticipantDataReader(con,e.id,"ATTENDED");
-                    while(pdr.hasAttendedNext()){
+                    while(pdr.hasNext()){
                         Participant pt = pdr.get();
-                        QuestionDataReader qdr = QuestionDataReader();
-                        AnsweringService ans = new AnsweringService(con,eventid, participantid, questList);
+                        QuestionDataReader qdr = new QuestionDataReader(con);
+                        AnsweringService ans = new AnsweringService(con,e,pt,qdr);
                     }
                 }
             }

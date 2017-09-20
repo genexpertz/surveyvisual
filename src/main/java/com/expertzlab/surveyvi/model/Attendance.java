@@ -5,6 +5,7 @@ package com.expertzlab.surveyvi.model;
  */
 public class Attendance {
     long id;
+    int projectId;
     int participantId;
     int eventId;
     String attendance;
@@ -15,6 +16,13 @@ public class Attendance {
 
     public void setId(long id) {
         this.id = id;
+    }
+    public int getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(int projectId) {
+        this.projectId = projectId;
     }
 
     public int getParticipantId() {

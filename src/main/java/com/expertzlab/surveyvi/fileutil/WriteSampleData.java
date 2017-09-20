@@ -42,7 +42,7 @@ public class WriteSampleData {
         this.map = map;
     }
 
-    void writeData() {
+    void writeData() throws SQLException {
         for (HashMap.Entry<Class, List> entry : map.entrySet()) {
             if (PARTICIPANT.equals(entry.getKey())) {
                 ParticipantDataWriter pdw = new ParticipantDataWriter(con, entry.getValue());
@@ -95,12 +95,11 @@ public class WriteSampleData {
             attendanceService.markAttendance();
             attendanceService.close();
 
-
                 //Use Event Reader
 
                 //Use Participant reader passing event id get attendedParticipant list
 
-                AttendanceDataWriter attdw = new AttendanceDataWriter(con, partlist, eventlist,questionlist);
+                AttendanceDataWriter attdw = new AttendanceDataWriter(con);
                 attdw.start();
             }
 

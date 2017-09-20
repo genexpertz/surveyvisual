@@ -36,10 +36,10 @@ public class ProgramDataReader {
     public List getProgramList() throws SQLException {
         PreparedStatement statement = con.prepareStatement("select * from program");
         res = statement.executeQuery();
+        List list = new ArrayList();
+        list.add(res);
 
-
-
-
+        return list;
     }
 
     public void close() throws SQLException{
@@ -63,7 +63,7 @@ public class ProgramDataReader {
     private String[] prepareProgramHeaderArray(){
         String[] hArray = new String[2];
         hArray[0]= "id";
-        hArray[1]="programName";
+        hArray[1]="name";
         return  hArray;
     }
 
@@ -76,7 +76,7 @@ public class ProgramDataReader {
         while (res1.next()){
             pt = new Program();
             pt.setId(res1.getLong("id"));
-            pt.setName(res1.getString("programName"));
+            pt.setName(res1.getString("name"));
             list1.add(pt);
         }
         System.out.println("Executed successfully");

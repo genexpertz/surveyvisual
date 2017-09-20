@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Event
 {
-    long id;
+    public long id;
     String eventName;
     String place;
     String date;
