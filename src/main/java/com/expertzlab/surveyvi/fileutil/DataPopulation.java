@@ -19,11 +19,13 @@ public class DataPopulation {
             String line = s.nextLine();
             String[] strArray = line.split("=");
             Class clazz = Class.forName(strArray[0]);
-            LoadSampleData ld = new LoadSampleData(strArray[1],clazz);
-            List list = ld.loadData();
-            System.out.println("Class is -"+clazz);
-            System.out.println("List is -"+list);
-            map.put(clazz.getName(),list);
+            if(!clazz.getName().equals("com.expertzlab.surveyvi.model.Attendance")) {
+                LoadSampleData ld = new LoadSampleData(strArray[1], clazz);
+                List list = ld.loadData();
+                System.out.println("Class is -" + clazz);
+                System.out.println("List is -" + list);
+                map.put(clazz.getName(), list);
+            }
         }
         WriteSampleData wsd = new WriteSampleData(map);
         wsd.writeData();

@@ -72,7 +72,7 @@ public class ParticipantDataReader {
         hArray[4]="address";
         return  hArray;
     }
-
+/*
     public List getAllParticipant() throws SQLException {
         List<Participant> list1 = new ArrayList();
         PreparedStatement statement = con.prepareStatement("select * from participant");
@@ -91,7 +91,7 @@ public class ParticipantDataReader {
         System.out.println("Executed successfully");
         return list1;
     }
-
+*/
     public static Iterator iterator() {
         return null;
     }

@@ -49,9 +49,7 @@ public class ParticipantDataWriter extends Thread {
         //Exeutequery to store the attendance randomely (true / false)
         Random r = new Random();
         pos1 = r.nextInt(list.size());
-        Participant p1 = (Participant) list.get(pos1);
         pos2 = r.nextInt(list.size());
-        Participant p2 = (Participant) list.get(pos2);
         if (pos1 > pos2) {
             PreparedStatement statement = con.prepareStatement("insert into attendance(attendance) values(yes)");
             statement.execute();

@@ -16,7 +16,9 @@ import java.util.List;
  * Created by preethup on 15/9/17.
  */
 public class QuestionnaireReader {
-    Connection con;
+
+  Connection con;
+
   public List  getQuestions(Event id) throws SQLException {
     List list = new ArrayList();
     PreparedStatement statement = con.prepareStatement("select * from question");
@@ -48,7 +50,7 @@ public class QuestionnaireReader {
     return  hArray;
   }
 
-  public void getAllParticipant(Project id) throws SQLException {
+ /* public void getAllParticipant(Project id) throws SQLException {
     List<Question> list1 = new ArrayList();
     PreparedStatement statement = con.prepareStatement("select * from question");
     ResultSet res1 = statement.executeQuery();
@@ -62,7 +64,7 @@ public class QuestionnaireReader {
     }
     System.out.println("Executed successfully");
   }
-
+*/
   public static Iterator iterator() {
     return null;
   }

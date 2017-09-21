@@ -60,13 +60,14 @@ public class ProjectDataReader {
     }
 
     private String[] prepareProjectHeaderArray(){
-        String[] hArray = new String[2];
+        String[] hArray = new String[3];
         hArray[0]= "id";
         hArray[1]="name";
-        hArray[3]="progId";
+        hArray[2]="progId";
         return  hArray;
     }
 
+    /*
     public List getAllProject() throws SQLException {
         List<Project> list1 = new ArrayList();
         PreparedStatement statement = con.prepareStatement("select * from project");
@@ -83,6 +84,7 @@ public class ProjectDataReader {
         System.out.println("Executed successfully");
         return list1;
     }
+    */
 
     public static Iterator iterator() {
         return null;

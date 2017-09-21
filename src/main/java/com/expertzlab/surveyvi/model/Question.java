@@ -15,7 +15,7 @@ public class Question {
     public void setId(int id) {
         this.id = id;
     }
-    public void setId(String id) {
+   public void setId(String id) {
         this.id = Integer.parseInt( id);
     }
 
@@ -26,6 +26,7 @@ public class Question {
     public void setOption1(String option) {
         this.option1 = split(option);
     }
+
 
     public String getOption2() {
         return String.valueOf(option2); }

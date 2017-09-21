@@ -1,6 +1,7 @@
 package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Event;
+import com.expertzlab.surveyvi.model.Participant;
 import com.expertzlab.surveyvi.model.Program;
 import com.expertzlab.surveyvi.model.Project;
 
@@ -21,8 +22,8 @@ public class AttendanceService {
     }
 
     public void close() throws SQLException{
-        pgdr.close();
-        prdr.close();
+        //pgdr.close();
+        //prdr.close();
 
     }
 
@@ -33,16 +34,21 @@ public class AttendanceService {
         while (pgdr.hasNext()) {
             Program p = pgdr.get();
             prdr = new ProjectDataReader(con, p.getId());
-            prdr.getAllProject();
+            //prdr.getAllProject();
+              prdr.getProjectList();
             while (prdr.hasNext()) {
                 Project pj = prdr.get();
                 EventDataReader edr = new EventDataReader(con, pj.getId());
+                edr.getEventList();
                 while (edr.hasNext()) {
                     Event e = edr.get();
                     ParticipantDataReader pdr = new ParticipantDataReader(con, e.id, "ALL");
-                    while (pdr.hasNext()) {
-                        ParticipantDataWriter pd = new ParticipantDataWriter(con,e.id);
-                        pd.markAttendance(e.getId());
+                    pdr.getParticipantList();
+                    while (pdr.hasNext()){
+                        Participant pt = pdr.get();
+
+                    AttendanceDataWriter pd = new AttendanceDataWriter(con,e.getId(),pj.getId(),pt.getId());
+                        pd.markAttendance();
                     }
                 }
             }

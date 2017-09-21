@@ -23,6 +23,9 @@ public class Option {
         this.questionId = questionId;
     }
 
+    public void setQuestionId(String questionId){
+        this.questionId = Integer.parseInt(questionId);
+    }
     public int getWeight() {
         return weight;
     }

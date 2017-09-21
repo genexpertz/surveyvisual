@@ -33,6 +33,7 @@ public class ProjectDataWriter extends Thread{
                 PreparedStatement statement = con.prepareStatement("insert into project values(?,?) ");
                 statement.setLong(1,((Project)pro).getId());
                 statement.setString(2,((Project)pro).getName());
+                statement.setString(3,((Project)pro).getProgId());
                 statement.execute();
                 System.out.println("Executed successfully");
             }

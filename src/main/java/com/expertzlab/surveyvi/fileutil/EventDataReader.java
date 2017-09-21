@@ -62,7 +62,7 @@ public class EventDataReader {
     }
 
     private String[] prepareEventHeaderArray(){
-        String[] hArray = new String[2];
+        String[] hArray = new String[6];
         hArray[0]= "id";
         hArray[1]="name";
         hArray[2]="place";
@@ -72,7 +72,7 @@ public class EventDataReader {
         return  hArray;
     }
 
-    public List getAllEvent(Program id) throws SQLException {
+    /*public List getAllEvent(Program id) throws SQLException {
         List<Event> list1 = new ArrayList();
         PreparedStatement statement = con.prepareStatement("select * from program");
         ResultSet res1 = statement.executeQuery();
@@ -91,7 +91,7 @@ public class EventDataReader {
         System.out.println("Executed successfully");
         return list1;
     }
-
+*/
     public static Iterator iterator() {
         return null;
     }

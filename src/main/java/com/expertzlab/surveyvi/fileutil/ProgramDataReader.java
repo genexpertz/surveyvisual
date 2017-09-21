@@ -66,7 +66,7 @@ public class ProgramDataReader {
         hArray[1]="name";
         return  hArray;
     }
-
+/*
     public List getAllProgram(Program id) throws SQLException {
         List<Program> list1 = new ArrayList();
         PreparedStatement statement = con.prepareStatement("select * from program");
@@ -82,7 +82,7 @@ public class ProgramDataReader {
         System.out.println("Executed successfully");
         return list1;
     }
-
+*/
     public static Iterator iterator() {
         return null;
     }

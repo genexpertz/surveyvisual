@@ -13,6 +13,10 @@ public class Program
         this.id = id;
     }
 
+    public void setid(String id){
+        this.id = Integer.parseInt(id);
+    }
+
     public String getName() {
         return name;
     }

@@ -1,21 +1,21 @@
-id|description|option1|option2|option3|option4
-1|Are you a smoker?|1:yes,100|2:no,0
-2|Do you know the consequences of smoking?|1:yes,100|2:no,0
-3|How many cigarettes do you usually smoke per day?|1:0-4,25|2:5-8,25|3:9-13,25|4:more than 13,25
-4|Do you smoke at work?|1:yes,100|2:no,0
-5|How many people in your household use tobacco?|1:0,25|2:1,25|3:2,25|4:3 or more,25
-6|How many times have you tried to quit using tobacco in the past?|1:0,25|2:1,25|3:2,25|4:3 or more,25
-7|What method did you use?|1:Nicotine Patches,25|2:Hypnotherapy,25|3:Willpower,25|4:Other,25 
-8|How would you rate your motivation today to stop using tobacco?|1:Not motivated at all,25|2:Somewhat motivated,25|3:Very motivated,25|4:Highly motivated,25
-9|How much has your motivation to stop using tobacco changed as a result of this class?|1:Not at all,25|2:Little,25|3:Somewhat,25|4:Much,25
-10|Overall how satisfied are you with the stop smoking service you received?|1:Unsatisfied,0|2:Satisfied,100
-11|Would you recommend this service to others who want to stop smoking?|1:Yes,100|2:No,0
-12|If you started smoking again would you return to the service for help to stop?|1:Yes,100|2:No,0
-13|How helpful was the information and advice from the Adviser?|1:Unhelpful,0|2:Helpful,100
-14|How helpful has the written information that staff have given to you been?|1:None given,25|2:Very helpful,25|3:Unhelpful,25|4:Unsure,25
-15|Do you find having your carbon monoxide (CO) reading done at every visit helpful?|1:CO not taken,25|2:Very helpful,25|3:Unhelpful,25|4:Unsure,25
-16|How did you learn about this class?|1:Friend,25|2:Internet,25|3:Doctor,25|4:Other,25
-17|What Kind of tobacco products do you use?|1:Cigarettes,50|2:Smokeless Tobacco,50
-18|How satisfied are you with how supportive staff have been?|1:Unsatisfied,50|2:Satisfied,50
-19|Have you smoked since your last appointment with the service?|1:not a single puff,25|2:just a few puffs,25|3:1-5 cigarettes,25|4:More than 5 cigarettes,25
-20|Do you want to quit using tobacco?|1:Yes,100|2:No,0
+description|option1|option2|option3|option4
+Are you a smoker?|1:yes,100|2:no,0
+Do you know the consequences of smoking?|1:yes,100|2:no,0
+How many cigarettes do you usually smoke per day?|1:0-4,25|2:5-8,25|3:9-13,25|4:more than 13,25
+Do you smoke at work?|1:yes,100|2:no,0
+How many people in your household use tobacco?|1:0,25|2:1,25|3:2,25|4:3 or more,25
+How many times have you tried to quit using tobacco in the past?|1:0,25|2:1,25|3:2,25|4:3 or more,25
+What method did you use?|1:Nicotine Patches,25|2:Hypnotherapy,25|3:Willpower,25|4:Other,25
+How would you rate your motivation today to stop using tobacco?|1:Not motivated at all,25|2:Somewhat motivated,25|3:Very motivated,25|4:Highly motivated,25
+How much has your motivation to stop using tobacco changed as a result of this class?|1:Not at all,25|2:Little,25|3:Somewhat,25|4:Much,25
+Overall how satisfied are you with the stop smoking service you received?|1:Unsatisfied,0|2:Satisfied,100
+Would you recommend this service to others who want to stop smoking?|1:Yes,100|2:No,0
+If you started smoking again would you return to the service for help to stop?|1:Yes,100|2:No,0
+How helpful was the information and advice from the Adviser?|1:Unhelpful,0|2:Helpful,100
+How helpful has the written information that staff have given to you been?|1:None given,25|2:Very helpful,25|3:Unhelpful,25|4:Unsure,25
+Do you find having your carbon monoxide (CO) reading done at every visit helpful?|1:CO not taken,25|2:Very helpful,25|3:Unhelpful,25|4:Unsure,25
+How did you learn about this class?|1:Friend,25|2:Internet,25|3:Doctor,25|4:Other,25
+What Kind of tobacco products do you use?|1:Cigarettes,50|2:Smokeless Tobacco,50
+How satisfied are you with how supportive staff have been?|1:Unsatisfied,50|2:Satisfied,50
+Have you smoked since your last appointment with the service?|1:not a single puff,25|2:just a few puffs,25|3:1-5 cigarettes,25|4:More than 5 cigarettes,25
+Do you want to quit using tobacco?|1:Yes,100|2:No,0
