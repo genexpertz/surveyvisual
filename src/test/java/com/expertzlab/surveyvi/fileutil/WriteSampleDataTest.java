@@ -10,7 +10,7 @@ import java.util.*;
 /**
  * Created by preethup on 17/8/17.
  */
-public class writeSampleDataTest {
+public class WriteSampleDataTest {
     Map pmap = new HashMap();
 
     @Before

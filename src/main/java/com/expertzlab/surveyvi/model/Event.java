@@ -19,6 +19,9 @@ public class Event
     public void setEventName(String eventName) {
         this.eventName = eventName;
     }
+    public void setName(String eventName) {
+        this.eventName = eventName;
+    }
 
     public String getPlace() {
         return place;
@@ -44,6 +47,9 @@ public class Event
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public void setId(String id){ if(id != null){ this.id =Long.parseLong(id);}
     }
 
     public String getProjectId() {

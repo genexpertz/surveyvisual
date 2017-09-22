@@ -17,6 +17,11 @@ public class Participant
     public void setId(long id) {
         this.Id = id;
     }
+    public void setId(String id) {
+        if(id != null) {
+            this.Id = Integer.parseInt(id);
+        }
+    }
 
     public String getName() {
         return name;
@@ -34,7 +39,9 @@ public class Participant
         this.age = age;
     }
     public void setAge(String age) {
-        this.age = Integer.parseInt( age);
+        if(age!=null) {
+            this.age = Integer.parseInt(age);
+        }
     }
 
     public String getGender() {
