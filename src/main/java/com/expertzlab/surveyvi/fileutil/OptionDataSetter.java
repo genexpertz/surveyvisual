@@ -23,8 +23,8 @@ public class OptionDataSetter extends DataSetter{
         Option op =null;
         Class<?> loadedClass = null;
         try {
-            loadedClass = Class.forName(clazz.getName());
-            op = (Option) loadedClass.newInstance();
+            //loadedClass = Class.forName(clazz.getName());
+            op = (Option) clazz.newInstance();
             for(int i = 0; i< hArray.length; i++) {
 
                 if (hArray[0].equals("id")) {
@@ -37,8 +37,7 @@ public class OptionDataSetter extends DataSetter{
                 }
 
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+
         } catch (IllegalAccessException e) {
             System.out.println(e);
         } catch (InvocationTargetException e) {

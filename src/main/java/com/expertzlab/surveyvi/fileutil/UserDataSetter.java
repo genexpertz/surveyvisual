@@ -24,8 +24,8 @@ class UserDataSetter extends DataSetter{
         User usr =null;
         Class<?> loadedClass = null;
         try {
-        loadedClass = Class.forName(clazz.getName());
-        usr = (User) loadedClass.newInstance();
+        //loadedClass = Class.forName(clazz.getName());
+        usr = (User) clazz.newInstance();
         for(int i = 0; i< hArray.length; i++) {
 
             if (hArray[i].equals("id")) {
@@ -42,8 +42,7 @@ class UserDataSetter extends DataSetter{
             }
 
         }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+
         } catch (IllegalAccessException e) {
             System.out.println(e);
         } catch (InvocationTargetException e) {
