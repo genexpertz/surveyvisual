@@ -37,10 +37,10 @@ public class ParticipantDataWriter extends Thread {
                 statement.setString(4, ((Participant) pt).getGender());
                 statement.setString(5, ((Participant) pt).getAddress());
                 statement.execute();
-                System.out.println("Executed successfully");
+                System.out.println("Participant Executed successfully");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            new RuntimeException("Participant Write",e);
         }
     }
 

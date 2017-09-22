@@ -12,11 +12,24 @@ public class Event
     String agentId;
     private int eventId;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setId(String id){ if(id != null){ this.id =Long.parseLong(id);}
+    }
     public String getEventName() {
         return eventName;
     }
 
     public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
+    public void setName(String eventName) {
         this.eventName = eventName;
     }
 
@@ -36,15 +49,6 @@ public class Event
         this.date = date;
     }
 
-
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getProjectId() {
         return String.valueOf(projectId);

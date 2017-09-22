@@ -31,7 +31,6 @@ class EventDataSetter extends DataSetter{
             Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
             m.invoke(evt, rArray[i]);
         }
-
         } catch (IllegalAccessException e) {
             System.out.println(e);
         } catch (InvocationTargetException e) {

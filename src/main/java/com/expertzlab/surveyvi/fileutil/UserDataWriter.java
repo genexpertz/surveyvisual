@@ -29,20 +29,19 @@ public class UserDataWriter extends Thread {
             UserRandomizer ur = new UserRandomizer(con);
             list = ur.getRandomizedList(list);
         for(Object usr :list) {
-            System.out.println("In new thread");
-            PreparedStatement statement = con.prepareStatement("insert into user values(?,?,?,?,?,?) ");
+            System.out.println("In user thread");
+            PreparedStatement statement = con.prepareStatement("insert into user values(?,?,?,?,?,?)");
             statement.setLong(1,((User)usr).getId());
             statement.setString(2,((User)usr).getFirstName());
-            statement.setString(3,((User)usr).getFirstName());
+            statement.setString(3,((User)usr).getLastName());
             statement.setInt(4,((User)usr).getAge());
             statement.setString(5,((User)usr).getUsername());
             statement.setString(6,((User)usr).getPassword());
             statement.execute();
-            System.out.println("Executed successfully");
+            System.out.println("User Executed successfully");
         }
         } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            new RuntimeException("User Write",e);        }
     }
 
 }

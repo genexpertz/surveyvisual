@@ -17,7 +17,7 @@ import java.util.Random;
 public class UserRandomizer {
     int pos1;
     int pos2;
-    int recordcount =10;
+    int recordcount =50;
     long lastId = 0;
 
     public UserRandomizer(Connection con ) throws SQLException {
@@ -30,18 +30,21 @@ public class UserRandomizer {
    public List getRandomizedList(List list) {
        List l1 = new ArrayList(recordcount);
 
+      int size = list.size()>0 ? list.size() : 1;
+
        for (long i = lastId+1; i <= recordcount; i++) {
 
            Random r = new Random();
-           pos1 = r.nextInt(list.size());
+           pos1 = r.nextInt(size);
            User p1 = (User) list.get(pos1);
-           pos2 = r.nextInt(list.size());
+           pos2 = r.nextInt(size);
            User p2 = (User) list.get(pos2);
            User p3 = new User();
+
            p3.setId(i);
            p3.setFirstName(p1.getFirstName());
            p3.setLastName(p1.getLastName());
-           p3.setAge(pos1 > pos2 ? p1.getAge() : p2.getAge());
+           p3.setAge(p1.getAge());
            p3.setUsername(p1.getUsername());
            p3.setPassword(p1.getPassword());
            l1.add(p3);
