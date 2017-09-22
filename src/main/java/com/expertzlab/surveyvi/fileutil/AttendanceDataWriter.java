@@ -30,7 +30,7 @@ public class AttendanceDataWriter extends Thread {
 
         public void markAttendance () throws SQLException{
 
-            PreparedStatement statement = con.prepareStatement("insert into attendance values(?,?,?) ");
+            PreparedStatement statement = con.prepareStatement("insert into attendance values(?,?,?)");
             statement.execute();
             System.out.println("Executed successfully");
         }

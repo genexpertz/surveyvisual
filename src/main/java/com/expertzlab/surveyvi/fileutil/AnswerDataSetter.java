@@ -24,8 +24,8 @@ class AnswerDataSetter extends DataSetter{
         Answer ans =null;
         Class<?> loadedClass = null;
         try {
-        loadedClass = Class.forName(clazz.getName());
-        ans = (Answer) loadedClass.newInstance();
+        //loadedClass = Class.forName(clazz.getName());
+        ans = (Answer) clazz.newInstance();
         for(int i = 0; i< rArray.length; i++) {
 
 
@@ -33,8 +33,7 @@ class AnswerDataSetter extends DataSetter{
                 m.invoke(ans, rArray[i]);
 
         }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        
         } catch (IllegalAccessException e) {
             System.out.println(e);
         } catch (InvocationTargetException e) {
