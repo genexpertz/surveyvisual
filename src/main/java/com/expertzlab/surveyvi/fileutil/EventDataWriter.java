@@ -42,7 +42,7 @@ public class EventDataWriter extends Thread {
                 System.out.println("Event Executed successfully");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            new RuntimeException("Event Write",e);
         }
     }
 }

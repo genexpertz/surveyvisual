@@ -39,7 +39,6 @@ public class OptionDataWriter extends Thread {
                 System.out.println("Executed successfully");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            new RuntimeException("Option Write",e);        }
     }
 }

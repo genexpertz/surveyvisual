@@ -40,7 +40,6 @@ public class WriteSampleData {
    public WriteSampleData(Map<Class,List> map) throws SQLException {
 
 
-        this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/surveyvisual", "root", "pp");
         this.con = DBConnectionManager.getConnection();
         this.map = map;
     }

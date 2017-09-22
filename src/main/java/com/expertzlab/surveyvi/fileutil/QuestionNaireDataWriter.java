@@ -37,8 +37,7 @@ public class QuestionNaireDataWriter extends Thread {
             System.out.println("Questionnaire Executed successfully");
         }
         } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            new RuntimeException("Questionnaire Write",e);        }
     }
 
 }
