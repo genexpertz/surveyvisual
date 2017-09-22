@@ -48,8 +48,8 @@ public class AttendanceDataWriter extends Thread {
             statement.setLong(2,eid);
             statement.setString(3,attendanceStataus);
             statement.setLong(4,proid);
-
             statement.execute();
-            System.out.println("Executed successfully");
+            System.out.println("Attendance Executed successfully");
+
         }
     }

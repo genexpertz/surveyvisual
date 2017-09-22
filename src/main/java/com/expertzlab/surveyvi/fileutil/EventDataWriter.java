@@ -39,7 +39,7 @@ public class EventDataWriter extends Thread {
                 statement.setString(5,((Event)evt).getProjectId());
                 statement.setString(6,((Event)evt).getAgentId());
                 statement.execute();
-                System.out.println("Executed successfully");
+                System.out.println("Event Executed successfully");
             }
         } catch (SQLException e) {
             e.printStackTrace();

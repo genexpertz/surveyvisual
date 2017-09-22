@@ -35,7 +35,7 @@ public class CompanyDataWriter extends Thread {
                 statement.setString(2,((Company)com).getName());
                 statement.setString(3,((Company)com).getAddress());
                 statement.execute();
-                System.out.println("Executed successfully");
+                System.out.println("Company Executed successfully");
             }
         } catch (SQLException e) {
             e.printStackTrace();

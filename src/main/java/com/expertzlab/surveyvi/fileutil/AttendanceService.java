@@ -18,6 +18,7 @@ public class AttendanceService {
     ProjectDataReader prdr;
     EventDataReader edr;
     ParticipantDataReader pdr;
+    AttendanceDataWriter adr;
 
     public AttendanceService(Connection con) {
         this.con = con;
@@ -36,11 +37,10 @@ public class AttendanceService {
         while (pgdr.hasNext()) {
             Program p = pgdr.get();
             prdr = new ProjectDataReader(con, p.getId());
-            //prdr.getAllProject();
-              prdr.getProjectList();
+            prdr.getProjectList();
             while (prdr.hasNext()) {
                 Project pj = prdr.get();
-                 edr = new EventDataReader(con, pj.getId());
+                edr = new EventDataReader(con, pj.getId());
                 edr.getEventList();
                 while (edr.hasNext()) {
                     Event e = edr.get();
@@ -49,8 +49,8 @@ public class AttendanceService {
                     while (pdr.hasNext()){
                         Participant pt = pdr.get();
 
-                    AttendanceDataWriter pd = new AttendanceDataWriter(con,pj.getId(),pt.getId(),e.getId());
-                        pd.markAttendance();
+                        adr = new AttendanceDataWriter(con,pj.getId(),pt.getId(),e.getId());
+                        adr.markAttendance();
                     }
                 }
             }

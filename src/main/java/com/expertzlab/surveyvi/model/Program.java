@@ -13,7 +13,7 @@ public class Program
         this.id = id;
     }
 
-    public void setid(String id){
+    public void setId(String id){
         this.id = Integer.parseInt(id);
     }
 

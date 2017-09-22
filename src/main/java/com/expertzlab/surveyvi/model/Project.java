@@ -13,6 +13,9 @@ public class Project
     public void setId(long id) {
         this.id = id;
     }
+    public void setId(String id){ if(id != null){ this.id =Long.parseLong(id);}
+    }
+
 
     public String getName() {
         return name;

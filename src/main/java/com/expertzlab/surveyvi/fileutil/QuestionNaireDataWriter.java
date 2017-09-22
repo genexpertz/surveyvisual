@@ -34,7 +34,7 @@ public class QuestionNaireDataWriter extends Thread {
             statement.setLong(1,((QuestionNaire)qn).getProgramId());
             statement.setString(2, String.valueOf(((QuestionNaire)qn).getQuestions()));
             statement.execute();
-            System.out.println("Executed successfully");
+            System.out.println("Questionnaire Executed successfully");
         }
         } catch (SQLException e) {
             e.printStackTrace();

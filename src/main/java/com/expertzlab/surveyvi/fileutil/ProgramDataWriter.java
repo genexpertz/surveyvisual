@@ -34,7 +34,7 @@ public class ProgramDataWriter extends Thread {
                 statement.setLong(1,((Program)pgm).getId());
                 statement.setString(2,((Program)pgm).getName());
                 statement.execute();
-                System.out.println("Executed successfully");
+                System.out.println("Program Executed successfully");
             }
         } catch (SQLException e) {
             e.printStackTrace();

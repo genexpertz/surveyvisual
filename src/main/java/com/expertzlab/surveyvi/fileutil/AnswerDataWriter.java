@@ -36,7 +36,7 @@ public class AnswerDataWriter extends Thread {
             statement.setLong(3,((Answer)pt).getQuestionId());
             statement.setLong(4,((Answer)pt).getOptionId());
             statement.execute();
-            System.out.println("Executed successfully");
+            System.out.println("Answer Executed successfully");
         }
         } catch (SQLException e) {
             e.printStackTrace();

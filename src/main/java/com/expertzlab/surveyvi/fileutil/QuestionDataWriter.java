@@ -38,7 +38,7 @@ public class QuestionDataWriter extends Thread {
             statement.setString(5,((Question)qus).getOption3());
             statement.setString(6,((Question)qus).getOption4());
             statement.execute();
-            System.out.println("Executed successfully");
+            System.out.println("Question Executed successfully");
         }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -26,8 +26,9 @@ public class ProgramDataSetter extends DataSetter{
             pgm = (Program) clazz.newInstance();
             for(int i = 0; i< hArray.length; i++) {
 
-                Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
-                m.invoke(pgm, rArray[i]);
+                    Method m = clazz.getMethod("set" + capitalizeFirstLetter(hArray[i]), String.class);
+                    m.invoke(pgm, rArray[i]);
+
             }
 
         } catch (IllegalAccessException e) {
