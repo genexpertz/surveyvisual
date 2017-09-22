@@ -49,7 +49,7 @@ public class AttendanceService {
                     while (pdr.hasNext()){
                         Participant pt = pdr.get();
 
-                    AttendanceDataWriter pd = new AttendanceDataWriter(con,e.getId(),pj.getId(),pt.getId());
+                    AttendanceDataWriter pd = new AttendanceDataWriter(con,pj.getId(),pt.getId(),e.getId());
                         pd.markAttendance();
                     }
                 }

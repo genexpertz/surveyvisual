@@ -25,15 +25,14 @@ public class CompanyDataSetter extends DataSetter{
         Company com =null;
         Class<?> loadedClass = null;
         try {
-            loadedClass = Class.forName(clazz.getName());
-            com = (Company) loadedClass.newInstance();
+            //loadedClass = Class.forName(clazz.getName());
+            com = (Company) clazz.newInstance();
             for(int i = 0; i< hArray.length; i++) {
 
                 Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
                 m.invoke(com, rArray[i]);
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+
         } catch (IllegalAccessException e) {
             System.out.println(e);
         } catch (InvocationTargetException e) {

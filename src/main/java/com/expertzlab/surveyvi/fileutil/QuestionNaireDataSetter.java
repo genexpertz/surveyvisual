@@ -23,15 +23,14 @@ class QuestionNaireDataSetter extends DataSetter{
         QuestionNaire qusnaire =null;
         Class<?> loadedClass = null;
         try {
-        loadedClass = Class.forName(clazz.getName());
-        qusnaire = (QuestionNaire) loadedClass.newInstance();
+        //loadedClass = Class.forName(clazz.getName());
+        qusnaire = (QuestionNaire) clazz.newInstance();
         for(int i = 0; i< hArray.length; i++) {
 
             Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
             m.invoke(qusnaire, rArray[i]);
         }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+
         } catch (IllegalAccessException e) {
             System.out.println(e);
         } catch (InvocationTargetException e) {

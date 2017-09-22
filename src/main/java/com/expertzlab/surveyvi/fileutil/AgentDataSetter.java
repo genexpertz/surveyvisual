@@ -23,15 +23,14 @@ public class AgentDataSetter extends DataSetter {
         Agent agt =null;
         Class<?> loadedClass = null;
         try {
-            loadedClass = Class.forName(clazz.getName());
-            agt = (Agent) loadedClass.newInstance();
+            //loadedClass = Class.forName(clazz.getName());
+            agt = (Agent) clazz.newInstance();
             for(int i = 0; i< hArray.length; i++) {
 
                 Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
                 m.invoke(agt, rArray[i]);
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+
         } catch (IllegalAccessException e) {
             System.out.println(e);
         } catch (InvocationTargetException e) {

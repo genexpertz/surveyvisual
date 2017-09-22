@@ -25,8 +25,8 @@ class QuestionDataSetter extends DataSetter{
         String record = null;
         Class<?> loadedClass = null;
         try {
-        loadedClass = Class.forName(clazz.getName());
-        qus = (Question) loadedClass.newInstance();
+        //loadedClass = Class.forName(clazz.getName());
+        qus = (Question) clazz.newInstance();
         int len =  rArray.length;
         for(int i = 0; i< len; i++) {
 
@@ -38,8 +38,7 @@ class QuestionDataSetter extends DataSetter{
 
 
         }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+
         } catch (IllegalAccessException e) {
             System.out.println(e);
         } catch (InvocationTargetException e) {
