@@ -39,6 +39,7 @@ public class ProjectRandomizer {
             Project p3 = new Project();
             p3.setId(i);
             p3.setName(p1.getName());
+            p3.setProgId(p1.getProgId());
             l1.add(p3);
         }
 
