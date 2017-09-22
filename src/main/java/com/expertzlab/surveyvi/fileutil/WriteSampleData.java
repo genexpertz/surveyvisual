@@ -1,6 +1,7 @@
 package com.expertzlab.surveyvi.fileutil;
 
 
+import com.expertzlab.surveyvi.genutil.DBConnectionManager;
 import com.expertzlab.surveyvi.model.Event;
 import com.expertzlab.surveyvi.model.Participant;
 import com.expertzlab.surveyvi.model.Program;
@@ -38,7 +39,7 @@ public class WriteSampleData {
 
    public WriteSampleData(Map<Class,List> map) throws SQLException {
 
-        this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/surveyvisual", "root", "pp");
+        this.con = DBConnectionManager.getConnection();
         this.map = map;
     }
 

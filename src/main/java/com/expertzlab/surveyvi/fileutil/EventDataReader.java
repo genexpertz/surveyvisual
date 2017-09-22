@@ -53,7 +53,7 @@ public class EventDataReader {
         String[] rArray = new String[10];
 
         prepareEventArray(rArray,res);
-        EventDataSetter eds = new EventDataSetter(Program.class,hArray,rArray);
+        EventDataSetter eds = new EventDataSetter(Event.class,hArray,rArray);
         Event p = eds.run();
         return p;
     }
