@@ -24,11 +24,10 @@ public class AgeDriver {
         Job job = new Job(conf);
         job.setJarByClass(AgeDriver.class);
         job.setMapperClass(AgeMap.class);
-        //job.setCombinerClass(AgeReducer.class);
+        job.setCombinerClass(AgeReducer.class);
         job.setReducerClass(AgeReducer.class);
         job.setMapOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
-
         FileInputFormat.setInputPaths(job,inp);
         FileOutputFormat.setOutputPath(job,out);
 

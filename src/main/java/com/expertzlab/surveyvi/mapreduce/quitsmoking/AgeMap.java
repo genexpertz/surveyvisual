@@ -24,12 +24,12 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
     @Override
     protected void setup(Context context){
         filename = ((FileSplit)context.getInputSplit()).getPath().toString();
-       // docId = new Text(filename);
+        //docId = new Text(filename);
     }
     @Override
     protected void map(LongWritable key, Text values,Context context) throws IOException, InterruptedException {
 
-        if(filename.contains("\\p\\")) {
+        if(filename.contains("\\participant\\")) {
             StringTokenizer iterator = new StringTokenizer(values.toString(), ",");
             pid = new Text(iterator.nextToken());
             iterator.nextToken();
