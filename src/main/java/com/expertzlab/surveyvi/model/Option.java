@@ -8,7 +8,6 @@ public class Option {
     long questionId;
     int weight;
 
-
     public long getId() { return id; }
 
     public void setId(long id) {

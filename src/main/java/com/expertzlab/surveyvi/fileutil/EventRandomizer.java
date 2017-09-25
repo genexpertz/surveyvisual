@@ -16,7 +16,7 @@ import java.util.Random;
 public class EventRandomizer {
     int pos1;
     int pos2;
-    int recordcount =50;
+    int recordcount =21;
     long lastId = 0;
 
     EventRandomizer(Connection con ) throws SQLException {
@@ -38,7 +38,7 @@ public class EventRandomizer {
             Event p2 = (Event) list.get(pos2);
             Event p3 = new Event();
             p3.setId(i);
-            p3.setEventName(p1.getEventName() + p2.getId());
+            p3.setEventName(p1.getEventName());
             p3.setPlace(p1.getPlace());
             p3.setDate(p1.getDate());
             p3.setProjectId(p1.getProjectId());

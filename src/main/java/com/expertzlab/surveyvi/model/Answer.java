@@ -6,6 +6,8 @@ public class Answer
     long participantId;
     long questionId;
     long optionId;
+    long eventId;
+    long progarmId;
 
     public long getParticipantId() {
         return participantId;
@@ -43,5 +45,21 @@ public class Answer
 
     public void setQuestionId(String questionId) {
         this.questionId = Integer.parseInt(questionId);
+    }
+
+    public long getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(long eventId) {
+        this.eventId = eventId;
+    }
+
+    public long getProgarmId() {
+        return progarmId;
+    }
+
+    public void setProgarmId(long progarmId) {
+        this.progarmId = progarmId;
     }
 }
