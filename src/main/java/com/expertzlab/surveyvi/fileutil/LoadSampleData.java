@@ -49,7 +49,7 @@ public class LoadSampleData {
        Option op = null;
        Attendance at = null;
        String record = null;
-       int count = 0;
+       int count = 1;
        while(( record = readData()) != null) {
 
            String[] rArray = record.split("\\|");

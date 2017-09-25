@@ -31,8 +31,7 @@ public class WriteSampleData {
 
    public WriteSampleData(Map<Class,List> map) throws SQLException {
 
-
-        this.con = DBConnectionManager.getConnection();
+       this.con = DBConnectionManager.getConnection();
         this.map = map;
     }
 
