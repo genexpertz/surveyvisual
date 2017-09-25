@@ -39,7 +39,7 @@ public class AnswerDataWriter extends Thread {
             System.out.println("Answer Executed successfully");
         }
         } catch (SQLException e) {
-            e.printStackTrace();
+            new RuntimeException("Answer Write failed",e);
         }
     }
 

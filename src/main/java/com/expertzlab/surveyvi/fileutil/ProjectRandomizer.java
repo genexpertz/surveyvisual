@@ -16,7 +16,7 @@ import java.util.Random;
 public class ProjectRandomizer {
     int pos1;
     int pos2;
-    int recordcount =10;
+    int recordcount =20;
     long lastId = 1;
 
     ProjectRandomizer(Connection con ) throws SQLException {
@@ -39,6 +39,7 @@ public class ProjectRandomizer {
             Project p3 = new Project();
             p3.setId(i);
             p3.setName(p1.getName());
+            p3.setProgId(p1.getProgId());
             l1.add(p3);
         }
 
