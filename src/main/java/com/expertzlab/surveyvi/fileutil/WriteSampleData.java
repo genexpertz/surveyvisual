@@ -2,13 +2,8 @@ package com.expertzlab.surveyvi.fileutil;
 
 
 import com.expertzlab.surveyvi.genutil.DBConnectionManager;
-import com.expertzlab.surveyvi.model.Event;
-import com.expertzlab.surveyvi.model.Participant;
-import com.expertzlab.surveyvi.model.Program;
-import com.expertzlab.surveyvi.model.Project;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
@@ -29,9 +24,6 @@ public class WriteSampleData {
     private static final String QUESTION = "com.expertzlab.surveyvi.model.Question";
     private static final String QUESTIONNAIRE = "com.expertzlab.surveyvi.model.Questionnaire";
     private static final String ANSWER = "com.expertzlab.surveyvi.model.Answer";
-    private static final String OPTION = "com.expertzlab.surveyvi.model.Option";
-    //sprivate static final String ATTENDANCE = "com.expertzlab.surveyvi.model.Attendance";
-
 
 
     Map<Class,List> map;
@@ -79,27 +71,16 @@ public class WriteSampleData {
             } else if (EVENT.equals(entry.getKey())) {
                 EventDataWriter evtdw = new EventDataWriter(con, entry.getValue());
                 evtdw.start();
-            } else if (OPTION.equals(entry.getKey())) {
-                OptionDataWriter opdw = new OptionDataWriter(con, entry.getValue());
-                opdw.start();
-            } else {
+            }
+            else {
                 AttendanceService attendanceService = new AttendanceService(con);
                 attendanceService.markAttendance();
-                //attendanceService.close();
             }
         }
 
+    }
 
-
-                //Use Event Reader
-
-                //Use Participant reader passing event id get attendedParticipant list
-
-               /* AttendanceDataWriter attdw = new AttendanceDataWriter(con,eid,proid,partid);
-                attdw.start();*/
-            }
-
-            }
+}
 
 
 

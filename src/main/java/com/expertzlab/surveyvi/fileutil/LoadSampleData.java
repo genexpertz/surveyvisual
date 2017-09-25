@@ -125,13 +125,7 @@ public class LoadSampleData {
                    arrayList.add(ans);
                    break;
                }
-               case "com.expertzlab.surveyvi.model.Option": {
-                   ds = new OptionDataSetter(clazz, harray, rArray);
-                   op = (Option) ds.run();
-                   op.setId(count);
-                   arrayList.add(op);
-                   break;
-               }
+
                case "com.expertzlab.surveyvi.model.Attendance": {
                    ds = new AttendanceDataSetter(clazz, harray, rArray);
                    at = (Attendance) ds.run();

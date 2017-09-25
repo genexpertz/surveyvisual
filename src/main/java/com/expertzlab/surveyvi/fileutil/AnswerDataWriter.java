@@ -29,7 +29,7 @@ public class AnswerDataWriter extends Thread {
             AnswerRandomizer pr = new AnswerRandomizer(con);
             list = pr.getRandomizedList(list);
         for(Object pt :list) {
-            System.out.println("In new thread");
+            System.out.println("In Answer thread");
             PreparedStatement statement = con.prepareStatement("insert into answer values(?,?,?,?) ");
             statement.setLong(1,((Answer)pt).getId());
             statement.setLong(2,((Answer)pt).getParticipantId());

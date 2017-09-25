@@ -35,14 +35,15 @@ public class AnswerRandomizer {
            pos1 = r.nextInt(list.size());
            Answer p1 = (Answer) list.get(pos1);
            pos2 = r.nextInt(list.size());
-
+           Answer p2 = (Answer) list.get(pos2);
            Answer p3 = new Answer();
-           p3.setId(i);
-           p3.setParticipantId(p1.getParticipantId());
-           p3.setQuestionId(p1.getQuestionId());
-           p3.setOptionId(p1.getOptionId());
-           l1.add(p3);
-       }
+               p3.setId(i);
+               p3.setParticipantId(p1.getParticipantId());
+               p3.setQuestionId(p1.getQuestionId());
+               p3.setOptionId(pos1 < pos2 ? p1.getOptionId() : p2.getOptionId());
+               l1.add(p3);
+
+           }
 
            return l1;
        }

@@ -25,15 +25,14 @@ public class AttendanceService {
     }
 
     public void close() throws SQLException{
-        //pgdr.close();
-        //prdr.close();
+
 
     }
 
     public void markAttendance() throws SQLException{
 
-         pgdr = new ProgramDataReader(con);
-         pgdr.getProgramList();
+        pgdr = new ProgramDataReader(con);
+        pgdr.getProgramList();
         while (pgdr.hasNext()) {
             Program p = pgdr.get();
             prdr = new ProjectDataReader(con, p.getId());
@@ -48,7 +47,6 @@ public class AttendanceService {
                     pdr.getParticipantList();
                     while (pdr.hasNext()){
                         Participant pt = pdr.get();
-
                         adr = new AttendanceDataWriter(con,pj.getId(),pt.getId(),e.getId());
                         adr.markAttendance();
                     }

@@ -22,9 +22,7 @@ class AnswerDataSetter extends DataSetter{
     }
     public Answer run() {
         Answer ans =null;
-        Class<?> loadedClass = null;
         try {
-        //loadedClass = Class.forName(clazz.getName());
         ans = (Answer) clazz.newInstance();
         for(int i = 0; i< rArray.length; i++) {
 

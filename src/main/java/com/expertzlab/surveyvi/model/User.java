@@ -40,6 +40,11 @@ public class User {
         this.age = age;
     }
 
+    public void setAge(String age) {
+        this.age = Integer.parseInt(age);
+    }
+
+
     public String getUsername() {
         return username;
     }

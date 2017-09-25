@@ -22,14 +22,9 @@ public class AnsweringService{
         this.con = con;
     }
 
-    Iterator eventitr;
-    Iterator participantitr;
-    Iterator questionitr;
-
     public void answerQuestion(String eventId, String particpantid){
 
         ProgramDataReader pgdr = new ProgramDataReader(con);
-
         while (pgdr.hasNext()){
             Program p = pgdr.get();
             ProjectDataReader prdr = new ProjectDataReader(con, p.getId());
