@@ -28,8 +28,7 @@ public class CompanyRandomizer {
     }
     public List getRandomizedList(List list) {
         List l1 = new ArrayList(recordcount);
-
-        for (long i = lastId; i <= recordcount; i++) {
+        for (long i = lastId+1; i <= recordcount; i++) {
 
             Random r = new Random();
             pos1 = r.nextInt(list.size());

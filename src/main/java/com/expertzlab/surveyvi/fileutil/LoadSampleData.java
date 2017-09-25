@@ -46,7 +46,7 @@ public class LoadSampleData {
        Question qus = null;
        QuestionNaire qusnaire = null;
        Answer ans = null;
-       Option op = null;
+       Options op = null;
        Attendance at = null;
        String record = null;
        int count = 1;

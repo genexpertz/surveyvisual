@@ -1,7 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Option;
-import com.expertzlab.surveyvi.model.QuestionNaire;
+import com.expertzlab.surveyvi.model.Options;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -19,12 +18,12 @@ public class OptionDataSetter extends DataSetter{
         this.hArray = hArray;
         this.rArray = rArray;
     }
-    public Option run() {
-        Option op =null;
+    public Options run() {
+        Options op =null;
         Class<?> loadedClass = null;
         try {
             //loadedClass = Class.forName(clazz.getName());
-            op = (Option) clazz.newInstance();
+            op = (Options) clazz.newInstance();
             for(int i = 0; i< hArray.length; i++) {
 
                 if (hArray[0].equals("id")) {

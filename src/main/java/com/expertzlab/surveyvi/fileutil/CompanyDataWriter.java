@@ -30,7 +30,7 @@ public class CompanyDataWriter extends Thread {
             list = cr.getRandomizedList(list);
             for(Object com :list) {
                 System.out.println("In Company thread");
-                PreparedStatement statement = con.prepareStatement("insert into company values(?,?,?) ");
+                PreparedStatement statement = con.prepareStatement("insert into company values(?,?,?)");
                 statement.setLong(1,((Company)com).getId());
                 statement.setString(2,((Company)com).getName());
                 statement.setString(3,((Company)com).getAddress());

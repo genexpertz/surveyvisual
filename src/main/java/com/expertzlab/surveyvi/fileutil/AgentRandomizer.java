@@ -38,7 +38,6 @@ public class AgentRandomizer {
             Agent p3 = new Agent();
             p3.setId(i);
             p3.setName(p1.getName() + " " + p2.getName() + pos1);
-           // p3.setProjectId(pos1 > pos2 ? p1.getProjectId() : p2.getProjectId());
             l1.add(p3);
         }
 
