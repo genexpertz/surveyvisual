@@ -30,7 +30,7 @@ public class ProjectDataWriter extends Thread{
             list = pr1.getRandomizedList(list);
             for(Object pro :list) {
                 System.out.println("In new thread");
-                PreparedStatement statement = con.prepareStatement("insert into project values(?,?,?)");
+                PreparedStatement statement = con.prepareStatement("insert into project values(?,?,?) ");
                 statement.setLong(1,((Project)pro).getId());
                 statement.setString(2,((Project)pro).getName());
                 statement.setString(3,((Project)pro).getProgId());
@@ -38,7 +38,7 @@ public class ProjectDataWriter extends Thread{
                 System.out.println("Project Executed successfully");
             }
         } catch (SQLException e) {
-            new RuntimeException("Project Write",e);
+            new RuntimeException("Write to Project Failed",e);
         }
     }
 }

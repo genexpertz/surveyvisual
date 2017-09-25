@@ -26,7 +26,7 @@ public class ProgramDataWriter extends Thread {
 
         try {
             ProgramRandomizer pr = new ProgramRandomizer(con);
-            list = pr.getRandomizedList(list);
+            //list = pr.getRandomizedList(list);
 
             for(Object pgm :list) {
                 System.out.println("In new thread");
