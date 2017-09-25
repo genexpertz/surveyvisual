@@ -97,7 +97,7 @@ public class LoadSampleData {
                    arrayList.add(com);
                    break;
                }
-               case "com.expertzlab.surveyvi.model.UserExt":{
+               case "com.expertzlab.surveyvi.model.User":{
                    ds = new UserDataSetter(clazz, harray, rArray);
                    usr = (User) ds.run();
                    usr.setId(count);

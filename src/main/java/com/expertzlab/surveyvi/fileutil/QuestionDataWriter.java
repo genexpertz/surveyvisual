@@ -41,7 +41,7 @@ public class QuestionDataWriter extends Thread {
             System.out.println("Question Executed successfully");
         }
         } catch (SQLException e) {
-            e.printStackTrace();
+            new RuntimeException("Question Write",e);
         }
     }
 

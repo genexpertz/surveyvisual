@@ -37,7 +37,6 @@ public class ProgramDataWriter extends Thread {
                 System.out.println("Program Executed successfully");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            new RuntimeException("Program Write",e);        }
     }
 }

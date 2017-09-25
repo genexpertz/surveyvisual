@@ -38,7 +38,7 @@ public class AgentDataWriter extends Thread{
                 System.out.println("Agent Executed successfully");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            new RuntimeException("Agent Write",e);
         }
     }
 }

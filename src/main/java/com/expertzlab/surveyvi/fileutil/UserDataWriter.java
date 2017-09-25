@@ -41,8 +41,7 @@ public class UserDataWriter extends Thread {
             System.out.println("User Executed successfully");
         }
         } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            new RuntimeException("User Write",e);        }
     }
 
 }

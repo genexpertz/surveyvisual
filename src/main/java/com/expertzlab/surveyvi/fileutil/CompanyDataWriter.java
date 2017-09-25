@@ -38,7 +38,7 @@ public class CompanyDataWriter extends Thread {
                 System.out.println("Company Executed successfully");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            new RuntimeException("Company Write",e);
         }
     }
 

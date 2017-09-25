@@ -16,8 +16,8 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
 
    // private Text docId ;
     String filename;
-    //private Text age;
-    private Text pid;
+
+    protected Text pid;
 
     public void setup() { setup();}
 
@@ -29,14 +29,19 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
     @Override
     protected void map(LongWritable key, Text values,Context context) throws IOException, InterruptedException {
 
-        if(filename.contains("\\participant\\")) {
-            StringTokenizer iterator = new StringTokenizer(values.toString(), ",");
+        System.out.println("File Name="+filename);
+        String value = values.toString();
+        System.out.println("Value string"+ value);
+
+        if(filename.contains("/participant")) {
+            StringTokenizer iterator = new StringTokenizer(value, ",");
             pid = new Text(iterator.nextToken());
             iterator.nextToken();
             int age = Integer.parseInt(iterator.nextToken());
             context.write(pid, new Text("age:"+age));
+            System.out.println("Wrote:"+pid+"age:"+age);
         }
-        else if (filename.contains("\\answer\\")){
+        else if (filename.contains("/answer")){
             StringTokenizer iterator = new StringTokenizer(values.toString(),",");
             iterator.nextToken();
             pid = new Text(iterator.nextToken());
@@ -45,6 +50,7 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
 
             if(qId == 1 && optId == 1  ){
                 context.write(pid,new Text("smoking:1"));
+                System.out.println("wrote:"+pid+",smoking:1");
             }
         }
     }

@@ -40,7 +40,7 @@ public class ParticipantDataWriter extends Thread {
                 System.out.println("Participant Executed successfully");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            new RuntimeException("Participant Write",e);
         }
     }
 
