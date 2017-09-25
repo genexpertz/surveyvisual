@@ -1,6 +1,5 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.QuestionNaire;
 import com.expertzlab.surveyvi.model.User;
 
 import java.lang.reflect.InvocationTargetException;
@@ -22,9 +21,7 @@ class UserDataSetter extends DataSetter{
     }
     public User run() {
         User usr =null;
-        Class<?> loadedClass = null;
         try {
-        //loadedClass = Class.forName(clazz.getName());
         usr = (User) clazz.newInstance();
         for(int i = 0; i< hArray.length; i++) {
 

@@ -1,7 +1,7 @@
 package com.expertzlab.surveyvi.fileutil;
 
 
-import com.expertzlab.surveyvi.model.Option;
+import com.expertzlab.surveyvi.model.Options;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -32,13 +32,13 @@ public class OptionDataWriter extends Thread {
             for(Object op :list) {
                 System.out.println("In new thread");
                 PreparedStatement statement = con.prepareStatement("insert into options values(?,?,?) ");
-                statement.setLong(1,((Option)op).getId());
-                statement.setLong(2,((Option)op).getQuestionId());
-                statement.setInt(3,((Option)op).getWeight());
+                statement.setLong(1,((Options)op).getId());
+                statement.setLong(2,((Options)op).getQuestionId());
+                statement.setInt(3,((Options)op).getWeight());
                 statement.execute();
                 System.out.println("Executed successfully");
             }
         } catch (SQLException e) {
-            new RuntimeException("Option Write",e);        }
+            new RuntimeException("Options Write",e);        }
     }
 }

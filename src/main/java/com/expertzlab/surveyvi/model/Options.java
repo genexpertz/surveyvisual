@@ -3,11 +3,10 @@ package com.expertzlab.surveyvi.model;
 /**
  * Created by preethup on 6/9/17.
  */
-public class Option {
+public class Options {
     long id;
     long questionId;
     int weight;
-
 
     public long getId() { return id; }
 
@@ -33,6 +32,5 @@ public class Option {
     public void setWeight(int weight) {
         this.weight = weight;
     }
-
 
 }

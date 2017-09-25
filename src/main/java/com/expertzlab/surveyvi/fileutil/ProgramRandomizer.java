@@ -35,7 +35,6 @@ public class ProgramRandomizer {
             pos1 = r.nextInt(list.size());
             Program p1 = (Program) list.get(pos1);
             pos2 = r.nextInt(list.size());
-            Program p2 = (Program) list.get(pos2);
             Program p3 = new Program();
             p3.setId(i);
             p3.setName(p1.getName());

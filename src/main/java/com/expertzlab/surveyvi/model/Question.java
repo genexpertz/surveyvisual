@@ -3,10 +3,10 @@ package com.expertzlab.surveyvi.model;
 public class Question {
     int id;
     String description;
-    Option option1;
-    Option option2;
-    Option option3;
-    Option option4;
+    Options option1;
+    Options option2;
+    Options option3;
+    Options option4;
     String record = null;
     private long questionId;
 
@@ -51,7 +51,6 @@ public class Question {
         this.option4 = split(option);
     }
 
-
     public String getDescription() {
         return description;
     }
@@ -60,9 +59,9 @@ public class Question {
         this.description = description;
     }
 
-    public Option split(String op) {
+    public Options split(String op) {
 
-        Option option = new Option();
+        Options option = new Options();
         String[] rArray = op.split(",");
         option.setQuestionId(id);
         String[] ids = rArray[0].split(":");

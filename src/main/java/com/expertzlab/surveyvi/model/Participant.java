@@ -38,6 +38,7 @@ public class Participant
     public void setAge(int age) {
         this.age = age;
     }
+
     public void setAge(String age) {
         if(age!=null) {
             this.age = Integer.parseInt(age);

@@ -20,9 +20,7 @@ public class ProgramDataSetter extends DataSetter{
     }
     public Program run() {
         Program pgm =null;
-        Class<?> loadedClass = null;
         try {
-            //loadedClass = Class.forName(clazz.getName());
             pgm = (Program) clazz.newInstance();
             for(int i = 0; i< hArray.length; i++) {
 
