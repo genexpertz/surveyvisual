@@ -49,7 +49,7 @@ public class ParticipantDataReader {
         System.out.println("Executed successfully");
     }
 
-    public Participant get(){
+    public Participant get() throws SQLException {
         String[] hArray = prepareParticipantHeaderArray();
         String[] rArray = new String[10];
 
@@ -60,7 +60,14 @@ public class ParticipantDataReader {
     }
 
 
-    private void prepareParticipantArray(String[] rArray, ResultSet res) {
+    private void prepareParticipantArray(String[] rArray, ResultSet res) throws SQLException {
+        rArray[0] = String.valueOf(res.getInt("id"));
+        rArray[1] = res.getString("name");
+        rArray[2] = String.valueOf( res.getInt("age"));
+        rArray[3] = res.getString("gender");
+        rArray[4] = res.getString("address");
+
+
     }
 
     private String[] prepareParticipantHeaderArray(){

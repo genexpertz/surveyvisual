@@ -1,7 +1,10 @@
 package com.expertzlab.surveyvi.fileutil;
 
+import com.expertzlab.surveyvi.genutil.DBConnectionManager;
+
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -11,7 +14,7 @@ import java.util.*;
 public class DataPopulation {
     static Map map = new LinkedHashMap();
     static File file;
-    public static void main(String[] args) throws IOException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, SQLException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, SQLException, InterruptedException {
         file = new File("classtype-datafile-mapping.properties");
         Scanner s = new Scanner(file);
         while (s.hasNext())
@@ -30,5 +33,16 @@ public class DataPopulation {
         WriteSampleData wsd = new WriteSampleData(map);
         wsd.writeData();
 
+        //while(true) {
+        //    System.out.println(Thread.activeCount());
+        //    Thread.sleep(1000*30);
+        //    if(Thread.activeCount()<2){
+        //        break;
+        //}
+        //  }
+
+        Connection con = DBConnectionManager.getConnection();
+        AttendanceService attendanceService = new AttendanceService(con);
+        attendanceService.markAttendance();
     }
 }

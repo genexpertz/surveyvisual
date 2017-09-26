@@ -71,11 +71,9 @@ public class WriteSampleData {
                 EventDataWriter evtdw = new EventDataWriter(con, entry.getValue());
                 evtdw.start();
             }
-            else {
-                AttendanceService attendanceService = new AttendanceService(con);
-                attendanceService.markAttendance();
-            }
+
         }
+        //con.commit();
 
     }
 

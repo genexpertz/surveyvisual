@@ -24,9 +24,9 @@ class QuestionDataSetter extends DataSetter{
         Question qus =null;
         String record = null;
         Class<?> loadedClass = null;
-        try {qus
+        try {
         //loadedClass = Class.forName(clazz.getName());
-         = (Question) clazz.newInstance();
+        qus = (Question) clazz.newInstance();
         int len =  rArray.length;
         for(int i = 0; i< len; i++) {
 
