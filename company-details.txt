@@ -3,3 +3,5 @@ ascend|eranakulam
 hyber|bangalur
 dell|tvm
 hp|chennai
+asus|bangalur
+sony|tvm

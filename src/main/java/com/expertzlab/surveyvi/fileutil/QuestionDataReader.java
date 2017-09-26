@@ -65,7 +65,7 @@ public class QuestionDataReader {
     }
 
     private String[] prepareQuestionHeaderArray(){
-        String[] hArray = new String[5];
+        String[] hArray = new String[6];
         hArray[0]= "id";
         hArray[1]="description";
         hArray[2]="option1";

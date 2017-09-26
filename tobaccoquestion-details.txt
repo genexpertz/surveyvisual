@@ -1,3 +1,2 @@
 description|option1|option2|option3|option4
 Are you a smoker?|1:yes,100|2:no,0
-
