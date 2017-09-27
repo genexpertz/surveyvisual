@@ -1,8 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Event;
-import com.expertzlab.surveyvi.model.Option;
-import com.expertzlab.surveyvi.model.Question;
+import com.expertzlab.surveyvi.model.Options;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -35,10 +33,10 @@ public class OptionRandomizer {
 
             Random r = new Random();
             pos1 = r.nextInt(list.size());
-            Option p1 = (Option) list.get(pos1);
+            Options p1 = (Options) list.get(pos1);
             pos2 = r.nextInt(list.size());
-            Option p2 = (Option) list.get(pos2);
-            Option p3 = new Option();
+            Options p2 = (Options) list.get(pos2);
+            Options p3 = new Options();
             p3.setId(i);
             p3.setQuestionId(p2.getQuestionId());
             p3.setWeight(p1.getWeight());

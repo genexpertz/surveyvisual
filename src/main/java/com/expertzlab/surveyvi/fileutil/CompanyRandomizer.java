@@ -16,8 +16,8 @@ import java.util.Random;
 public class CompanyRandomizer {
     int pos1;
     int pos2;
-    int recordcount =10;
-    long lastId = 0;
+    int recordcount =20;
+    long lastId = 1;
 
     public CompanyRandomizer(Connection con ) throws SQLException {
         Statement stmt = con.createStatement();
@@ -28,7 +28,6 @@ public class CompanyRandomizer {
     }
     public List getRandomizedList(List list) {
         List l1 = new ArrayList(recordcount);
-
         for (long i = lastId+1; i <= recordcount; i++) {
 
             Random r = new Random();

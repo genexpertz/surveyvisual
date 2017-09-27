@@ -1,6 +1,5 @@
 package com.expertzlab.surveyvi.model;
 
-import java.util.Date;
 
 public class Event
 {
@@ -29,6 +28,7 @@ public class Event
     public void setEventName(String eventName) {
         this.eventName = eventName;
     }
+
     public void setName(String eventName) {
         this.eventName = eventName;
     }
@@ -48,7 +48,6 @@ public class Event
     public void setDate(String date) {
         this.date = date;
     }
-
 
     public String getProjectId() {
         return String.valueOf(projectId);

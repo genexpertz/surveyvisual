@@ -66,23 +66,7 @@ public class ProgramDataReader {
         hArray[1]="name";
         return  hArray;
     }
-/*
-    public List getAllProgram(Program id) throws SQLException {
-        List<Program> list1 = new ArrayList();
-        PreparedStatement statement = con.prepareStatement("select * from program");
-        ResultSet res1 = statement.executeQuery();
-        //Iterator itr =res1.Iterator();
-        Program pt = null;
-        while (res1.next()){
-            pt = new Program();
-            pt.setId(res1.getLong("id"));
-            pt.setName(res1.getString("name"));
-            list1.add(pt);
-        }
-        System.out.println("Executed successfully");
-        return list1;
-    }
-*/
+
     public static Iterator iterator() {
         return null;
     }

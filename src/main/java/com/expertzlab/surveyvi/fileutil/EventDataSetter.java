@@ -1,7 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Event;
-import com.expertzlab.surveyvi.model.QuestionNaire;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -22,9 +21,7 @@ class EventDataSetter extends DataSetter{
     }
     public Event run() {
         Event evt =null;
-        Class<?> loadedClass = null;
         try {
-        //loadedClass = Class.forName(clazz.getName());
         evt = (Event) clazz.newInstance();
         for(int i = 0; i< hArray.length; i++) {
 

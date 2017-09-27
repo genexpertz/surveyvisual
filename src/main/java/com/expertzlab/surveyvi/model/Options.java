@@ -3,11 +3,10 @@ package com.expertzlab.surveyvi.model;
 /**
  * Created by preethup on 6/9/17.
  */
-public class Option {
+public class Options {
     long id;
     long questionId;
     int weight;
-
 
     public long getId() { return id; }
 
@@ -34,5 +33,8 @@ public class Option {
         this.weight = weight;
     }
 
+    public String toString(){
+        return id+","+weight+","+questionId;
+    }
 
 }

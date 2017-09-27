@@ -1,7 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Event;
-import com.expertzlab.surveyvi.model.Program;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -30,7 +29,7 @@ public class EventDataWriter extends Thread {
             list = er.getRandomizedList(list);
 
             for(Object evt :list) {
-                System.out.println("In new thread");
+                System.out.println("In Event thread");
                 PreparedStatement statement = con.prepareStatement("insert into event values(?,?,?,?,?,?) ");
                 statement.setLong(1,((Event)evt).getId());
                 statement.setString(2,((Event)evt).getEventName());

@@ -29,8 +29,8 @@ public class CompanyDataWriter extends Thread {
             CompanyRandomizer cr = new CompanyRandomizer(con);
             list = cr.getRandomizedList(list);
             for(Object com :list) {
-                System.out.println("In new thread");
-                PreparedStatement statement = con.prepareStatement("insert into company values(?,?,?) ");
+                System.out.println("In Company thread");
+                PreparedStatement statement = con.prepareStatement("insert into company values(?,?,?)");
                 statement.setLong(1,((Company)com).getId());
                 statement.setString(2,((Company)com).getName());
                 statement.setString(3,((Company)com).getAddress());

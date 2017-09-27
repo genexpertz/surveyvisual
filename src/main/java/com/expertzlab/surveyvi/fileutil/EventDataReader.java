@@ -1,7 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Event;
-import com.expertzlab.surveyvi.model.Program;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -72,26 +71,7 @@ public class EventDataReader {
         return  hArray;
     }
 
-    /*public List getAllEvent(Program id) throws SQLException {
-        List<Event> list1 = new ArrayList();
-        PreparedStatement statement = con.prepareStatement("select * from program");
-        ResultSet res1 = statement.executeQuery();
-        //Iterator itr =res1.Iterator();
-        Event pt = null;
-        while (res1.next()){
-            pt = new Event();
-            pt.setId(res1.getLong("id"));
-            pt.setEventName(res1.getString("name"));
-            pt.setPlace(res1.getString("place"));
-            pt.setDate(res1.getString("date"));
-            pt.setProjectId(res1.getString("projectId"));
-            pt.setAgentId(res1.getString("agentId"));
-            list1.add(pt);
-        }
-        System.out.println("Executed successfully");
-        return list1;
-    }
-*/
+
     public static Iterator iterator() {
         return null;
     }

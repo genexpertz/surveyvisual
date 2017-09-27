@@ -7,6 +7,7 @@ import com.expertzlab.surveyvi.model.Program;
 import com.expertzlab.surveyvi.model.Project;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Iterator;
 
 
@@ -22,14 +23,9 @@ public class AnsweringService{
         this.con = con;
     }
 
-    Iterator eventitr;
-    Iterator participantitr;
-    Iterator questionitr;
-
-    public void answerQuestion(String eventId, String particpantid){
+    public void answerQuestion(String eventId, String particpantid) throws SQLException {
 
         ProgramDataReader pgdr = new ProgramDataReader(con);
-
         while (pgdr.hasNext()){
             Program p = pgdr.get();
             ProjectDataReader prdr = new ProjectDataReader(con, p.getId());

@@ -14,7 +14,7 @@ public class Program
     }
 
     public void setId(String id){
-        this.id = Integer.parseInt(id);
+        this.id = Long.parseLong(id);
     }
 
     public String getName() {

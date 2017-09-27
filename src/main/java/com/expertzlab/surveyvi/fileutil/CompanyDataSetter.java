@@ -23,9 +23,7 @@ public class CompanyDataSetter extends DataSetter{
     }
     public Company run() {
         Company com =null;
-        Class<?> loadedClass = null;
         try {
-            //loadedClass = Class.forName(clazz.getName());
             com = (Company) clazz.newInstance();
             for(int i = 0; i< hArray.length; i++) {
 
