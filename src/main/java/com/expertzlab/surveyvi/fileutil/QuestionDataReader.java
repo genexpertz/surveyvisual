@@ -36,13 +36,9 @@ public class QuestionDataReader {
 
         this.con = con;
     }
-    public List getQuestionList() throws SQLException {
+    public void getQuestionList() throws SQLException {
         PreparedStatement statement = con.prepareStatement("select * from question");
         res = statement.executeQuery();
-        List list = new ArrayList();
-        list.add(res);
-
-        return list;
     }
 
     public void close() throws SQLException{
@@ -50,22 +46,28 @@ public class QuestionDataReader {
         System.out.println("Executed successfully");
     }
 
-    public Event get(){
+    public Question get() throws SQLException {
         String[] hArray = prepareQuestionHeaderArray();
-        String[] rArray = new String[10];
+        String[] rArray = new String[6];
 
         prepareQuestionArray(rArray,res);
-        EventDataSetter eds = new EventDataSetter(Participant.class,hArray,rArray);
-        Event p = eds.run();
-        return p;
+        QuestionDataSetter qds = new QuestionDataSetter(Question.class,hArray,rArray);
+        Question q = qds.run();
+        return q;
     }
 
 
-    private void prepareQuestionArray(String[] rArray, ResultSet res) {
+    private void prepareQuestionArray(String[] rArray, ResultSet res) throws SQLException {
+        rArray[0] = String.valueOf(res.getInt(1));
+        rArray[1] = res.getString(2);
+        rArray[2] = res.getString(3);
+        rArray[3] = res.getString(4);
+        rArray[4] = res.getString(5);
+        rArray[5] = res.getString(6);
     }
 
     private String[] prepareQuestionHeaderArray(){
-        String[] hArray = new String[5];
+        String[] hArray = new String[6];
         hArray[0]= "id";
         hArray[1]="description";
         hArray[2]="option1";

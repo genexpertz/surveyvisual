@@ -16,7 +16,7 @@ import java.util.Random;
 public class QuestionRandomizer {
     int pos1;
     int pos2;
-    int recordcount =16;
+    int recordcount =10;
     long lastId = 0;
 
     public QuestionRandomizer(Connection con ) throws SQLException {
@@ -26,7 +26,7 @@ public class QuestionRandomizer {
             lastId = res.getLong(1);
         }
     }
-   public List getRandomizedList(List list) {
+   public List<Question> getRandomizedList(List list) {
        List l1 = new ArrayList(recordcount);
 
        for (long i = lastId+1; i <= recordcount; i++) {
@@ -41,7 +41,10 @@ public class QuestionRandomizer {
            p3.setDescription(p1.getDescription());
            p3.setOption1(p1.getOption1());
            p3.setOption2(p1.getOption2());
+
+           if(p1.getOption3() != null)
            p3.setOption3(p1.getOption3());
+           if(p1.getOption4() != null)
            p3.setOption4(p1.getOption4());
            l1.add(p3);
        }

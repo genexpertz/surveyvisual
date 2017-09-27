@@ -33,4 +33,8 @@ public class Options {
         this.weight = weight;
     }
 
+    public String toString(){
+        return id+","+weight+","+questionId;
+    }
+
 }

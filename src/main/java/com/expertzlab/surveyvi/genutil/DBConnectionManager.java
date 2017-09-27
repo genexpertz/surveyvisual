@@ -11,5 +11,6 @@ public class DBConnectionManager {
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection("jdbc:mysql://localhost:3306/surveyvisual", "root", "AvinRaja001");
+
     }
 }

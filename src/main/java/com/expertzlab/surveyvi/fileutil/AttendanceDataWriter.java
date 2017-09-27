@@ -1,13 +1,9 @@
 package com.expertzlab.surveyvi.fileutil;
 
 
-import com.expertzlab.surveyvi.model.*;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -15,6 +11,7 @@ import java.util.Random;
  */
 public class AttendanceDataWriter extends Thread {
 
+<<<<<<< HEAD
 //    Connection con;
 //    long proid;
 //    long partid;
@@ -25,10 +22,23 @@ public class AttendanceDataWriter extends Thread {
 //        this.eid = eid;
 //        this.proid = proid;
 //        this.partid = partid;
+=======
+    Connection con;
+    long projId;
+    long partcipId;
+    long eid;
+
+    public AttendanceDataWriter(Connection con, long projid, long  partcId, long evtId) {
+        this.con = con;
+        this.eid = evtId;
+        this.projId = projid;
+        this.partcipId = partcId;
+>>>>>>> 5a568a4a3e0899184f6a34a2dd0b12b1d6436894
 
     }
 
 
+<<<<<<< HEAD
 //        public void markAttendance () throws SQLException{
 //
 //            PreparedStatement statement = con.prepareStatement("insert into attendance(participantId," +
@@ -53,3 +63,30 @@ public class AttendanceDataWriter extends Thread {
 //
 //        }
 //    }
+=======
+        public void markAttendance () throws SQLException{
+
+            PreparedStatement statement = con.prepareStatement("insert into attendance(participantId," +
+                    "eventId, attendance, projectId) values(?,?,?,?) ");
+
+            String attendanceStataus = null;
+            Random r = new Random();
+            int pos1 = r.nextInt(10);
+            int pos2 = r.nextInt(10);
+            if (pos1>pos2) {
+                attendanceStataus = "yes";
+            }
+            else {
+                attendanceStataus = "no";
+            }
+            statement.setLong(1, partcipId);
+            statement.setLong(2,eid);
+            statement.setString(3,attendanceStataus);
+            statement.setLong(4, projId);
+            statement.execute();
+            System.out.println("Attendance Executed successfully for: partcipId:"+ partcipId +
+                    ",attendance status:"+attendanceStataus);
+
+        }
+    }
+>>>>>>> 5a568a4a3e0899184f6a34a2dd0b12b1d6436894

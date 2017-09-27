@@ -111,13 +111,13 @@ public class LoadSampleData {
                    arrayList.add(qus);
                    break;
                }
-               case "com.expertzlab.surveyvi.model.QuestionNaire":{
+               /*case "com.expertzlab.surveyvi.model.QuestionNaire":{
                    ds = new QuestionNaireDataSetter(clazz, harray, rArray);
                    qusnaire = (QuestionNaire) ds.run();
                    qusnaire.setId((long) count);
                    arrayList.add(qusnaire);
                    break;
-               }
+               }*/
                case "com.expertzlab.surveyvi.model.Answer":{
                    ds = new AnswerDataSetter(clazz, harray, rArray);
                    ans = (Answer) ds.run();
