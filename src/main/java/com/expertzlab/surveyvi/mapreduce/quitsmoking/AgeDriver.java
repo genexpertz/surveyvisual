@@ -7,9 +7,7 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-/**
- * Created by varsha on 9/21/17.
- */
+
 public class AgeDriver {
     public static void main(String[] args) throws Exception {
         AgeDriver AgeDriver = new AgeDriver();

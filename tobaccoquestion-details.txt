@@ -1,5 +1,9 @@
 description|option1|option2|option3|option4
 Are you a smoker?|1:yes,100|2:no,0
+<<<<<<< HEAD
+=======
+Do you know the consequences of smoking?|1:yes,100|2:no,0
+>>>>>>> 5a568a4a3e0899184f6a34a2dd0b12b1d6436894
 How many cigarettes do you usually smoke per day?|1:0-4,25|2:5-8,25|3:9-13,25|4:more than 13,25
 Do you smoke at work?|1:yes,100|2:no,0
 How many people in your household use tobacco?|1:0,25|2:1,25|3:2,25|4:3 or more,25
@@ -17,4 +21,8 @@ How did you learn about this class?|1:Friend,25|2:Internet,25|3:Doctor,25|4:Othe
 What Kind of tobacco products do you use?|1:Cigarettes,50|2:Smokeless Tobacco,50
 How satisfied are you with how supportive staff have been?|1:Unsatisfied,50|2:Satisfied,50
 Have you smoked since your last appointment with the service?|1:not a single puff,25|2:just a few puffs,25|3:1-5 cigarettes,25|4:More than 5 cigarettes,25
+<<<<<<< HEAD
 Do you want to quit using tobacco?|1:Yes,100|2:No,0
+=======
+Do you want to quit using tobacco?|1:Yes,100|2:No,0
+>>>>>>> 5a568a4a3e0899184f6a34a2dd0b12b1d6436894

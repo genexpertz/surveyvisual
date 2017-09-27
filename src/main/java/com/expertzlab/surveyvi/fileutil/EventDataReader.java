@@ -47,9 +47,9 @@ public class EventDataReader {
         System.out.println("Executed successfully");
     }
 
-    public Event get(){
+    public Event get() throws SQLException {
         String[] hArray = prepareEventHeaderArray();
-        String[] rArray = new String[10];
+        String[] rArray = new String[6];
 
         prepareEventArray(rArray,res);
         EventDataSetter eds = new EventDataSetter(Event.class,hArray,rArray);
@@ -57,7 +57,13 @@ public class EventDataReader {
         return p;
     }
 
-    private void prepareEventArray(String[] rArray, ResultSet res) {
+    private void prepareEventArray(String[] rArray, ResultSet res) throws SQLException {
+        rArray[0] = String.valueOf(res.getInt(1));
+        rArray[1] = res.getString(2);
+        rArray[2] = res.getString(3);
+        rArray[3]  = res.getString(4);
+        rArray[4] = String.valueOf(res.getInt(5));
+        rArray[5] = String.valueOf(res.getInt(6));
     }
 
     private String[] prepareEventHeaderArray(){

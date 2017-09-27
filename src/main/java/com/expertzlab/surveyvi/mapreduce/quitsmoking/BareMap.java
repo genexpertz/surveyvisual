@@ -11,9 +11,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
 
-/**
- * Created by varsha on 9/21/17.
- */
+
 public class BareMap extends Mapper<LongWritable,Text,Text,Text> {
 
 

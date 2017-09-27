@@ -1,7 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
 import com.expertzlab.surveyvi.model.Question;
-import com.expertzlab.surveyvi.model.QuestionNaire;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -25,7 +24,8 @@ class QuestionDataSetter extends DataSetter{
         String record = null;
         Class<?> loadedClass = null;
         try {
-            qus = (Question) clazz.newInstance();
+
+        qus = (Question) clazz.newInstance();
         int len =  rArray.length;
         for(int i = 0; i< len; i++) {
 

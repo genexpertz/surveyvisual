@@ -9,9 +9,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
-/**
- * Created by varsha on 9/21/17.
- */
+
 public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
 
    // private Text docId ;

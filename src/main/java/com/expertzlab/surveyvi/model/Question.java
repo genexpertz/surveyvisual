@@ -1,5 +1,7 @@
 package com.expertzlab.surveyvi.model;
 
+import javax.swing.text.html.Option;
+
 public class Question {
     int id;
     String description;
@@ -10,7 +12,9 @@ public class Question {
     String record = null;
     private long questionId;
 
-    public int getId() { return id; }
+    public int getId() {
+        return id;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -21,30 +25,72 @@ public class Question {
     }
 
 
-    public String getOption1() {
-        return String.valueOf(option1); }
+    public Options getOption1() {
+        return option1;
+    }
+
+    public String getOption1AsString() {
+        if(option1 == null) return null;
+        return option1.toString();
+    }
+
+
+    public void setOption1(Options option) {
+        this.option1 = option;
+    }
 
     public void setOption1(String option) {
         this.option1 = split(option);
     }
 
+    public Options getOption2() {
+        return option2;
+    }
 
-    public String getOption2() {
-        return String.valueOf(option2); }
+    public String getOption2AsString() {
+        if(option2 == null) return null;
+        return option2.toString();
+    }
+
+    public void setOption2(Options option) {
+        this.option2 = option;
+    }
 
     public void setOption2(String option) {
         this.option2 = split(option);
     }
 
-    public String getOption3() {
-        return String.valueOf(option3); }
+    public Options getOption3() {
+        return option3;
+    }
+
+    public String getOption3AsString() {
+
+        if(option3 == null) return null;
+        return option3.toString();
+    }
+
+    public void setOption3(Options option) {
+        this.option3 = option;
+    }
 
     public void setOption3(String option) {
         this.option3 = split(option);
     }
 
-    public String getOption4() {
-        return String.valueOf(option4);
+    public Options getOption4() {
+        return option4;
+    }
+
+    public String getOption4AsString() {
+
+        if(option4 == null) return null;
+        return option4.toString();
+    }
+
+    public void setOption4(Options option) {
+
+        this.option4 = option;
     }
 
     public void setOption4(String option) {
