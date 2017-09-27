@@ -7,7 +7,7 @@ public class Participant
     int age;
     String gender;
     String address;
-    int projectId;
+
 
 
     public long getId() {

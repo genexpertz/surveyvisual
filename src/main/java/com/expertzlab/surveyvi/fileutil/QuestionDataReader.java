@@ -50,18 +50,26 @@ public class QuestionDataReader {
         System.out.println("Executed successfully");
     }
 
-    public Event get(){
+    public Question get() throws SQLException {
         String[] hArray = prepareQuestionHeaderArray();
         String[] rArray = new String[10];
 
         prepareQuestionArray(rArray,res);
-        EventDataSetter eds = new EventDataSetter(Participant.class,hArray,rArray);
-        Event p = eds.run();
+        QuestionDataSetter qus = new QuestionDataSetter(Question.class,hArray,rArray);
+        Question p = qus.run();
         return p;
     }
 
 
-    private void prepareQuestionArray(String[] rArray, ResultSet res) {
+    private void prepareQuestionArray(String[] rArray, ResultSet res) throws SQLException {
+
+        rArray[0] = String.valueOf(res.getInt("id"));
+        rArray[1] = String.valueOf(res.getString("description"));
+        rArray[2] = String.valueOf(res.getInt("option1"));
+        rArray[3] = String.valueOf(res.getInt("option2"));
+        rArray[4] = String.valueOf(res.getInt("option3"));
+        rArray[5] = String.valueOf(res.getInt("option4"));
+
     }
 
     private String[] prepareQuestionHeaderArray(){
