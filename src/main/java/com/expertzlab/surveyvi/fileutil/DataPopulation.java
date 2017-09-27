@@ -21,6 +21,9 @@ public class DataPopulation {
         {
             String line = s.nextLine();
             String[] strArray = line.split("=");
+            if(strArray[0].startsWith("#")){
+                continue;
+            }
             Class clazz = Class.forName(strArray[0]);
             if(!clazz.getName().equals("com.expertzlab.surveyvi.model.Attendance")) {
                 LoadSampleData ld = new LoadSampleData(strArray[1], clazz);
@@ -32,17 +35,12 @@ public class DataPopulation {
         }
         WriteSampleData wsd = new WriteSampleData(map);
         wsd.writeData();
-
-        //while(true) {
-        //    System.out.println(Thread.activeCount());
-        //    Thread.sleep(1000*30);
-        //    if(Thread.activeCount()<2){
-        //        break;
-        //}
-        //  }
-
         Connection con = DBConnectionManager.getConnection();
-        AttendanceService attendanceService = new AttendanceService(con);
-        attendanceService.markAttendance();
+        //AttendanceService attendanceService = new AttendanceService(con);
+        //attendanceService.markAttendance();
+
+        AnsweringService answeringService = new AnsweringService(con);
+        answeringService.answerQuestions();
+
     }
 }

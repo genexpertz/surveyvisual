@@ -16,11 +16,9 @@ public class QuestionDataWriter extends Thread {
     List<Question> list;
 
 
-    public QuestionDataWriter(Connection con, List<Question> list)
-    {
+    public QuestionDataWriter(Connection con, List<Question> list) {
         this.con = con;
         this.list = list;
-
     }
     public void run()
     {

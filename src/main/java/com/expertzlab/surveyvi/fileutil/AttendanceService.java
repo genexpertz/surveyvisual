@@ -44,7 +44,7 @@ public class AttendanceService {
                 while (edr.hasNext()) {
                     Event e = edr.get();
                     pdr = new ParticipantDataReader(con, e.id, "ALL");
-                    pdr.getParticipantList();
+                    pdr.loadParticipantList();
                     while (pdr.hasNext()){
                         Participant pt = pdr.get();
                         adr = new AttendanceDataWriter(con,pj.getId(),pt.getId(),e.getId());

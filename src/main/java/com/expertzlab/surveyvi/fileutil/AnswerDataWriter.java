@@ -13,35 +13,28 @@ import java.util.List;
 public class AnswerDataWriter extends Thread {
 
     Connection con;
-    List<Object> list;
 
 
-    public AnswerDataWriter(Connection con, List<Object> list)
-    {
+    public AnswerDataWriter(Connection con) {
         this.con = con;
-        this.list = list;
-
     }
-    public void run()
-    {
+
+    public void execute(Answer answer) {
 
         try {
-            AnswerRandomizer pr = new AnswerRandomizer(con);
-            list = pr.getRandomizedList(list);
-        for(Object pt :list) {
-            System.out.println("In Answer thread");
-            PreparedStatement statement = con.prepareStatement("insert into answer values(?,?,?,?,?,?) ");
-            statement.setLong(1,((Answer)pt).getId());
-            statement.setLong(2,((Answer)pt).getParticipantId());
-            statement.setLong(3,((Answer)pt).getQuestionId());
-            statement.setLong(4,((Answer)pt).getOptionId());
-            statement.setLong(5,((Answer)pt).getEventId());
-            statement.setLong(6,((Answer)pt).getProgarmId());
-            statement.execute();
-            System.out.println("Answer Executed successfully");
-        }
+                System.out.println("In Answer thread");
+                PreparedStatement statement = con.prepareStatement("insert into answer values(?,?,?,?,?,?) ");
+                statement.setLong(1, ((Answer) answer).getId());
+                statement.setLong(2, ((Answer) answer).getParticipantId());
+                statement.setLong(3, ((Answer) answer).getQuestionId());
+                statement.setLong(4, ((Answer) answer).getOptionId());
+                statement.setLong(5, ((Answer) answer).getEventId());
+                statement.setLong(6, ((Answer) answer).getProgarmId());
+                statement.execute();
+                System.out.println("Answer Executed successfully");
+
         } catch (SQLException e) {
-            new RuntimeException("Answer Write failed",e);
+            new RuntimeException("Answer Write failed", e);
         }
     }
 

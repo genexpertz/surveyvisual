@@ -33,13 +33,9 @@ public class ProgramDataReader {
 
         this.con = con;
     }
-    public List getProgramList() throws SQLException {
+    public void getProgramList() throws SQLException {
         PreparedStatement statement = con.prepareStatement("select * from program");
         res = statement.executeQuery();
-        List list = new ArrayList();
-        list.add(res);
-
-        return list;
     }
 
     public void close() throws SQLException{
@@ -47,9 +43,9 @@ public class ProgramDataReader {
         System.out.println("Executed successfully");
     }
 
-    public Program get(){
+    public Program get() throws SQLException {
         String[] hArray = prepareProgramHeaderArray();
-        String[] rArray = new String[10];
+        String[] rArray = new String[2];
 
         prepareProgramArray(rArray,res);
         ProgramDataSetter pds = new ProgramDataSetter(Program.class,hArray,rArray);
@@ -57,7 +53,9 @@ public class ProgramDataReader {
         return p;
     }
 
-    private void prepareProgramArray(String[] rArray, ResultSet res) {
+    private void prepareProgramArray(String[] rArray, ResultSet res) throws SQLException {
+        rArray[0] = res.getString(1);
+        rArray[1] = res.getString(2);
     }
 
     private String[] prepareProgramHeaderArray(){

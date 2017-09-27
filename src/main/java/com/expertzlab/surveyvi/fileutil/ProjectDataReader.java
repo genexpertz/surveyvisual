@@ -32,13 +32,9 @@ public class ProjectDataReader {
 
         this.con = con;
     }
-    public List getProjectList() throws SQLException {
+    public void getProjectList() throws SQLException {
         PreparedStatement statement = con.prepareStatement("select * from project");
         res = statement.executeQuery();
-        List list = new ArrayList();
-        list.add(res);
-        return list;
-
     }
 
     public void close() throws SQLException{
@@ -46,9 +42,9 @@ public class ProjectDataReader {
         System.out.println("Executed successfully");
     }
 
-    public Project get(){
+    public Project get() throws SQLException {
         String[] hArray = prepareProjectHeaderArray();
-        String[] rArray = new String[10];
+        String[] rArray = new String[3];
 
         prepareProjectArray(rArray,res);
         ProjectDataSetter prds = new ProjectDataSetter(Project.class,hArray,rArray);
@@ -56,7 +52,10 @@ public class ProjectDataReader {
         return p;
     }
 
-    private void prepareProjectArray(String[] rArray, ResultSet res) {
+    private void prepareProjectArray(String[] rArray, ResultSet res) throws SQLException {
+        rArray[0] = String.valueOf(res.getInt(1));
+        rArray[1] = res.getString(2);
+        rArray[2] = String.valueOf(res.getInt(3));
     }
 
     private String[] prepareProjectHeaderArray(){

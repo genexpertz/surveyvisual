@@ -57,7 +57,7 @@ public class Question {
     }
 
     public void setOption2(String option) {
-        this.option1 = split(option);
+        this.option2 = split(option);
     }
 
     public Options getOption3() {
@@ -94,7 +94,7 @@ public class Question {
     }
 
     public void setOption4(String option) {
-        this.option1 = split(option);
+        this.option4 = split(option);
     }
 
     public String getDescription() {

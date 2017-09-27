@@ -35,13 +35,16 @@ public class ParticipantDataReader {
 
         this.con = con;
     }
-    public List getParticipantList() throws SQLException {
+    public void loadParticipantList() throws SQLException {
         PreparedStatement statement = con.prepareStatement("select * from participant");
         res = statement.executeQuery();
-        List list = new ArrayList();
-        list.add(res);
 
-        return list;
+    }
+
+    public void loadAttendedParticipantList() throws SQLException {
+        PreparedStatement statement = con.prepareStatement("select p.id, p.name, p.age, p.gender, p.address from participant p join attendance a on  p.id = a.participantId");
+        res = statement.executeQuery();
+
     }
 
     public void close() throws SQLException{
@@ -51,7 +54,7 @@ public class ParticipantDataReader {
 
     public Participant get() throws SQLException {
         String[] hArray = prepareParticipantHeaderArray();
-        String[] rArray = new String[10];
+        String[] rArray = new String[5];
 
         prepareParticipantArray(rArray,res);
         ParticipantDataSetter eds = new ParticipantDataSetter(Participant.class,hArray,rArray);
