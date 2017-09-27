@@ -24,15 +24,29 @@ public class AgeDriver {
         Job job = new Job(conf);
         job.setJarByClass(AgeDriver.class);
         job.setMapperClass(AgeMap.class);
-        job.setCombinerClass(AgeCombiner.class);
-        job.setReducerClass(AgeReducer.class);
+        job.setReducerClass(AgeCombiner.class);
         job.setMapOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         FileInputFormat.setInputPaths(job,inp);
+        Path tempPath = new Path("/surveyoutput/temp");
+        FileOutputFormat.setOutputPath(job,tempPath);
+
+        if(job.waitForCompletion(true)){
+            System.out.println("Job part1 completed Successfully");
+        }
+
+
+        job = new Job(conf);
+        job.setJarByClass(AgeDriver.class);
+        job.setMapperClass(BareMap.class);
+        job.setReducerClass(AgeReducer.class);
+        job.setMapOutputKeyClass(Text.class);
+        job.setOutputValueClass(Text.class);
+        FileInputFormat.setInputPaths(job,tempPath);
         FileOutputFormat.setOutputPath(job,out);
 
         if(job.waitForCompletion(true)){
-            System.out.println("Job completed Successfully");
+            System.out.println("Job part 2 completed Successfully");
         }
     }
 }

@@ -16,7 +16,7 @@ public class AgeReducer extends Reducer<Text,Text,Text,Text> {
         for(Text val : values) {
             sum++;
         }
-        System.out.println("sum="+sum);
+        System.out.println("key="+key.toString()+",sum="+sum);
         context.write(key,new Text(""+sum));
     }
 }
