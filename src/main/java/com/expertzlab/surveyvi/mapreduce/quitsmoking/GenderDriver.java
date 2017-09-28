@@ -6,7 +6,9 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-
+/**
+ * Created by avin on 9/26/17.
+ */
 public class GenderDriver {
     public static void main(String[] args) throws Exception {
         GenderDriver GenderDriver = new GenderDriver();
