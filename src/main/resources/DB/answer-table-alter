@@ -1,0 +1,6 @@
+
+alter table answer add column programId int(11);
+
+ALTER TABLE `surveyvisual`.`answer`
+CHANGE COLUMN `ID` `ID` INT(11) NULL ,
+DROP PRIMARY KEY;
