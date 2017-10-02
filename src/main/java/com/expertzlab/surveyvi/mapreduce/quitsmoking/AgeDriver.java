@@ -26,7 +26,7 @@ public class AgeDriver {
         job.setMapOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         FileInputFormat.setInputPaths(job,inp);
-        Path tempPath = new Path("/surveyoutput/temp");
+        Path tempPath = new Path("/surveyoutput/temp"+System.currentTimeMillis());
         FileOutputFormat.setOutputPath(job,tempPath);
 
         if(job.waitForCompletion(true)){
