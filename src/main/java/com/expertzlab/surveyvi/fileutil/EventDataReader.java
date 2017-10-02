@@ -53,8 +53,8 @@ public class EventDataReader {
 
         prepareEventArray(rArray,res);
         EventDataSetter eds = new EventDataSetter(Event.class,hArray,rArray);
-        Event p = eds.run();
-        return p;
+        Event e = eds.run();
+        return e;
     }
 
     private void prepareEventArray(String[] rArray, ResultSet res) throws SQLException {

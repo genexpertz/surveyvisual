@@ -64,10 +64,7 @@ public class WriteSampleData {
             } else if (QUESTIONNAIRE.equals(entry.getKey())) {
                 QuestionNaireDataWriter qadw = new QuestionNaireDataWriter(con, entry.getValue());
                 qadw.start();
-            } else if (ANSWER.equals(entry.getKey())) {
-                AnswerDataWriter ansdw = new AnswerDataWriter(con, entry.getValue());
-                ansdw.start();
-            } else if (EVENT.equals(entry.getKey())) {
+            }else if (EVENT.equals(entry.getKey())) {
                 EventDataWriter evtdw = new EventDataWriter(con, entry.getValue());
                 evtdw.start();
             }

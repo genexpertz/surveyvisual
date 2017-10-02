@@ -12,7 +12,6 @@ import java.io.IOException;
 /**
  * Created by avin on 9/23/17.
  */
-
 public class YearDriver {
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         YearDriver yearDriver = new YearDriver();

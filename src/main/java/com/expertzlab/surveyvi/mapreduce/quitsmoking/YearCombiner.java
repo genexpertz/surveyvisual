@@ -7,11 +7,6 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.StringTokenizer;
 
-
-/**
- * Created by avin on 9/26/17.
- */
-
 public class YearCombiner<T1,T2,T3,T4> extends Reducer<Text,Text,Text,Text> {
     public void run(Text key , Iterable<Text> values, Context context) throws IOException, InterruptedException {
 

@@ -24,6 +24,7 @@ public class AnsweringService{
 
         ProgramDataReader pgdr = new ProgramDataReader(con);
         pgdr.getProgramList();
+       // long i =1;
         while (pgdr.hasNext()){
             Program p = pgdr.get();
             ProjectDataReader prdr = new ProjectDataReader(con, p.getId());
@@ -40,17 +41,22 @@ public class AnsweringService{
                         Participant pt = pdr.get();
                         QuestionDataReader qdr = new QuestionDataReader(con);
                         qdr.getQuestionList();
+
                         while(qdr.hasNext()) {
                             Question q = qdr.get();
+
                             Answer answer = new Answer();
-                            answer.setEventId(e.getEventId());
+                           // answer.setId(i);
+                            answer.setEventId(e.getId());
+                            //answer.setOptionId(new Random(q.getOption1()));
                             answer.setOptionId(new Random().nextInt(4));
                             answer.setParticipantId(pt.getId());
                             answer.setProgarmId(p.getId());
-                            answer.setQuestionId(q.getQuestionId());
+                            answer.setQuestionId(q.getId());
 
-                            AnswerDataWriter adw = new AnswerDataWriter(con, entry.getValue());
+                            AnswerDataWriter adw = new AnswerDataWriter(con);
                             adw.execute(answer);
+
                         }
 
                     }
@@ -59,5 +65,7 @@ public class AnsweringService{
 
         }
 
+        //i++;
     }
+
 }
