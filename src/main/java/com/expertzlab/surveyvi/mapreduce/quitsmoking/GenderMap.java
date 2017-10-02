@@ -6,9 +6,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 
 import java.util.StringTokenizer;
-/**
- * Created by avin on 9/26/17.
- */
+
 public class GenderMap extends Mapper<LongWritable,Text,Text,Text> {
     String filename;
 
