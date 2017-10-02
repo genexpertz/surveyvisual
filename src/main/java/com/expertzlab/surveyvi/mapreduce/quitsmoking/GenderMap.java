@@ -15,7 +15,6 @@ public class GenderMap extends Mapper<LongWritable,Text,Text,Text> {
     protected Text evid;
 
     public void setup() { setup();}
-
     @Override
     protected void setup(Context context){
         filename = ((FileSplit)context.getInputSplit()).getPath().toString();
