@@ -1,7 +1,5 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Event;
-import com.expertzlab.surveyvi.model.Participant;
 import com.expertzlab.surveyvi.model.Question;
 
 import java.sql.Connection;
@@ -58,6 +56,7 @@ public class QuestionDataReader {
 
 
     private void prepareQuestionArray(String[] rArray, ResultSet res) throws SQLException {
+
         rArray[0] = String.valueOf(res.getInt(1));
         rArray[1] = res.getString(2);
         rArray[2] = res.getString(3);

@@ -6,9 +6,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
-/**
- * Created by varsha on 9/21/17.
- */
+
 public class AgeCombiner<T, T1, T2, T3> extends Reducer<Text,Text,Text,Text> {
 
 

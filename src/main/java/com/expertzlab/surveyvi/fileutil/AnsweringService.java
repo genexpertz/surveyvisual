@@ -5,7 +5,6 @@ import com.expertzlab.surveyvi.model.*;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Iterator;
 import java.util.Random;
 
 
@@ -43,7 +42,6 @@ public class AnsweringService{
                         qdr.getQuestionList();
                         while(qdr.hasNext()) {
                             Question q = qdr.get();
-
                             Answer answer = new Answer();
                             answer.setEventId(e.getEventId());
                             answer.setOptionId(new Random().nextInt(4));

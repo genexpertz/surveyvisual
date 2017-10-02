@@ -1,0 +1,1232 @@
+
+
+Container: container_1506485445588_0005_01_000005 on preethup-Inspiron-3442_32917
+===================================================================================
+LogType:stderr
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:0
+Log Contents:
+
+LogType:stdout
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:1360
+Log Contents:
+key=21-30,sum=1
+key=41-50,sum=1
+key=51-60,sum=2
+key=11-20,sum=1
+key=51-60,sum=1
+key=11-20,sum=1
+key=21-30,sum=1
+key=51-60,sum=1
+key=11-20,sum=1
+key=21-30,sum=2
+key=61-70,sum=1
+key=11-20,sum=1
+key=21-30,sum=1
+key=41-50,sum=1
+key=11-20,sum=1
+key=21-30,sum=1
+key=11-20,sum=1
+key=41-50,sum=1
+key=21-30,sum=1
+key=31-40,sum=1
+key=21-30,sum=1
+key=31-40,sum=1
+key=21-30,sum=2
+key=11-20,sum=2
+key=21-30,sum=1
+key=51-60,sum=1
+key=11-20,sum=2
+key=51-60,sum=1
+key=21-30,sum=2
+key=51-60,sum=1
+key=11-20,sum=1
+key=41-50,sum=1
+key=21-30,sum=1
+key=71-80,sum=1
+key=21-30,sum=1
+key=31-40,sum=1
+key=21-30,sum=1
+key=11-20,sum=1
+key=51-60,sum=1
+key=41-50,sum=1
+key=11-20,sum=1
+key=31-40,sum=1
+key=21-30,sum=1
+key=41-50,sum=1
+key=21-30,sum=1
+key=51-60,sum=1
+key=31-40,sum=1
+key=21-30,sum=1
+key=71-80,sum=1
+key=31-40,sum=1
+key=21-30,sum=1
+key=11-20,sum=2
+key=31-40,sum=1
+key=21-30,sum=1
+key=11-20,sum=1
+key=51-60,sum=1
+key=21-30,sum=1
+key=41-50,sum=1
+key=31-40,sum=1
+key=71-80,sum=1
+key=21-30,sum=1
+key=11-20,sum=1
+key=51-60,sum=2
+key=71-80,sum=1
+key=41-50,sum=1
+key=21-30,sum=1
+key=41-50,sum=2
+key=21-30,sum=1
+key=11-20,sum=1
+key=41-50,sum=1
+key=51-60,sum=1
+key=31-40,sum=1
+key=21-30,sum=1
+key=11-20,sum=1
+key=21-30,sum=2
+key=61-70,sum=1
+key=11-20,sum=2
+key=51-60,sum=2
+key=21-30,sum=2
+key=11-20,sum=1
+key=21-30,sum=1
+key=11-20,sum=3
+key=51-60,sum=1
+key=21-30,sum=1
+key=31-40,sum=1
+
+LogType:syslog
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:7305
+Log Contents:
+2017-09-27 12:21:04,970 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-09-27 12:21:05,944 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2017-09-27 12:21:06,389 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-09-27 12:21:06,389 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system started
+2017-09-27 12:21:06,468 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2017-09-27 12:21:06,468 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1506485445588_0005, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@3b2cf7ab)
+2017-09-27 12:21:06,954 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2017-09-27 12:21:07,722 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/preethup/hadoop/tmp/nm-local-dir/usercache/preethup/appcache/application_1506485445588_0005
+2017-09-27 12:21:08,286 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-09-27 12:21:12,502 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 1
+2017-09-27 12:21:12,877 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2017-09-27 12:21:12,950 WARN [main] org.apache.hadoop.yarn.util.ProcfsBasedProcessTree: Unexpected: procfs stat file is not in the expected format for process with pid 15342
+2017-09-27 12:21:13,046 INFO [main] org.apache.hadoop.mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@2ce6c6ec
+2017-09-27 12:21:13,545 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: MergerManager: memoryLimit=535088320, maxSingleShuffleLimit=133772080, mergeThreshold=353158304, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2017-09-27 12:21:13,550 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1506485445588_0005_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+2017-09-27 12:21:13,560 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1506485445588_0005_r_000000_0: Got 2 new map-outputs
+2017-09-27 12:21:13,562 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Assigning preethup-Inspiron-3442:13562 with 2 to fetcher#1
+2017-09-27 12:21:13,563 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: assigned 2 of 2 to preethup-Inspiron-3442:13562 to fetcher#1
+2017-09-27 12:21:14,321 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.Fetcher: for url=13562/mapOutput?job=job_1506485445588_0005&reduce=0&map=attempt_1506485445588_0005_m_000001_0,attempt_1506485445588_0005_m_000000_0 sent hash and received reply
+2017-09-27 12:21:14,331 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.Fetcher: fetcher#1 about to shuffle output of map attempt_1506485445588_0005_m_000001_0 decomp: 2 len: 6 to MEMORY
+2017-09-27 12:21:14,624 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput: Read 2 bytes from map-output for attempt_1506485445588_0005_m_000001_0
+2017-09-27 12:21:14,628 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 2, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->2
+2017-09-27 12:21:14,629 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.Fetcher: fetcher#1 about to shuffle output of map attempt_1506485445588_0005_m_000000_0 decomp: 1002 len: 1006 to MEMORY
+2017-09-27 12:21:14,630 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput: Read 1002 bytes from map-output for attempt_1506485445588_0005_m_000000_0
+2017-09-27 12:21:14,630 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 1002, inMemoryMapOutputs.size() -> 2, commitMemory -> 2, usedMemory ->1004
+2017-09-27 12:21:14,667 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: EventFetcher is interrupted.. Returning
+2017-09-27 12:21:14,667 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: preethup-Inspiron-3442:13562 freed by fetcher#1 in 1105ms
+2017-09-27 12:21:14,675 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: finalMerge called with 2 in-memory map-outputs and 0 on-disk map-outputs
+2017-09-27 12:21:14,741 INFO [main] org.apache.hadoop.mapred.Merger: Merging 2 sorted segments
+2017-09-27 12:21:14,742 INFO [main] org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 994 bytes
+2017-09-27 12:21:14,752 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merged 2 segments, 1004 bytes to disk to satisfy reduce memory limit
+2017-09-27 12:21:14,753 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merging 1 files, 1006 bytes from disk
+2017-09-27 12:21:14,753 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+2017-09-27 12:21:14,754 INFO [main] org.apache.hadoop.mapred.Merger: Merging 1 sorted segments
+2017-09-27 12:21:14,756 INFO [main] org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 994 bytes
+2017-09-27 12:21:15,188 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2017-09-27 12:21:16,006 INFO [main] org.apache.hadoop.mapred.Task: Task:attempt_1506485445588_0005_r_000000_0 is done. And is in the process of committing
+2017-09-27 12:21:16,057 WARN [main] org.apache.hadoop.yarn.util.ProcfsBasedProcessTree: Unexpected: procfs stat file is not in the expected format for process with pid 15342
+2017-09-27 12:21:16,079 INFO [main] org.apache.hadoop.mapred.Task: Task attempt_1506485445588_0005_r_000000_0 is allowed to commit now
+2017-09-27 12:21:16,178 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Saved output of task 'attempt_1506485445588_0005_r_000000_0' to hdfs://localhost:9000/surveyoutput2/_temporary/1/task_1506485445588_0005_r_000000
+2017-09-27 12:21:16,202 WARN [main] org.apache.hadoop.yarn.util.ProcfsBasedProcessTree: Unexpected: procfs stat file is not in the expected format for process with pid 15342
+2017-09-27 12:21:16,214 INFO [main] org.apache.hadoop.mapred.Task: Task 'attempt_1506485445588_0005_r_000000_0' done.
+2017-09-27 12:21:16,315 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping ReduceTask metrics system...
+2017-09-27 12:21:16,317 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system stopped.
+2017-09-27 12:21:16,317 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system shutdown complete.
+
+
+
+Container: container_1506485445588_0005_01_000003 on preethup-Inspiron-3442_32917
+===================================================================================
+LogType:stderr
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:0
+Log Contents:
+
+LogType:stdout
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:9402
+Log Contents:
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string1,18,18,2,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string2,18,18,1,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string3,14,14,1,5,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string4,4,4,1,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string5,18,18,1,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string6,19,19,1,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string7,18,18,2,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string8,20,20,2,2,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string9,10,10,2,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string10,20,20,1,2,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string11,2,2,1,2,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string12,19,19,1,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string13,1,1,1,1,1
+wrote:1,smoking:1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string14,18,18,2,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string15,4,4,1,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string16,8,8,4,8,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string17,15,15,3,6,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string18,16,16,1,7,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string19,10,10,4,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string20,14,14,2,5,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string21,12,12,2,3,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string22,4,4,1,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string23,15,15,1,6,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string24,13,13,2,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string25,18,18,2,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string26,1,1,1,1,1
+wrote:1,smoking:1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string27,13,13,3,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string28,13,13,1,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string29,5,5,2,5,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string30,13,13,1,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string31,16,16,4,7,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string32,13,13,2,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string33,7,7,2,7,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string34,7,7,2,7,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string35,14,14,1,5,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string36,12,12,1,3,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string37,10,10,2,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string38,15,15,1,6,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string39,15,15,3,6,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string40,20,20,2,2,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string41,13,13,2,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string42,19,19,2,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string43,1,1,1,1,1
+wrote:1,smoking:1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string44,2,2,1,2,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string45,10,10,2,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string46,20,20,2,2,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string47,19,19,1,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string48,4,4,1,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string49,11,11,2,2,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string50,5,5,1,5,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string51,16,16,4,7,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string52,4,4,1,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string53,10,10,2,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string54,1,1,1,1,1
+wrote:1,smoking:1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string55,10,10,1,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string56,6,6,2,6,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string57,16,16,1,7,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string58,8,8,1,8,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string59,1,1,1,1,1
+wrote:1,smoking:1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string60,19,19,4,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string61,17,17,2,8,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string62,3,3,3,3,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string63,17,17,2,8,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string64,10,10,1,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string65,7,7,2,7,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string66,17,17,1,8,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string67,3,3,3,3,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string68,8,8,4,8,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string69,5,5,1,5,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string70,20,20,2,2,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string71,18,18,3,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string72,9,9,1,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string73,15,15,3,6,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string74,19,19,2,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string75,9,9,3,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string76,13,13,3,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string77,8,8,4,8,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string78,20,20,1,2,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string79,10,10,1,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string80,20,20,2,2,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string81,20,20,1,2,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string82,9,9,3,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string83,13,13,3,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string84,10,10,1,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string85,6,6,1,6,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string86,13,13,1,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string87,15,15,1,6,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string88,16,16,3,7,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string89,10,10,3,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string90,10,10,2,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string91,11,11,3,2,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string92,1,1,1,1,1
+wrote:1,smoking:1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string93,6,6,1,6,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string94,17,17,2,8,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string95,3,3,3,3,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string96,18,18,3,9,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string97,13,13,1,4,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string98,19,19,1,1,2
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string99,3,3,3,3,1
+File Name=hdfs://localhost:9000/surveyvisual/answer/part-m-00000
+Value string100,20,20,2,2,1
+In combiner value=smoking:1
+In combiner value=smoking:1
+In combiner value=smoking:1
+In combiner value=smoking:1
+In combiner value=smoking:1
+In combiner value=smoking:1
+
+LogType:syslog
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:4112
+Log Contents:
+2017-09-27 12:19:28,035 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-09-27 12:19:29,643 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2017-09-27 12:19:30,621 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-09-27 12:19:30,621 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2017-09-27 12:19:31,983 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2017-09-27 12:19:31,983 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1506485445588_0005, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@3b2cf7ab)
+2017-09-27 12:19:34,972 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2017-09-27 12:19:42,133 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/preethup/hadoop/tmp/nm-local-dir/usercache/preethup/appcache/application_1506485445588_0005
+2017-09-27 12:20:10,313 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-09-27 12:20:18,196 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 1
+2017-09-27 12:20:18,356 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2017-09-27 12:20:18,459 WARN [main] org.apache.hadoop.yarn.util.ProcfsBasedProcessTree: Unexpected: procfs stat file is not in the expected format for process with pid 15342
+2017-09-27 12:20:26,350 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: hdfs://localhost:9000/surveyvisual/answer/part-m-00000:0+1426
+2017-09-27 12:20:27,480 INFO [main] org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2017-09-27 12:20:27,480 INFO [main] org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2017-09-27 12:20:27,480 INFO [main] org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2017-09-27 12:20:27,480 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2017-09-27 12:20:27,480 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2017-09-27 12:20:27,758 INFO [main] org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-09-27 12:20:28,910 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2017-09-27 12:20:28,910 INFO [main] org.apache.hadoop.mapred.MapTask: Spilling map output
+2017-09-27 12:20:28,911 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 72; bufvoid = 104857600
+2017-09-27 12:20:28,911 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396(104857584); kvend = 26214376(104857504); length = 21/6553600
+2017-09-27 12:20:30,076 INFO [main] org.apache.hadoop.mapred.MapTask: Finished spill 0
+2017-09-27 12:20:30,084 INFO [main] org.apache.hadoop.mapred.Task: Task:attempt_1506485445588_0005_m_000001_0 is done. And is in the process of committing
+2017-09-27 12:20:30,253 WARN [main] org.apache.hadoop.yarn.util.ProcfsBasedProcessTree: Unexpected: procfs stat file is not in the expected format for process with pid 15342
+2017-09-27 12:20:30,504 WARN [main] org.apache.hadoop.yarn.util.ProcfsBasedProcessTree: Unexpected: procfs stat file is not in the expected format for process with pid 15342
+2017-09-27 12:20:31,470 INFO [main] org.apache.hadoop.mapred.Task: Task 'attempt_1506485445588_0005_m_000001_0' done.
+2017-09-27 12:20:31,618 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping MapTask metrics system...
+2017-09-27 12:20:31,621 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system stopped.
+2017-09-27 12:20:31,621 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system shutdown complete.
+
+
+
+Container: container_1506485445588_0005_01_000001 on preethup-Inspiron-3442_32917
+===================================================================================
+LogType:stderr
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:222
+Log Contents:
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.ipc.Server).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+LogType:stdout
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:0
+Log Contents:
+
+LogType:syslog
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:46552
+Log Contents:
+2017-09-27 12:19:14,055 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1506485445588_0005_000001
+2017-09-27 12:19:14,517 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-09-27 12:19:14,539 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Executing with tokens:
+2017-09-27 12:19:14,539 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Kind: YARN_AM_RM_TOKEN, Service: , Ident: (org.apache.hadoop.yarn.security.AMRMTokenIdentifier@3b2da18f)
+2017-09-27 12:19:14,663 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Using mapred newApiCommitter.
+2017-09-27 12:19:15,970 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter set in config null
+2017-09-27 12:19:16,061 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 1
+2017-09-27 12:19:16,072 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2017-09-27 12:19:16,238 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.jobhistory.EventType for class org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler
+2017-09-27 12:19:16,239 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobEventDispatcher
+2017-09-27 12:19:16,240 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskEventDispatcher
+2017-09-27 12:19:16,241 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher
+2017-09-27 12:19:16,242 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventType for class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler
+2017-09-27 12:19:16,278 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.speculate.Speculator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$SpeculatorEventDispatcher
+2017-09-27 12:19:16,279 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.rm.ContainerAllocator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerAllocatorRouter
+2017-09-27 12:19:16,281 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncher$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerLauncherRouter
+2017-09-27 12:19:16,344 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://localhost:9000]
+2017-09-27 12:19:16,385 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://localhost:9000]
+2017-09-27 12:19:16,426 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://localhost:9000]
+2017-09-27 12:19:16,466 INFO [main] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Emitting job history data to the timeline server is not enabled
+2017-09-27 12:19:16,608 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobFinishEvent$Type for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobFinishEventHandler
+2017-09-27 12:19:17,169 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2017-09-27 12:19:17,385 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-09-27 12:19:17,385 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MRAppMaster metrics system started
+2017-09-27 12:19:17,403 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Adding job token for job_1506485445588_0005 to jobTokenSecretManager
+2017-09-27 12:19:17,680 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Not uberizing job_1506485445588_0005 because: not enabled;
+2017-09-27 12:19:17,709 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Input size for job job_1506485445588_0005 = 4710. Number of splits = 2
+2017-09-27 12:19:17,711 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Number of reduces for job job_1506485445588_0005 = 1
+2017-09-27 12:19:17,711 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1506485445588_0005Job Transitioned from NEW to INITED
+2017-09-27 12:19:17,713 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: MRAppMaster launching normal, non-uberized, multi-container job job_1506485445588_0005.
+2017-09-27 12:19:17,754 INFO [main] org.apache.hadoop.ipc.CallQueueManager: Using callQueue class java.util.concurrent.LinkedBlockingQueue
+2017-09-27 12:19:17,783 INFO [Socket Reader #1 for port 40777] org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 40777
+2017-09-27 12:19:17,895 INFO [main] org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server
+2017-09-27 12:19:17,895 INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-09-27 12:19:17,896 INFO [IPC Server listener on 40777] org.apache.hadoop.ipc.Server: IPC Server listener on 40777: starting
+2017-09-27 12:19:17,898 INFO [main] org.apache.hadoop.mapreduce.v2.app.client.MRClientService: Instantiated MRClientService at preethup-Inspiron-3442/127.0.1.1:40777
+2017-09-27 12:19:18,043 INFO [main] org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-09-27 12:19:18,047 INFO [main] org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.mapreduce is not defined
+2017-09-27 12:19:18,074 INFO [main] org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2017-09-27 12:19:18,097 INFO [main] org.apache.hadoop.http.HttpServer2: Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context mapreduce
+2017-09-27 12:19:18,097 INFO [main] org.apache.hadoop.http.HttpServer2: Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context static
+2017-09-27 12:19:18,110 INFO [main] org.apache.hadoop.http.HttpServer2: adding path spec: /mapreduce/*
+2017-09-27 12:19:18,110 INFO [main] org.apache.hadoop.http.HttpServer2: adding path spec: /ws/*
+2017-09-27 12:19:18,123 INFO [main] org.apache.hadoop.http.HttpServer2: Jetty bound to port 44109
+2017-09-27 12:19:18,123 INFO [main] org.mortbay.log: jetty-6.1.26.cloudera.4
+2017-09-27 12:19:18,245 INFO [main] org.mortbay.log: Extract jar:file:/home/preethup/hadoop/share/hadoop/yarn/hadoop-yarn-common-2.6.0-cdh5.4.1.jar!/webapps/mapreduce to /tmp/Jetty_0_0_0_0_44109_mapreduce____.hqrtz5/webapp
+2017-09-27 12:19:18,756 INFO [main] org.mortbay.log: Started HttpServer2$SelectChannelConnectorWithSafeStartup@0.0.0.0:44109
+2017-09-27 12:19:18,757 INFO [main] org.apache.hadoop.yarn.webapp.WebApps: Web app /mapreduce started at 44109
+2017-09-27 12:19:19,274 INFO [main] org.apache.hadoop.yarn.webapp.WebApps: Registered webapp guice modules
+2017-09-27 12:19:19,279 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator: JOB_CREATE job_1506485445588_0005
+2017-09-27 12:19:19,281 INFO [main] org.apache.hadoop.ipc.CallQueueManager: Using callQueue class java.util.concurrent.LinkedBlockingQueue
+2017-09-27 12:19:19,282 INFO [Socket Reader #1 for port 34671] org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 34671
+2017-09-27 12:19:19,293 INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-09-27 12:19:19,294 INFO [IPC Server listener on 34671] org.apache.hadoop.ipc.Server: IPC Server listener on 34671: starting
+2017-09-27 12:19:19,342 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: nodeBlacklistingEnabled:true
+2017-09-27 12:19:19,342 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: maxTaskFailuresPerNode is 3
+2017-09-27 12:19:19,342 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: blacklistDisablePercent is 33
+2017-09-27 12:19:19,425 INFO [main] org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8030
+2017-09-27 12:19:20,005 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: maxContainerCapability: <memory:8192, vCores:8>
+2017-09-27 12:19:20,006 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: queue: root.preethup
+2017-09-27 12:19:20,076 INFO [main] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Upper limit on the thread pool size is 500
+2017-09-27 12:19:20,081 INFO [main] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: yarn.client.max-cached-nodemanagers-proxies : 0
+2017-09-27 12:19:20,139 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1506485445588_0005Job Transitioned from INITED to SETUP
+2017-09-27 12:19:20,141 INFO [CommitterEvent Processor #0] org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Processing the event EventType: JOB_SETUP
+2017-09-27 12:19:20,371 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1506485445588_0005Job Transitioned from SETUP to RUNNING
+2017-09-27 12:19:20,584 INFO [AsyncDispatcher event handler] org.apache.hadoop.yarn.util.RackResolver: Resolved preethup-Inspiron-3442 to /default-rack
+2017-09-27 12:19:20,705 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1506485445588_0005_m_000000 Task Transitioned from NEW to SCHEDULED
+2017-09-27 12:19:20,706 INFO [AsyncDispatcher event handler] org.apache.hadoop.yarn.util.RackResolver: Resolved preethup-Inspiron-3442 to /default-rack
+2017-09-27 12:19:20,706 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1506485445588_0005_m_000001 Task Transitioned from NEW to SCHEDULED
+2017-09-27 12:19:20,707 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1506485445588_0005_r_000000 Task Transitioned from NEW to SCHEDULED
+2017-09-27 12:19:20,979 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_m_000000_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2017-09-27 12:19:20,979 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_m_000001_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2017-09-27 12:19:20,980 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_r_000000_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2017-09-27 12:19:20,982 INFO [Thread-50] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: mapResourceRequest:<memory:1024, vCores:1>
+2017-09-27 12:19:21,007 INFO [Thread-50] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: reduceResourceRequest:<memory:1024, vCores:1>
+2017-09-27 12:19:21,072 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Before Scheduling: PendingReds:1 ScheduledMaps:2 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:0 ContRel:0 HostLocal:0 RackLocal:0
+2017-09-27 12:19:21,165 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Event Writer setup for JobId: job_1506485445588_0005, File: hdfs://localhost:9000/tmp/hadoop-yarn/staging/preethup/.staging/job_1506485445588_0005/job_1506485445588_0005_1.jhist
+2017-09-27 12:19:21,432 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1506485445588_0005: ask=3 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:6144, vCores:7> knownNMs=1
+2017-09-27 12:19:21,433 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:6144, vCores:7>
+2017-09-27 12:19:21,514 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2017-09-27 12:19:22,631 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Got allocated containers 1
+2017-09-27 12:19:22,643 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1506485445588_0005_01_000002 to attempt_1506485445588_0005_m_000000_0
+2017-09-27 12:19:22,646 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:5120, vCores:6>
+2017-09-27 12:19:22,646 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2017-09-27 12:19:22,646 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:1 ScheduledMaps:1 ScheduledReds:0 AssignedMaps:1 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:1 ContRel:0 HostLocal:1 RackLocal:0
+2017-09-27 12:19:22,717 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://localhost:9000]
+2017-09-27 12:19:23,244 INFO [AsyncDispatcher event handler] org.apache.hadoop.yarn.util.RackResolver: Resolved preethup-Inspiron-3442 to /default-rack
+2017-09-27 12:19:23,489 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: The job-jar file on the remote FS is hdfs://localhost:9000/tmp/hadoop-yarn/staging/preethup/.staging/job_1506485445588_0005/job.jar
+2017-09-27 12:19:23,516 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/preethup/.staging/job_1506485445588_0005/job.xml
+2017-09-27 12:19:23,519 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Adding #0 tokens and #1 secret keys for NM use for launching container
+2017-09-27 12:19:23,519 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Size of containertokens_dob is 1
+2017-09-27 12:19:23,520 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Putting shuffle token in serviceData
+2017-09-27 12:19:23,703 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapred.JobConf: Task java-opts do not specify heap size. Setting task attempt jvm max heap size to -Xmx820m
+2017-09-27 12:19:23,708 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_m_000000_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2017-09-27 12:19:23,717 INFO [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1506485445588_0005_01_000002 taskAttempt attempt_1506485445588_0005_m_000000_0
+2017-09-27 12:19:23,720 INFO [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1506485445588_0005_m_000000_0
+2017-09-27 12:19:23,731 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1506485445588_0005: ask=3 release= 0 newContainers=1 finishedContainers=0 resourcelimit=<memory:4096, vCores:5> knownNMs=1
+2017-09-27 12:19:23,732 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Got allocated containers 1
+2017-09-27 12:19:23,732 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1506485445588_0005_01_000003 to attempt_1506485445588_0005_m_000001_0
+2017-09-27 12:19:23,732 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:4096, vCores:5>
+2017-09-27 12:19:23,732 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2017-09-27 12:19:23,732 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:1 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:2 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:2 ContRel:0 HostLocal:2 RackLocal:0
+2017-09-27 12:19:23,732 INFO [AsyncDispatcher event handler] org.apache.hadoop.yarn.util.RackResolver: Resolved preethup-Inspiron-3442 to /default-rack
+2017-09-27 12:19:23,733 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapred.JobConf: Task java-opts do not specify heap size. Setting task attempt jvm max heap size to -Xmx820m
+2017-09-27 12:19:23,734 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_m_000001_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2017-09-27 12:19:23,735 INFO [ContainerLauncher #1] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1506485445588_0005_01_000003 taskAttempt attempt_1506485445588_0005_m_000001_0
+2017-09-27 12:19:23,735 INFO [ContainerLauncher #1] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1506485445588_0005_m_000001_0
+2017-09-27 12:19:23,779 INFO [ContainerLauncher #0] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : preethup-Inspiron-3442:32917
+2017-09-27 12:19:23,959 INFO [ContainerLauncher #1] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : preethup-Inspiron-3442:32917
+2017-09-27 12:19:24,179 INFO [ContainerLauncher #1] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Shuffle port returned by ContainerManager for attempt_1506485445588_0005_m_000001_0 : 13562
+2017-09-27 12:19:24,180 INFO [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Shuffle port returned by ContainerManager for attempt_1506485445588_0005_m_000000_0 : 13562
+2017-09-27 12:19:24,181 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1506485445588_0005_m_000001_0] using containerId: [container_1506485445588_0005_01_000003 on NM: [preethup-Inspiron-3442:32917]
+2017-09-27 12:19:24,335 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_m_000001_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+2017-09-27 12:19:24,336 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1506485445588_0005_m_000000_0] using containerId: [container_1506485445588_0005_01_000002 on NM: [preethup-Inspiron-3442:32917]
+2017-09-27 12:19:24,336 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_m_000000_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+2017-09-27 12:19:24,337 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator: ATTEMPT_START task_1506485445588_0005_m_000001
+2017-09-27 12:19:24,337 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1506485445588_0005_m_000001 Task Transitioned from SCHEDULED to RUNNING
+2017-09-27 12:19:24,337 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator: ATTEMPT_START task_1506485445588_0005_m_000000
+2017-09-27 12:19:24,338 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1506485445588_0005_m_000000 Task Transitioned from SCHEDULED to RUNNING
+2017-09-27 12:19:24,737 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1506485445588_0005: ask=3 release= 0 newContainers=1 finishedContainers=0 resourcelimit=<memory:3072, vCores:4> knownNMs=1
+2017-09-27 12:19:24,738 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Got allocated containers 1
+2017-09-27 12:19:24,738 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Cannot assign container Container: [ContainerId: container_1506485445588_0005_01_000004, NodeId: preethup-Inspiron-3442:32917, NodeHttpAddress: preethup-Inspiron-3442:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 127.0.1.1:32917 }, ] for a map as either  container memory less than required <memory:1024, vCores:1> or no pending map tasks - maps.isEmpty=true
+2017-09-27 12:19:24,739 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:3072, vCores:4>
+2017-09-27 12:19:24,739 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2017-09-27 12:19:24,739 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:1 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:2 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:3 ContRel:1 HostLocal:2 RackLocal:0
+2017-09-27 12:19:25,743 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1506485445588_0005: ask=0 release= 1 newContainers=0 finishedContainers=0 resourcelimit=<memory:4096, vCores:5> knownNMs=1
+2017-09-27 12:19:25,743 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:4096, vCores:5>
+2017-09-27 12:19:25,743 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2017-09-27 12:19:26,923 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1506485445588_0005_01_000004
+2017-09-27 12:19:26,923 ERROR [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Container complete event for unknown container id container_1506485445588_0005_01_000004
+2017-09-27 12:19:26,923 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:4096, vCores:5>
+2017-09-27 12:19:26,923 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2017-09-27 12:19:36,739 INFO [Socket Reader #1 for port 34671] SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for job_1506485445588_0005 (auth:SIMPLE)
+2017-09-27 12:19:36,829 INFO [Socket Reader #1 for port 34671] SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for job_1506485445588_0005 (auth:SIMPLE)
+2017-09-27 12:19:37,307 INFO [IPC Server handler 12 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID : jvm_1506485445588_0005_m_000002 asked for a task
+2017-09-27 12:19:37,308 INFO [IPC Server handler 13 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID : jvm_1506485445588_0005_m_000003 asked for a task
+2017-09-27 12:19:37,309 INFO [IPC Server handler 12 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID: jvm_1506485445588_0005_m_000002 given task: attempt_1506485445588_0005_m_000000_0
+2017-09-27 12:19:37,309 INFO [IPC Server handler 13 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID: jvm_1506485445588_0005_m_000003 given task: attempt_1506485445588_0005_m_000001_0
+2017-09-27 12:20:21,155 INFO [Socket Reader #1 for port 34671] SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for job_1506485445588_0005 (auth:SIMPLE)
+2017-09-27 12:20:21,379 INFO [Socket Reader #1 for port 34671] SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for job_1506485445588_0005 (auth:SIMPLE)
+2017-09-27 12:20:28,840 INFO [IPC Server handler 8 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1506485445588_0005_m_000001_0 is : 0.0
+2017-09-27 12:20:29,458 INFO [IPC Server handler 1 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1506485445588_0005_m_000000_0 is : 0.0
+2017-09-27 12:20:30,533 INFO [IPC Server handler 0 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1506485445588_0005_m_000000_0 is : 1.0
+2017-09-27 12:20:30,534 INFO [IPC Server handler 18 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1506485445588_0005_m_000001_0 is : 1.0
+2017-09-27 12:20:31,468 INFO [IPC Server handler 14 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Done acknowledgement from attempt_1506485445588_0005_m_000001_0
+2017-09-27 12:20:31,468 INFO [IPC Server handler 16 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Done acknowledgement from attempt_1506485445588_0005_m_000000_0
+2017-09-27 12:20:31,567 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_m_000000_0 TaskAttempt Transitioned from RUNNING to SUCCESS_CONTAINER_CLEANUP
+2017-09-27 12:20:31,568 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_m_000001_0 TaskAttempt Transitioned from RUNNING to SUCCESS_CONTAINER_CLEANUP
+2017-09-27 12:20:31,569 INFO [ContainerLauncher #3] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1506485445588_0005_01_000003 taskAttempt attempt_1506485445588_0005_m_000001_0
+2017-09-27 12:20:31,569 INFO [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1506485445588_0005_01_000002 taskAttempt attempt_1506485445588_0005_m_000000_0
+2017-09-27 12:20:31,569 INFO [ContainerLauncher #3] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: KILLING attempt_1506485445588_0005_m_000001_0
+2017-09-27 12:20:31,569 INFO [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: KILLING attempt_1506485445588_0005_m_000000_0
+2017-09-27 12:20:31,569 INFO [ContainerLauncher #3] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : preethup-Inspiron-3442:32917
+2017-09-27 12:20:31,570 INFO [ContainerLauncher #2] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : preethup-Inspiron-3442:32917
+2017-09-27 12:20:32,571 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_m_000001_0 TaskAttempt Transitioned from SUCCESS_CONTAINER_CLEANUP to SUCCEEDED
+2017-09-27 12:20:32,572 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_m_000000_0 TaskAttempt Transitioned from SUCCESS_CONTAINER_CLEANUP to SUCCEEDED
+2017-09-27 12:20:33,662 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Task succeeded with attempt attempt_1506485445588_0005_m_000001_0
+2017-09-27 12:20:33,687 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1506485445588_0005_m_000001 Task Transitioned from RUNNING to SUCCEEDED
+2017-09-27 12:20:33,688 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Task succeeded with attempt attempt_1506485445588_0005_m_000000_0
+2017-09-27 12:20:33,688 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1506485445588_0005_m_000000 Task Transitioned from RUNNING to SUCCEEDED
+2017-09-27 12:20:33,759 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Num completed Tasks: 1
+2017-09-27 12:20:33,759 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:4096, vCores:5>
+2017-09-27 12:20:33,759 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold reached. Scheduling reduces.
+2017-09-27 12:20:33,759 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: All maps assigned. Ramping up all remaining reduces:1
+2017-09-27 12:20:33,760 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Num completed Tasks: 2
+2017-09-27 12:20:33,760 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:1 AssignedMaps:2 AssignedReds:0 CompletedMaps:2 CompletedReds:0 ContAlloc:3 ContRel:1 HostLocal:2 RackLocal:0
+2017-09-27 12:20:34,763 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1506485445588_0005: ask=1 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:4096, vCores:5> knownNMs=1
+2017-09-27 12:20:35,820 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Got allocated containers 1
+2017-09-27 12:20:35,821 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned to reduce
+2017-09-27 12:20:35,821 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1506485445588_0005_01_000005 to attempt_1506485445588_0005_r_000000_0
+2017-09-27 12:20:35,821 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:2 AssignedReds:1 CompletedMaps:2 CompletedReds:0 ContAlloc:4 ContRel:1 HostLocal:2 RackLocal:0
+2017-09-27 12:20:36,895 INFO [AsyncDispatcher event handler] org.apache.hadoop.yarn.util.RackResolver: Resolved preethup-Inspiron-3442 to /default-rack
+2017-09-27 12:20:36,895 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapred.JobConf: Task java-opts do not specify heap size. Setting task attempt jvm max heap size to -Xmx820m
+2017-09-27 12:20:36,896 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_r_000000_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2017-09-27 12:20:36,898 INFO [ContainerLauncher #4] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1506485445588_0005_01_000005 taskAttempt attempt_1506485445588_0005_r_000000_0
+2017-09-27 12:20:36,898 INFO [ContainerLauncher #4] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1506485445588_0005_r_000000_0
+2017-09-27 12:20:36,898 INFO [ContainerLauncher #4] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : preethup-Inspiron-3442:32917
+2017-09-27 12:20:37,225 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1506485445588_0005: ask=1 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:3072, vCores:4> knownNMs=1
+2017-09-27 12:20:37,247 INFO [ContainerLauncher #4] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Shuffle port returned by ContainerManager for attempt_1506485445588_0005_r_000000_0 : 13562
+2017-09-27 12:20:37,248 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1506485445588_0005_r_000000_0] using containerId: [container_1506485445588_0005_01_000005 on NM: [preethup-Inspiron-3442:32917]
+2017-09-27 12:20:37,248 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_r_000000_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+2017-09-27 12:20:37,249 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.speculate.DefaultSpeculator: ATTEMPT_START task_1506485445588_0005_r_000000
+2017-09-27 12:20:37,249 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1506485445588_0005_r_000000 Task Transitioned from SCHEDULED to RUNNING
+2017-09-27 12:20:42,469 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1506485445588_0005_01_000002
+2017-09-27 12:20:42,470 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1506485445588_0005_01_000003
+2017-09-27 12:20:42,471 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:2 CompletedReds:0 ContAlloc:4 ContRel:1 HostLocal:2 RackLocal:0
+2017-09-27 12:20:42,471 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1506485445588_0005_m_000000_0: Container killed by the ApplicationMaster.
+
+2017-09-27 12:20:42,471 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1506485445588_0005_m_000001_0: Container killed by the ApplicationMaster.
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+2017-09-27 12:21:07,371 INFO [Socket Reader #1 for port 34671] SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for job_1506485445588_0005 (auth:SIMPLE)
+2017-09-27 12:21:07,436 INFO [IPC Server handler 5 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID : jvm_1506485445588_0005_r_000005 asked for a task
+2017-09-27 12:21:07,437 INFO [IPC Server handler 5 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID: jvm_1506485445588_0005_r_000005 given task: attempt_1506485445588_0005_r_000000_0
+2017-09-27 12:21:13,552 INFO [IPC Server handler 4 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: MapCompletionEvents request from attempt_1506485445588_0005_r_000000_0. startIndex 0 maxEvents 10000
+2017-09-27 12:21:14,562 INFO [IPC Server handler 20 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: MapCompletionEvents request from attempt_1506485445588_0005_r_000000_0. startIndex 2 maxEvents 10000
+2017-09-27 12:21:14,672 INFO [IPC Server handler 8 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1506485445588_0005_r_000000_0 is : 0.0
+2017-09-27 12:21:14,758 INFO [IPC Server handler 3 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1506485445588_0005_r_000000_0 is : 0.0
+2017-09-27 12:21:16,074 INFO [IPC Server handler 5 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Commit-pending state update from attempt_1506485445588_0005_r_000000_0
+2017-09-27 12:21:16,075 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_r_000000_0 TaskAttempt Transitioned from RUNNING to COMMIT_PENDING
+2017-09-27 12:21:16,075 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: attempt_1506485445588_0005_r_000000_0 given a go for committing the task output.
+2017-09-27 12:21:16,077 INFO [IPC Server handler 27 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Commit go/no-go request from attempt_1506485445588_0005_r_000000_0
+2017-09-27 12:21:16,078 INFO [IPC Server handler 27 on 34671] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Result of canCommit for attempt_1506485445588_0005_r_000000_0:true
+2017-09-27 12:21:16,207 INFO [IPC Server handler 1 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1506485445588_0005_r_000000_0 is : 1.0
+2017-09-27 12:21:16,213 INFO [IPC Server handler 18 on 34671] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Done acknowledgement from attempt_1506485445588_0005_r_000000_0
+2017-09-27 12:21:16,214 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_r_000000_0 TaskAttempt Transitioned from COMMIT_PENDING to SUCCESS_CONTAINER_CLEANUP
+2017-09-27 12:21:16,216 INFO [ContainerLauncher #5] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1506485445588_0005_01_000005 taskAttempt attempt_1506485445588_0005_r_000000_0
+2017-09-27 12:21:16,217 INFO [ContainerLauncher #5] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: KILLING attempt_1506485445588_0005_r_000000_0
+2017-09-27 12:21:16,217 INFO [ContainerLauncher #5] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : preethup-Inspiron-3442:32917
+2017-09-27 12:21:16,277 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1506485445588_0005_r_000000_0 TaskAttempt Transitioned from SUCCESS_CONTAINER_CLEANUP to SUCCEEDED
+2017-09-27 12:21:16,277 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Task succeeded with attempt attempt_1506485445588_0005_r_000000_0
+2017-09-27 12:21:16,277 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1506485445588_0005_r_000000 Task Transitioned from RUNNING to SUCCEEDED
+2017-09-27 12:21:16,278 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Num completed Tasks: 3
+2017-09-27 12:21:16,312 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1506485445588_0005Job Transitioned from RUNNING to COMMITTING
+2017-09-27 12:21:16,313 INFO [CommitterEvent Processor #1] org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Processing the event EventType: JOB_COMMIT
+2017-09-27 12:21:16,687 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Before Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:2 CompletedReds:1 ContAlloc:4 ContRel:1 HostLocal:2 RackLocal:0
+2017-09-27 12:21:16,794 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Calling handler for JobFinishedEvent 
+2017-09-27 12:21:16,795 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1506485445588_0005Job Transitioned from COMMITTING to SUCCEEDED
+2017-09-27 12:21:16,831 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: We are finishing cleanly so this is the last retry
+2017-09-27 12:21:16,831 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Notify RMCommunicator isAMLastRetry: true
+2017-09-27 12:21:16,831 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: RMCommunicator notified that shouldUnregistered is: true
+2017-09-27 12:21:16,831 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Notify JHEH isAMLastRetry: true
+2017-09-27 12:21:16,831 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: JobHistoryEventHandler notified that forceJobCompletion is true
+2017-09-27 12:21:16,831 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Calling stop for all the services
+2017-09-27 12:21:16,832 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopping JobHistoryEventHandler. Size of the outstanding queue size is 0
+2017-09-27 12:21:17,159 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copying hdfs://localhost:9000/tmp/hadoop-yarn/staging/preethup/.staging/job_1506485445588_0005/job_1506485445588_0005_1.jhist to hdfs://localhost:9000/tmp/hadoop-yarn/staging/history/done_intermediate/preethup/job_1506485445588_0005-1506494949338-preethup-surveyvisual%2D1.0%2DSNAPSHOT.jar-1506495076790-2-1-SUCCEEDED-root.preethup-1506494960095.jhist_tmp
+2017-09-27 12:21:17,543 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copied to done location: hdfs://localhost:9000/tmp/hadoop-yarn/staging/history/done_intermediate/preethup/job_1506485445588_0005-1506494949338-preethup-surveyvisual%2D1.0%2DSNAPSHOT.jar-1506495076790-2-1-SUCCEEDED-root.preethup-1506494960095.jhist_tmp
+2017-09-27 12:21:17,626 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copying hdfs://localhost:9000/tmp/hadoop-yarn/staging/preethup/.staging/job_1506485445588_0005/job_1506485445588_0005_1_conf.xml to hdfs://localhost:9000/tmp/hadoop-yarn/staging/history/done_intermediate/preethup/job_1506485445588_0005_conf.xml_tmp
+2017-09-27 12:21:17,691 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1506485445588_0005_01_000005
+2017-09-27 12:21:17,691 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:2 CompletedReds:1 ContAlloc:4 ContRel:1 HostLocal:2 RackLocal:0
+2017-09-27 12:21:17,692 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1506485445588_0005_r_000000_0: Container killed by the ApplicationMaster.
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+2017-09-27 12:21:19,424 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copied to done location: hdfs://localhost:9000/tmp/hadoop-yarn/staging/history/done_intermediate/preethup/job_1506485445588_0005_conf.xml_tmp
+2017-09-27 12:21:19,601 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Moved tmp to done: hdfs://localhost:9000/tmp/hadoop-yarn/staging/history/done_intermediate/preethup/job_1506485445588_0005.summary_tmp to hdfs://localhost:9000/tmp/hadoop-yarn/staging/history/done_intermediate/preethup/job_1506485445588_0005.summary
+2017-09-27 12:21:19,750 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Moved tmp to done: hdfs://localhost:9000/tmp/hadoop-yarn/staging/history/done_intermediate/preethup/job_1506485445588_0005_conf.xml_tmp to hdfs://localhost:9000/tmp/hadoop-yarn/staging/history/done_intermediate/preethup/job_1506485445588_0005_conf.xml
+2017-09-27 12:21:19,878 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Moved tmp to done: hdfs://localhost:9000/tmp/hadoop-yarn/staging/history/done_intermediate/preethup/job_1506485445588_0005-1506494949338-preethup-surveyvisual%2D1.0%2DSNAPSHOT.jar-1506495076790-2-1-SUCCEEDED-root.preethup-1506494960095.jhist_tmp to hdfs://localhost:9000/tmp/hadoop-yarn/staging/history/done_intermediate/preethup/job_1506485445588_0005-1506494949338-preethup-surveyvisual%2D1.0%2DSNAPSHOT.jar-1506495076790-2-1-SUCCEEDED-root.preethup-1506494960095.jhist
+2017-09-27 12:21:20,344 INFO [Thread-75] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopped JobHistoryEventHandler. super.stop()
+2017-09-27 12:21:20,356 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Setting job diagnostics to 
+2017-09-27 12:21:20,357 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: History url is http://preethup-Inspiron-3442:19888/jobhistory/job/job_1506485445588_0005
+2017-09-27 12:21:21,460 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Waiting for application to be successfully unregistered.
+2017-09-27 12:21:22,811 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:2 CompletedReds:1 ContAlloc:4 ContRel:1 HostLocal:2 RackLocal:0
+2017-09-27 12:21:22,813 INFO [Thread-75] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Deleting staging directory hdfs://localhost:9000 /tmp/hadoop-yarn/staging/preethup/.staging/job_1506485445588_0005
+2017-09-27 12:21:22,917 INFO [Thread-75] org.apache.hadoop.ipc.Server: Stopping server on 34671
+2017-09-27 12:21:22,920 INFO [IPC Server listener on 34671] org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 34671
+2017-09-27 12:21:22,920 INFO [TaskHeartbeatHandler PingChecker] org.apache.hadoop.mapreduce.v2.app.TaskHeartbeatHandler: TaskHeartbeatHandler thread interrupted
+2017-09-27 12:21:22,920 INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+
+
+
+Container: container_1506485445588_0005_01_000002 on preethup-Inspiron-3442_32917
+===================================================================================
+LogType:stderr
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:0
+Log Contents:
+
+LogType:stdout
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:16776
+Log Contents:
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string1,Priya Aiden10,25,F,Alappuzha
+Wrote:1age:25
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string2,Ethana Samual82,65,M,Idukki
+Wrote:2age:65
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string3,David Aidan91,32,M,Kottayam
+Wrote:3age:32
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string4,Aiden Mason126,25,M,Idukki
+Wrote:4age:25
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string5,Gabriel Anu41,42,F,Malappuram
+Wrote:5age:42
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string6,Gavin Jany60,27,F,Idukki
+Wrote:6age:27
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string7,Tyler Christina29,26,M,Kollam
+Wrote:7age:26
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string8,David Jasy27,45,M,Kottayam
+Wrote:8age:45
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string9,Monu Kevin68,54,M,Kannur
+Wrote:9age:54
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string10,Angel Praseeetha109,43,F,Ernakulam
+Wrote:10age:43
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string11,Gabriel Elijah41,57,M,Malappuram
+Wrote:11age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string12,Jordan William123,20,M,Wayanad
+Wrote:12age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string13,Ryan Samuel26,57,M,Alappuzha
+Wrote:13age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string14,James Priyanka30,18,F,Alappuzha
+Wrote:14age:18
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string15,Isaiah Brandon122,23,M,Malappuram
+Wrote:15age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string16,Elijah Emily44,57,F,Malappuram
+Wrote:16age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string17,Aidan Evan56,20,M,Alappuzha
+Wrote:17age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string18,John Nathan95,23,M,Malappuram
+Wrote:18age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string19,Logan Praseeetha39,21,M,Kottayam
+Wrote:19age:21
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string20,Kevin Isaac46,20,M,Alappuzha
+Wrote:20age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string21,Pachu Daniel74,21,M,Alappuzha
+Wrote:21age:21
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string22,Priya Ryan3,43,F,Alappuzha
+Wrote:22age:43
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string23,Isaac Nicholas127,20,M,Alappuzha
+Wrote:23age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string24,Thomas Priya53,23,F,Kottayam
+Wrote:24age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string25,Joshua Noah16,20,F,Pathanamthitta
+Wrote:25age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string26,Gabriel Christopher105,42,M,Wayanad
+Wrote:26age:42
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string27,Connor Dylan125,23,M,Malappuram
+Wrote:27age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string28,Aidan Tyler120,32,M,Alappuzha
+Wrote:28age:32
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string29,Connor Monu125,23,M,Malappuram
+Wrote:29age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string30,Jackson Thomas57,23,M,Ernakulam
+Wrote:30age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string31,Priya Alwin3,26,F,Alappuzha
+Wrote:31age:26
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string32,Isaac Jasy127,20,F,Alappuzha
+Wrote:32age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string33,Jordan Emily123,20,F,Wayanad
+Wrote:33age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string34,Samual Jackson7,30,M,Pathanmthitta
+Wrote:34age:30
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string35,Robert Isaiah116,57,M,Ernakulam
+Wrote:35age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string36,Tyler Ethan93,12,M,Kollam
+Wrote:36age:12
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string37,Austin Mason50,20,M,Ernakulam
+Wrote:37age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string38,Elijah Alexander44,57,M,Malappuram
+Wrote:38age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string39,Isaiah Christina58,23,F,Malappuram
+Wrote:39age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string40,Matthew Luke17,57,M,Kottayam
+Wrote:40age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string41,Logan Jack39,20,M,Kottayam
+Wrote:41age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string42,Dylan Samual101,43,M,Wayanad
+Wrote:42age:43
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string43,Michael Manu15,23,M,Alappuzha
+Wrote:43age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string44,Alexander Jasy89,78,F,Idukki
+Wrote:44age:78
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string45,David Gavin27,27,M,Kottayam
+Wrote:45age:27
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string46,Raju Daniel65,33,M,Thammanam
+Wrote:46age:33
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string47,Logan Pachu39,21,M,Kottayam
+Wrote:47age:21
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string48,Ethan Evan18,20,M,Idukki
+Wrote:48age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string49,Zachary DanielD106,57,M,Alappuzha
+Wrote:49age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string50,Priya Mason10,20,F,Alappuzha
+Wrote:50age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string51,Dylan Aidan37,32,M,Alappuzha
+Wrote:51age:32
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string52,Zachary William42,25,M,Alappuzha
+Wrote:52age:25
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string53,Janki Ryan6,43,F,Kottayam
+Wrote:53age:43
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string54,Priya William3,25,F,Alappuzha
+Wrote:54age:25
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string55,EmilyJason Samuel78,57,F,Kottayam
+Wrote:55age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string56,Caleb Samual48,35,M,Malappuram
+Wrote:56age:35
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string57,Benjamin Pachu38,21,M,Kottayam
+Wrote:57age:21
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string58,Samu Luke71,72,M,Pathanmthitta
+Wrote:58age:72
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string59,Roshan Aiden72,33,M,Thoppumpadi
+Wrote:59age:33
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string60,Anthony James21,18,M,Kannur
+Wrote:60age:18
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string61,Kevin Jordan46,20,M,Alappuzha
+Wrote:61age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string62,John EmilyJason31,36,M,Malappuram
+Wrote:62age:36
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string63,Nicholas Anthony92,22,M,Pathanamthitta
+Wrote:63age:22
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string64,Mason Angel55,20,M,Idukki
+Wrote:64age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string65,Zachary Monu106,57,M,Alappuzha
+Wrote:65age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string66,Connor Aiden61,25,M,Malappuram
+Wrote:66age:25
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string67,Samsan Angel64,43,M,Palarivattam
+Wrote:67age:43
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string68,Caleb Aiden112,35,M,Malappuram
+Wrote:68age:35
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string69,Samu Isaac71,72,M,Pathanmthitta
+Wrote:69age:72
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string70,Thomas Jordan53,20,M,Kottayam
+Wrote:70age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string71,Luke Logan118,57,M,Ernakulam
+Wrote:71age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string72,Samuel Samual98,57,M,Idukki
+Wrote:72age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string73,Raj Alexander1,78,M,Thammanam
+Wrote:73age:78
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string74,William Ryan24,43,M,Alappuzha
+Wrote:74age:43
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string75,Tyler Kevin29,23,M,Kollam
+Wrote:75age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string76,Dylan Kevin101,43,M,Wayanad
+Wrote:76age:43
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string77,Ryan Ryan90,43,M,Alappuzha
+Wrote:77age:43
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string78,Kevin Awin110,23,M,Alappuzha
+Wrote:78age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string79,Jonathan Anthony32,19,M,Kottayam
+Wrote:79age:19
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string80,Benjamin Luke102,57,M,Kottayam
+Wrote:80age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string81,Jose David43,34,M,Ernakulam
+Wrote:81age:34
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string82,Alwin Kevin66,23,M,Aluva
+Wrote:82age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string83,Evan Angel51,20,M,Malappuram
+Wrote:83age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string84,Miche Austin79,23,M,Alappuzha
+Wrote:84age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string85,Jany Sam13,26,M,Kottayam
+Wrote:85age:26
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string86,Ethan Roy18,65,M,Idukki
+Wrote:86age:65
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string87,Jack Joshua111,20,F,Idukki
+Wrote:87age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string88,Jack Zachary47,20,M,Idukki
+Wrote:88age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string89,Jose Anthony107,60,M,Ernakulam
+Wrote:89age:60
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string90,Christina Elijah99,26,M,Ernakulam
+Wrote:90age:26
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string91,Prana Joshua69,25,F,Aluva
+Wrote:91age:25
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string92,Evan Christina115,20,F,Malappuram
+Wrote:92age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string93,Alexander Justin25,23,M,Idukki
+Wrote:93age:23
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string94,DanielD Noah84,20,M,Kasaragod
+Wrote:94age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string95,Noah Evan100,20,M,Malappuram
+Wrote:95age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string96,Achu Jack76,20,M,Kollam
+Wrote:96age:20
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string97,Jonathan Elijah32,57,M,Kottayam
+Wrote:97age:57
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string98,Roy Gavin8,27,M,Thoppumpadi
+Wrote:98age:27
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string99,Benjamin Roshan38,33,M,Kottayam
+Wrote:99age:33
+File Name=hdfs://localhost:9000/surveyvisual/participant/part-m-00000
+Value string100,Brandon Robert40,57,M,Idukki
+Wrote:100age:57
+In combiner value=age:25
+group =21-30
+In combiner value=age:43
+group =41-50
+In combiner value=age:57
+group =51-60
+In combiner value=age:57
+group =51-60
+In combiner value=age:20
+group =11-20
+In combiner value=age:57
+group =51-60
+In combiner value=age:18
+group =11-20
+In combiner value=age:23
+group =21-30
+In combiner value=age:57
+group =51-60
+In combiner value=age:20
+group =11-20
+In combiner value=age:23
+group =21-30
+In combiner value=age:21
+group =21-30
+In combiner value=age:65
+group =61-70
+In combiner value=age:20
+group =11-20
+In combiner value=age:21
+group =21-30
+In combiner value=age:43
+group =41-50
+In combiner value=age:20
+group =11-20
+In combiner value=age:23
+group =21-30
+In combiner value=age:20
+group =11-20
+In combiner value=age:42
+group =41-50
+In combiner value=age:23
+group =21-30
+In combiner value=age:32
+group =31-40
+In combiner value=age:23
+group =21-30
+In combiner value=age:32
+group =31-40
+In combiner value=age:23
+group =21-30
+In combiner value=age:26
+group =21-30
+In combiner value=age:20
+group =11-20
+In combiner value=age:20
+group =11-20
+In combiner value=age:30
+group =21-30
+In combiner value=age:57
+group =51-60
+In combiner value=age:12
+group =11-20
+In combiner value=age:20
+group =11-20
+In combiner value=age:57
+group =51-60
+In combiner value=age:23
+group =21-30
+In combiner value=age:25
+group =21-30
+In combiner value=age:57
+group =51-60
+In combiner value=age:20
+group =11-20
+In combiner value=age:43
+group =41-50
+In combiner value=age:23
+group =21-30
+In combiner value=age:78
+group =71-80
+In combiner value=age:27
+group =21-30
+In combiner value=age:33
+group =31-40
+In combiner value=age:21
+group =21-30
+In combiner value=age:20
+group =11-20
+In combiner value=age:57
+group =51-60
+In combiner value=age:42
+group =41-50
+In combiner value=age:20
+group =11-20
+In combiner value=age:32
+group =31-40
+In combiner value=age:25
+group =21-30
+In combiner value=age:43
+group =41-50
+In combiner value=age:25
+group =21-30
+In combiner value=age:57
+group =51-60
+In combiner value=age:35
+group =31-40
+In combiner value=age:21
+group =21-30
+In combiner value=age:72
+group =71-80
+In combiner value=age:33
+group =31-40
+In combiner value=age:27
+group =21-30
+In combiner value=age:18
+group =11-20
+In combiner value=age:20
+group =11-20
+In combiner value=age:36
+group =31-40
+In combiner value=age:22
+group =21-30
+In combiner value=age:20
+group =11-20
+In combiner value=age:57
+group =51-60
+In combiner value=age:25
+group =21-30
+In combiner value=age:43
+group =41-50
+In combiner value=age:35
+group =31-40
+In combiner value=age:72
+group =71-80
+In combiner value=age:26
+group =21-30
+In combiner value=age:20
+group =11-20
+In combiner value=age:57
+group =51-60
+In combiner value=age:57
+group =51-60
+In combiner value=age:78
+group =71-80
+In combiner value=age:43
+group =41-50
+In combiner value=age:23
+group =21-30
+In combiner value=age:43
+group =41-50
+In combiner value=age:43
+group =41-50
+In combiner value=age:23
+group =21-30
+In combiner value=age:19
+group =11-20
+In combiner value=age:45
+group =41-50
+In combiner value=age:57
+group =51-60
+In combiner value=age:34
+group =31-40
+In combiner value=age:23
+group =21-30
+In combiner value=age:20
+group =11-20
+In combiner value=age:23
+group =21-30
+In combiner value=age:26
+group =21-30
+In combiner value=age:65
+group =61-70
+In combiner value=age:20
+group =11-20
+In combiner value=age:20
+group =11-20
+In combiner value=age:60
+group =51-60
+In combiner value=age:54
+group =51-60
+In combiner value=age:26
+group =21-30
+In combiner value=age:25
+group =21-30
+In combiner value=age:20
+group =11-20
+In combiner value=age:23
+group =21-30
+In combiner value=age:20
+group =11-20
+In combiner value=age:20
+group =11-20
+In combiner value=age:20
+group =11-20
+In combiner value=age:57
+group =51-60
+In combiner value=age:27
+group =21-30
+In combiner value=age:33
+group =31-40
+
+LogType:syslog
+Log Upload Time:Wed Sep 27 12:21:30 +0530 2017
+LogLength:4119
+Log Contents:
+2017-09-27 12:19:28,035 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-09-27 12:19:29,643 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2017-09-27 12:19:30,621 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-09-27 12:19:30,622 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2017-09-27 12:19:31,983 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2017-09-27 12:19:31,983 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1506485445588_0005, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@3b2cf7ab)
+2017-09-27 12:19:34,972 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2017-09-27 12:19:42,133 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/preethup/hadoop/tmp/nm-local-dir/usercache/preethup/appcache/application_1506485445588_0005
+2017-09-27 12:20:10,023 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-09-27 12:20:18,196 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 1
+2017-09-27 12:20:18,356 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2017-09-27 12:20:18,446 WARN [main] org.apache.hadoop.yarn.util.ProcfsBasedProcessTree: Unexpected: procfs stat file is not in the expected format for process with pid 15342
+2017-09-27 12:20:26,350 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: hdfs://localhost:9000/surveyvisual/participant/part-m-00000:0+3284
+2017-09-27 12:20:27,522 INFO [main] org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2017-09-27 12:20:27,522 INFO [main] org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2017-09-27 12:20:27,522 INFO [main] org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2017-09-27 12:20:27,522 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2017-09-27 12:20:27,522 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2017-09-27 12:20:27,764 INFO [main] org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-09-27 12:20:29,459 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2017-09-27 12:20:29,459 INFO [main] org.apache.hadoop.mapred.MapTask: Spilling map output
+2017-09-27 12:20:29,460 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 992; bufvoid = 104857600
+2017-09-27 12:20:29,460 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396(104857584); kvend = 26214000(104856000); length = 397/6553600
+2017-09-27 12:20:29,767 INFO [main] org.apache.hadoop.mapred.MapTask: Finished spill 0
+2017-09-27 12:20:29,837 INFO [main] org.apache.hadoop.mapred.Task: Task:attempt_1506485445588_0005_m_000000_0 is done. And is in the process of committing
+2017-09-27 12:20:30,249 WARN [main] org.apache.hadoop.yarn.util.ProcfsBasedProcessTree: Unexpected: procfs stat file is not in the expected format for process with pid 15342
+2017-09-27 12:20:30,508 WARN [main] org.apache.hadoop.yarn.util.ProcfsBasedProcessTree: Unexpected: procfs stat file is not in the expected format for process with pid 15342
+2017-09-27 12:20:31,470 INFO [main] org.apache.hadoop.mapred.Task: Task 'attempt_1506485445588_0005_m_000000_0' done.
+2017-09-27 12:20:31,618 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping MapTask metrics system...
+2017-09-27 12:20:31,619 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system stopped.
+2017-09-27 12:20:31,620 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system shutdown complete.
+

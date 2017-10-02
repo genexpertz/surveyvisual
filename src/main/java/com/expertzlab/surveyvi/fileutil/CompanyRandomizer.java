@@ -16,7 +16,7 @@ import java.util.Random;
 public class CompanyRandomizer {
     int pos1;
     int pos2;
-    int recordcount =20;
+    int recordcount =15;
     long lastId = 1;
 
     public CompanyRandomizer(Connection con ) throws SQLException {

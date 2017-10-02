@@ -30,13 +30,13 @@ public class OptionDataWriter extends Thread {
             list = or.getRandomizedList(list);
 
             for(Object op :list) {
-                System.out.println("In new thread");
+                System.out.println("In option thread");
                 PreparedStatement statement = con.prepareStatement("insert into options values(?,?,?) ");
                 statement.setLong(1,((Options)op).getId());
                 statement.setLong(2,((Options)op).getQuestionId());
                 statement.setInt(3,((Options)op).getWeight());
                 statement.execute();
-                System.out.println("Executed successfully");
+                System.out.println(" Option Executed successfully");
             }
         } catch (SQLException e) {
             new RuntimeException("Options Write",e);        }
