@@ -49,7 +49,7 @@ public class AnsweringService{
                             answer.setProgarmId(p.getId());
                             answer.setQuestionId(q.getQuestionId());
 
-                            AnswerDataWriter adw = new AnswerDataWriter(con);
+                            AnswerDataWriter adw = new AnswerDataWriter(con, entry.getValue());
                             adw.execute(answer);
                         }
 

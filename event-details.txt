@@ -5,23 +5,6 @@ free your lungs|alappuzha|2009/02/11|3|3
 cardiosmart|kozhikkodu|2010/10/01|4|4
 smoke less breathe more|kollam|2005/12/21|5|5
 nicotine free campus|kannur|2011/01/09|6|6
-go smoke free|wayanad|24/2/2010|7|7
-good bye lighters|thiruvananthapuram|30/12/2008|8|8
-<<<<<<< HEAD
-less puffs more hugs|kottayam|22/5/2010|9|9
-say no to tobacco|malappuram|17/6/2007|10|10
-tobacco and diabetics|kasargodu|27/9/2010|1|11
-quit cigarette|kannur|31/12/2003|2|1s2
-smoking & cancer|palakkad|11/6/2011|3|13
-tobacco free school|malappuram|17/9/2004|4|14
-stop smoking start repairing|kottayam|4/5/2005|5|15
-go smoke free|idukki|2/2/2006|6|16
-no to tobacco yes to life|wayanad|9/11/2001|7|17
-say no to tobacco|malappuram|21/10/2005|8|18
-oral cancer awareness|palakkad|2/5/2007|9|19
-smoking and immunity|thiruvananthapuram|21/5/2009|10|20
-smoke free panchayath|kasargodu|22/5/2004|1|21
-=======
 less puffs more hugs|kottayam|2010/05/22|9|9
 say no to tobacco|malappuram|2007/06/17|10|10
 tobacco and diabetics|kasargodu|2010/09/27|1|11
@@ -35,4 +18,3 @@ say no to tobacco|malappuram|2005/10/21|8|18
 oral cancer awareness|palakkad|2007/05/02|9|19
 smoking and immunity|thiruvananthapuram|2009/05/21|10|20
 smoke free panchayath|kasargodu|2004/05/22|1|21
->>>>>>> 00a6793c1d4fe9d287fbbb489176c7c977f0631e
