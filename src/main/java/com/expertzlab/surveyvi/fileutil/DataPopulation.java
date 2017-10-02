@@ -8,9 +8,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.*;
 
-/**
- * Created by gireeshbabu on 10/08/17.
- */
+
 public class DataPopulation {
     static Map map = new LinkedHashMap();
     static File file;
@@ -36,8 +34,8 @@ public class DataPopulation {
         WriteSampleData wsd = new WriteSampleData(map);
         wsd.writeData();
         Connection con = DBConnectionManager.getConnection();
-        //AttendanceService attendanceService = new AttendanceService(con);
-        //attendanceService.markAttendance();
+        AttendanceService attendanceService = new AttendanceService(con);
+        attendanceService.markAttendance();
 
         AnsweringService answeringService = new AnsweringService(con);
         answeringService.answerQuestions();

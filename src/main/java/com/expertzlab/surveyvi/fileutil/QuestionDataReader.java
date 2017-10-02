@@ -1,7 +1,5 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.model.Event;
-import com.expertzlab.surveyvi.model.Participant;
 import com.expertzlab.surveyvi.model.Question;
 
 import java.sql.Connection;
