@@ -59,6 +59,8 @@
             <scope>test</scope>
         </dependency>
 
+
+
         <!--
 
         <dependency>
@@ -104,9 +106,6 @@
             <artifactId>hadoop-hdfs</artifactId>
             <version>2.7.2</version>
         </dependency>
-
-
-
         -->
 
     </dependencies>

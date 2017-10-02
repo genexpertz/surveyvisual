@@ -11,6 +11,7 @@ import java.util.Random;
  */
 public class AttendanceDataWriter extends Thread {
 
+
     Connection con;
     long projId;
     long partcipId;
@@ -50,3 +51,4 @@ public class AttendanceDataWriter extends Thread {
 
         }
     }
+

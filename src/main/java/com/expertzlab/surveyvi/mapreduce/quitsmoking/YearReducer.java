@@ -5,7 +5,13 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
+<<<<<<< HEAD
 
+=======
+/**
+ * Created by avin on 9/26/17.
+ */
+>>>>>>> 00a6793c1d4fe9d287fbbb489176c7c977f0631e
 public class YearReducer extends Reducer<Text,Text,Text,Text> {
 
     public void reduce(Text key,Iterable<Text> values,Context context) throws IOException, InterruptedException {
