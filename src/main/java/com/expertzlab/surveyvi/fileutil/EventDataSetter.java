@@ -23,7 +23,7 @@ class EventDataSetter extends DataSetter{
         Event evt =null;
         try {
         evt = (Event) clazz.newInstance();
-        for(int i = 0; i< hArray.length; i++) {
+        for(int i = 0; i< rArray.length; i++) {
 
             Method m = clazz.getMethod("set" +capitalizeFirstLetter( hArray[i]), String.class);
             m.invoke(evt, rArray[i]);

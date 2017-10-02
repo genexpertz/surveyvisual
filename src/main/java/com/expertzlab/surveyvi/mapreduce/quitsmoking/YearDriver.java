@@ -9,13 +9,10 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 import java.io.IOException;
 
-<<<<<<< HEAD
 
-=======
 /**
  * Created by avin on 9/23/17.
  */
->>>>>>> 00a6793c1d4fe9d287fbbb489176c7c977f0631e
 public class YearDriver {
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         YearDriver yearDriver = new YearDriver();
