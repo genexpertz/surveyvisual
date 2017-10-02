@@ -1,9 +1,5 @@
 package com.expertzlab.surveyvi.mapreduce.quitsmoking;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 0da65dcfe824a840da5746b89e5b9320e1a8e8cd
 import org.apache.hadoop.io.LongWritable;
 
 
@@ -14,15 +10,8 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 
-<<<<<<< HEAD
-public class    YearMap extends Mapper<LongWritable,Text,Text,Text> {
 
-=======
-/**
- * Created by avin on 9/23/17.
- */
 public class    YearMap extends Mapper<LongWritable,Text,Text,Text> {
->>>>>>> 0da65dcfe824a840da5746b89e5b9320e1a8e8cd
 
     String filename = null;
     String eventId = null;
