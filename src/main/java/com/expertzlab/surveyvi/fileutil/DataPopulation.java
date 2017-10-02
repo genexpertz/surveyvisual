@@ -34,8 +34,8 @@ public class DataPopulation {
         WriteSampleData wsd = new WriteSampleData(map);
         wsd.writeData();
         Connection con = DBConnectionManager.getConnection();
-        AttendanceService attendanceService = new AttendanceService(con);
-        attendanceService.markAttendance();
+        //AttendanceService attendanceService = new AttendanceService(con);
+        //attendanceService.markAttendance();
 
         AnsweringService answeringService = new AnsweringService(con);
         answeringService.answerQuestions();

@@ -107,6 +107,8 @@ public class Question {
 
     public Options split(String op) {
 
+        if(op == null) return null;
+
         Options option = new Options();
         String[] rArray = op.split(",");
         option.setQuestionId(id);
