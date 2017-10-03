@@ -39,16 +39,12 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
             context.write(pid, new Text("age:"+age));
             System.out.println("Wrote:"+pid+",age:"+age);
         }
-        else if (filename.contains("/answer_view")){
+        else if (filename.contains("/answer")){
             StringTokenizer iterator = new StringTokenizer(values.toString(),",");
             iterator.nextToken();
             pid = new Text(iterator.nextToken());
             int qId = Integer.parseInt(iterator.nextToken());
             int optId = Integer.parseInt(iterator.nextToken());
-            iterator.nextToken();
-            iterator.nextToken();
-            String yr = iterator.nextToken();
-
 
             if(qId == 1 && optId == 1 ){
                 context.write(pid,new Text("smoking:1"));
@@ -56,7 +52,5 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
             }
         }
     }
-
-
 
 }
