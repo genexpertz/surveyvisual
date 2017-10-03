@@ -53,6 +53,4 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
         }
     }
 
-
-
 }
