@@ -1,5 +1,6 @@
-package com.expertzlab.surveyvi.mapreduce.quitsmoking;
+package com.expertzlab.surveyvi.mapreduce.quitsmoking.age;
 
+import com.expertzlab.surveyvi.mapreduce.quitsmoking.age.AgeMap;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -7,8 +8,6 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InOrder;
-import org.mockito.Mockito;
 
 
 import java.io.IOException;

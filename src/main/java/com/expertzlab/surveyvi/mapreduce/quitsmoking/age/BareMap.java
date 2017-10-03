@@ -1,4 +1,4 @@
-package com.expertzlab.surveyvi.mapreduce.quitsmoking;
+package com.expertzlab.surveyvi.mapreduce.quitsmoking.age;
 
 /**
  * Created by preethup on 27/9/17.

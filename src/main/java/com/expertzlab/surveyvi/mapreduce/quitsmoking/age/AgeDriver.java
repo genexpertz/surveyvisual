@@ -1,4 +1,4 @@
-package com.expertzlab.surveyvi.mapreduce.quitsmoking;
+package com.expertzlab.surveyvi.mapreduce.quitsmoking.age;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;

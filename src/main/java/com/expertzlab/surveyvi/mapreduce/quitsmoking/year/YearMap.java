@@ -1,4 +1,4 @@
-package com.expertzlab.surveyvi.mapreduce.quitsmoking;
+package com.expertzlab.surveyvi.mapreduce.quitsmoking.year;
 
 import org.apache.hadoop.io.LongWritable;
 

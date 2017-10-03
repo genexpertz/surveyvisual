@@ -1,6 +1,6 @@
-package com.expertzlab.surveyvi.mapreduce.quitsmoking;
+package com.expertzlab.surveyvi.mapreduce.quitsmoking.gender;
 
-//import com.expertzlab.surveyvi.mapreduce.quitsmoking.AgeMap;
+//import com.expertzlab.surveyvi.mapreduce.quitsmoking.age.AgeMap;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -10,9 +10,9 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 
-public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
+public class GenderMap extends Mapper<LongWritable,Text,Text,Text> {
 
-   // private Text docId ;
+    // private Text docId ;
     String filename;
 
     protected Text pid;
@@ -22,7 +22,6 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
     @Override
     protected void setup(Context context){
         filename = ((FileSplit)context.getInputSplit()).getPath().toString();
-        //docId = new Text(filename);
     }
     @Override
     protected void map(LongWritable key, Text values,Context context) throws IOException, InterruptedException {
@@ -36,8 +35,10 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
             pid = new Text(iterator.nextToken());
             iterator.nextToken();
             int age = Integer.parseInt(iterator.nextToken());
+            String gender = iterator.nextToken();
             context.write(pid, new Text("age:"+age));
             System.out.println("Wrote:"+pid+",age:"+age);
+            //context.write(gender, new Text("gender:")+gender);
         }
         else if (filename.contains("/answer")){
             StringTokenizer iterator = new StringTokenizer(values.toString(),",");
@@ -46,7 +47,7 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
             int qId = Integer.parseInt(iterator.nextToken());
             int optId = Integer.parseInt(iterator.nextToken());
 
-            if(qId == 1 && optId == 1  ){
+            if(qId == 1 && optId == 1 ){
                 context.write(pid,new Text("smoking:1"));
                 System.out.println("wrote:"+pid+",smoking:1");
             }
@@ -54,3 +55,4 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
     }
 
 }
+
