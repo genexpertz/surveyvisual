@@ -29,7 +29,7 @@ public class ParticipantDataWriter extends Thread {
             ParticipantRandomizer pr = new ParticipantRandomizer(con);
             list = pr.getRandomizedList(list);
             for (Object pt : list) {
-                System.out.println("In new thread");
+                System.out.println("In participant thread");
                 PreparedStatement statement = con.prepareStatement("insert into participant values(?,?,?,?,?) ");
                 statement.setLong(1, ((Participant) pt).getId());
                 statement.setString(2, ((Participant) pt).getName());

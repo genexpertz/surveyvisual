@@ -8,3 +8,4 @@ thursdayCampaign|1
 fridayCampaign|2
 saturdayCampaign|2
 theaterAdd|1
+tvAdds|1
