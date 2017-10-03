@@ -4,4 +4,4 @@ out.txt
 answer.txt
 participant.txt
 surveyvisual.iml
-DBConnectionManager.java
+src/main/java/com/expertzlab/surveyvi/genutil/DBConnectionManager.java

@@ -29,7 +29,7 @@ public class AgentDataWriter extends Thread{
             list = ar.getRandomizedList(list);
             for(Object agt :list) {
                 System.out.println("Agent -"+agt);
-                System.out.println("In new thread");
+                System.out.println("In new Agent thread");
                 PreparedStatement statement = con.prepareStatement("insert into agent values(?,?) ");
                 statement.setLong(1,((Agent)agt).getId());
                 statement.setString(2,((Agent)agt).getName());

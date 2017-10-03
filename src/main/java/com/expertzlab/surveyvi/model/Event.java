@@ -9,7 +9,6 @@ public class Event
     String date;
     String projectId;
     String agentId;
-    private int eventId;
 
     public long getId() {
         return id;
@@ -63,9 +62,5 @@ public class Event
 
     public void setAgentId(String agentId) {
         this.agentId = agentId;
-    }
-
-    public int getEventId() {
-        return eventId;
     }
 }
