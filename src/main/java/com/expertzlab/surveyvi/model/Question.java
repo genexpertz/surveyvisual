@@ -10,7 +10,6 @@ public class Question {
     Options option3;
     Options option4;
     String record = null;
-    private long questionId;
 
     public int getId() {
         return id;
@@ -116,9 +115,5 @@ public class Question {
         option.setId(Integer.parseInt(ids[0]));
         option.setWeight(Integer.parseInt(rArray[1]));
         return option;
-    }
-
-    public long getQuestionId() {
-        return questionId;
     }
 }

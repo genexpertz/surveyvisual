@@ -43,11 +43,11 @@ public class AnsweringService{
                         while(qdr.hasNext()) {
                             Question q = qdr.get();
                             Answer answer = new Answer();
-                            answer.setEventId(e.getEventId());
-                            answer.setOptionId(new Random().nextInt(4));
+                            answer.setEventId(e.getId());
+                            answer.setOptionId(getOptionRandom());
                             answer.setParticipantId(pt.getId());
                             answer.setProgarmId(p.getId());
-                            answer.setQuestionId(q.getQuestionId());
+                            answer.setQuestionId(q.getId());
 
                             AnswerDataWriter adw = new AnswerDataWriter(con);
                             adw.execute(answer);
@@ -59,5 +59,15 @@ public class AnsweringService{
 
         }
 
+    }
+
+    public int getOptionRandom(){
+       int optionId = new Random().nextInt(5);
+       if(optionId <=0){
+           optionId = 1;
+       } else if(optionId > 4){
+           optionId = 4;
+       }
+       return optionId;
     }
 }
