@@ -32,21 +32,15 @@ ui <- fluidPage(
 server <- function(input, output) {
 
   dbAccess <- ({
-    dyn.load('/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so')
-       library(rJava)
+        library(rJava)
         library(RJDBC)
-
-        cp <- c("/home/preethup/hive/lib/hive-jdbc-1.1.0-cdh5.4.1-standalone.jar","/home/preethup/Documents/hbase/lib/hadoop-common-2.6.0-cdh5.4.1.jar")
-
-        .jinit(classpath=cp)
-
-        drv <- JDBC("org.apache.hive.jdbc.HiveDriver","/home/preethup/hive/lib/hive-jdbc-1.1.0-cdh5.4.1-standalone.jar",identifier.quote="`")
-
-        conn <- dbConnect(drv, "jdbc:hive2://localhost:10000/surveyvisual","preethup","")
-        result <- dbSendQuery(conn,"select * from age_group")
-        d.frame <- fetch(result, n=-1)
-        print(d.frame)
-
+        cp <- c("/home/avin/hive/hive-1.1.0-cdh5.4.1/lib/hive-jdbc-1.1.0-cdh5.4.1-standalone.jar","/home/avin/hbase/hbase-1.0.0-cdh5.4.1/lib/hadoop-common-2.6.0-cdh5.4.1.jar");
+        .jinit(classpath=cp);
+        drv <- JDBC("org.apache.hive.jdbc.HiveDriver","/home/avin/hive/hive-1.1.0-cdh5.4.1/lib/hive-jdbc-1.1.0-cdh5.4.1-standalone.jar",identifier.quote="`");
+        conn <- dbConnect(drv, "jdbc:hive2://localhost:10000/surveyvisual","avin","");
+        result <- dbSendQuery(conn,"select * from agegroupcount");
+        d.frame <- fetch(result, n=-1);
+        print(d.frame);
     })
 
   # Histogram of the Old Faithful Geyser Data ----
