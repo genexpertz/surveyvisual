@@ -23,6 +23,7 @@ public class GenderMap extends Mapper<LongWritable,Text,Text,Text> {
     protected void setup(Context context){
         filename = ((FileSplit)context.getInputSplit()).getPath().toString();
     }
+
     @Override
     protected void map(LongWritable key, Text values,Context context) throws IOException, InterruptedException {
 

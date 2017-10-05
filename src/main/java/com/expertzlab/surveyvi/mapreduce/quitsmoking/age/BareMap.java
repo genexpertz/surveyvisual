@@ -23,6 +23,9 @@ public class BareMap extends Mapper<LongWritable,Text,Text,Text> {
     }
     @Override
     protected void map(LongWritable key, Text value,Context context) throws IOException, InterruptedException {
+
+        String val = value.toString();
+        System.out.println("Values in BareMap = "+val);
         String[] valueArray = value.toString().split("\\t");
 
        context.write(new Text(valueArray[0]),new Text(valueArray[1]));

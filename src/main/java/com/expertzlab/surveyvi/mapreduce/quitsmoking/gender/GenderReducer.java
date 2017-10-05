@@ -6,7 +6,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 
-public class GenderReducer {
+public class GenderReducer extends Reducer {
 
     public void reduce(Text key, Iterable<Text> values, Reducer.Context context) throws IOException, InterruptedException {
 

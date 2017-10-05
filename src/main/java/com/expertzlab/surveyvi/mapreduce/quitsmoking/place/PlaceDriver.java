@@ -1,4 +1,4 @@
-package com.expertzlab.surveyvi.mapreduce.quitsmoking.gender;
+package com.expertzlab.surveyvi.mapreduce.quitsmoking.place;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -7,41 +7,49 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class GenderDriver {
-    public static void main(String[] args) throws Exception {
-        GenderDriver GenderDriver = new GenderDriver();
+import java.io.IOException;
+
+/**
+ * Created by varsha on 10/4/17.
+ */
+public class PlaceDriver  {
+    public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
+        PlaceDriver placeDriver = new PlaceDriver();
         Path inp = new Path(args[0]);
         Path out = new Path(args[1]);
-        GenderDriver.run(inp,out);
+        placeDriver.run(inp,out);
     }
 
-    public void run(Path inp,Path out) throws Exception {
+    private void run(Path inp, Path out) throws IOException, ClassNotFoundException, InterruptedException {
+
         Configuration conf = new Configuration();
         Job job = new Job(conf);
-        job.setJarByClass(GenderDriver.class);
-        job.setMapperClass(GenderMap.class);
-        job.setReducerClass(GenderCombiner.class);
+        job.setJarByClass(PlaceDriver.class);
+        job.setMapperClass(PlaceMap.class);
+        job.setReducerClass(PlaceCombiner.class);
         job.setMapOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         FileInputFormat.setInputPaths(job,inp);
-        Path tempGender = new Path("/surveyoutput/tempgender"+System.currentTimeMillis());
-        FileOutputFormat.setOutputPath(job,tempGender);
+        Path tempPlace = new Path("/surveyoutput/tempplace"+System.currentTimeMillis());
+        FileOutputFormat.setOutputPath(job,tempPlace);
 
-        if(job.waitForCompletion(true)){
+        if (job.waitForCompletion(true)){
             System.out.println("Job1 completed Successfully");
         }
 
         job = new Job(conf);
-        job.setJarByClass(GenderDriver.class);
+        job.setJarByClass(PlaceDriver.class);
         job.setMapperClass(BareMap.class);
-        job.setReducerClass(GenderReducer.class);
+        job.setReducerClass(PlaceReducer.class);
         job.setMapOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
-        FileInputFormat.setInputPaths(job,tempGender);
+        FileInputFormat.setInputPaths(job,tempPlace);
         FileOutputFormat.setOutputPath(job,out);
 
         if (job.waitForCompletion(true)){
             System.out.println("Job2 completed Successfully");
         }
+
     }
+
 }

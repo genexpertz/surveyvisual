@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 
 
 
-public class    YearMap extends Mapper<LongWritable,Text,Text,Text> {
+public class YearMap extends Mapper<LongWritable,Text,Text,Text> {
 
     String filename = null;
     String eventId = null;

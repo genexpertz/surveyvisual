@@ -1,19 +1,18 @@
 package com.expertzlab.surveyvi.mapreduce.quitsmoking.age;
 
-//import com.expertzlab.surveyvi.mapreduce.quitsmoking.age.AgeMap;
+
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
+
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
-
 import java.io.IOException;
 import java.util.StringTokenizer;
-
 
 public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
 
    // private Text docId ;
-    String filename;
+    String filename = null;
 
     protected Text pid;
 
@@ -22,8 +21,8 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
     @Override
     protected void setup(Context context){
         filename = ((FileSplit)context.getInputSplit()).getPath().toString();
-        //docId = new Text(filename);
     }
+
     @Override
     protected void map(LongWritable key, Text values,Context context) throws IOException, InterruptedException {
 

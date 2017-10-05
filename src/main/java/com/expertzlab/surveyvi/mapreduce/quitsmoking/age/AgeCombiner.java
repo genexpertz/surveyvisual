@@ -15,9 +15,10 @@ public class AgeCombiner extends Reducer<Text, Text, Text, Text> {
         int age = 0;
         boolean smokingFlag = false;
         String group = null;
+
         for (Text value : values) {
             String val = value.toString();
-            System.out.println("In combiner value=" + val);
+            System.out.println("In combiner value = " + val);
             StringTokenizer iterator = new StringTokenizer(val, ":");
             String partOne = iterator.nextToken();
             if ("age".equals(partOne)) {

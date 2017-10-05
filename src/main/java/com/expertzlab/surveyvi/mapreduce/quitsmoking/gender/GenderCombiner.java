@@ -16,6 +16,7 @@ public class GenderCombiner<T, T1, T2, T3> extends Reducer<Text,Text,Text,Text> 
         String gender = null;
         String smokingFlag = null;
         String group = null;
+
         for (Text value : values) {
             String val = value.toString();
             System.out.println("In combiner value="+val);

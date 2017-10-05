@@ -16,7 +16,7 @@ import java.util.Random;
 public class QuestionNaireRandomizer {
     int pos1;
     int pos2;
-    int recordcount =1;
+    int recordcount =10;
     long lastId = 0;
 
     public QuestionNaireRandomizer(Connection con ) throws SQLException {
