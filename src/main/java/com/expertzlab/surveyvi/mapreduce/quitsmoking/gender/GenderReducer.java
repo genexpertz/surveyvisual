@@ -6,10 +6,8 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 
-public class GenderReducer extends Reducer {
-
-    public void reduce(Text key, Iterable<Text> values, Reducer.Context context) throws IOException, InterruptedException {
-
+public class GenderReducer extends Reducer<Text,Text,Text,Text> {
+    public void reduce(Text key,Iterable<Text> values,Context context) throws IOException, InterruptedException {
         int sum = 0;
         for (Text val : values) {
             sum++;
@@ -17,4 +15,5 @@ public class GenderReducer extends Reducer {
         System.out.println("key=" + key.toString() + ",sum=" + sum);
         context.write(key, new Text("" + sum));
     }
+
 }
