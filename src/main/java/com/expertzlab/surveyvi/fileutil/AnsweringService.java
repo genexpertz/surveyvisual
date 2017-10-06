@@ -44,7 +44,7 @@ public class AnsweringService{
                             Question q = qdr.get();
                             Answer answer = new Answer();
                             answer.setEventId(e.getId());
-                            answer.setOptionId(getOptionRandom());
+                            answer.setOptionId(getOptionRandom(q));
                             answer.setParticipantId(pt.getId());
                             answer.setProgarmId(p.getId());
                             answer.setQuestionId(q.getId());
@@ -61,12 +61,15 @@ public class AnsweringService{
 
     }
 
-    public int getOptionRandom(){
-       int optionId = new Random().nextInt(5);
+    public int getOptionRandom(Question q){
+
+        int optioncount = q.getOptionCount();
+       int optionId = new Random().nextInt(optioncount);
        if(optionId <=0){
            optionId = 1;
-       } else if(optionId > 4){
-           optionId = 4;
+       }
+       if(optionId > optioncount){
+           optionId = optioncount;
        }
        return optionId;
     }

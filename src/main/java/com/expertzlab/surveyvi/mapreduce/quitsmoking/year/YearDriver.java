@@ -1,6 +1,5 @@
 package com.expertzlab.surveyvi.mapreduce.quitsmoking.year;
 
-import com.expertzlab.surveyvi.mapreduce.quitsmoking.YearReducer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;

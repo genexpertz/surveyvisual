@@ -116,4 +116,21 @@ public class Question {
         option.setWeight(Integer.parseInt(rArray[1]));
         return option;
     }
+
+    public int getOptionCount(){
+        int count = 0;
+        if(option1 != null){
+            count ++;
+        }
+        if (option2 != null){
+            count++;
+        }
+        if (option3 != null){
+            count++;
+        }
+        if (option4 != null){
+            count++;
+        }
+        return count;
+    }
 }
