@@ -12,17 +12,17 @@ dropdownMenu(type = "notifications",
 ),
   dashboardSidebar(
     sidebarMenu(
-      menuItem("Agewise Report", tabName = "overview", icon = icon("group")),
-      menuItem("Genderwise Report", tabName = "dashboard", icon = icon("bar-chart-o")),
-      menuItem("Placewise Report", tabName = "calender", icon = icon("fa fa-area-chart") ),
-      menuItem("Yearwise Report", tabName = "calender", icon = icon("calendar") )
+      menuItem("Agewise Report", tabName = "agewise", icon = icon("group")),
+      menuItem("Genderwise Report", tabName = "genderwise", icon = icon("bar-chart-o")),
+      menuItem("Placewise Report", tabName = "placewise", icon = icon("fa fa-area-chart")),
+      menuItem("Yearwise Report", tabName = "yearwise", icon = icon("calendar"))
     )
   ),
    dashboardBody(
     tabItems(
       
       # First tab content
-     tabItem(tabName = "overview",
+     tabItem(tabName = "agewise",
           h1("Agewise Report"),
           
           selectInput(inputId = "dataset",
@@ -32,7 +32,7 @@ dropdownMenu(type = "notifications",
           
           ),
      #second tab content 
-     tabItem(tabName = "dashboard",
+     tabItem(tabName = "genderwise",
          h1("Genderwise Report"),
          
          selectInput(inputId = "dataset",
@@ -42,7 +42,7 @@ dropdownMenu(type = "notifications",
   ),      
 
       # Third tab content
-      tabItem(tabName = "calender",
+      tabItem(tabName = "placewise",
         h1("Placewise Report"),
         
         selectInput(inputId = "dataset",
@@ -53,7 +53,7 @@ dropdownMenu(type = "notifications",
       ),      
   
         # Fourth tab content
-        tabItem(tabName = "dashboard",
+        tabItem(tabName = "yearwise",
                 h1("Yearwise Report"),
                 
                 selectInput(inputId = "dataset",

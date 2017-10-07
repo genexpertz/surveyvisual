@@ -16,7 +16,7 @@ import java.util.Random;
 public class ParticipantRandomizer {
     int pos1;
     int pos2;
-    int recordcount =1000;
+    int recordcount =10;
     long lastId = 0;
 
     public ParticipantRandomizer(Connection con ) throws SQLException {
