@@ -34,7 +34,7 @@ public class PlaceDriver  {
         FileOutputFormat.setOutputPath(job,tempPlace);
 
         if (job.waitForCompletion(true)){
-            System.out.println("Job1 completed Successfully");
+            System.out.println("Job 1 completed Successfully");
         }
 
         job = new Job(conf);
@@ -47,7 +47,7 @@ public class PlaceDriver  {
         FileOutputFormat.setOutputPath(job,out);
 
         if (job.waitForCompletion(true)){
-            System.out.println("Job2 completed Successfully");
+            System.out.println("Job 2 completed Successfully");
         }
 
     }

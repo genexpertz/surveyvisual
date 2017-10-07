@@ -41,7 +41,7 @@ public class GenderMap extends Mapper<LongWritable,Text,Text,Text> {
             context.write(new Text(pid), new Text("gender:"+gender));
             System.out.println("Wrote:"+pid+",gender:"+gender);
         }
-        else if (filename.contains("/answer")){
+        else if (filename.contains("/answer_view")){
             StringTokenizer iterator = new StringTokenizer(values.toString(),",");
             iterator.nextToken();
             pid = iterator.nextToken();

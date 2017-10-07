@@ -27,6 +27,7 @@ public class GenderCombiner<T, T1, T2, T3> extends Reducer<Text,Text,Text,Text> 
             }
         }
         if (gender != null && smokingFlag == true){
+            System.out.println(gender+"1");
             context.write(new Text(gender),new Text("1"));
         }
     }

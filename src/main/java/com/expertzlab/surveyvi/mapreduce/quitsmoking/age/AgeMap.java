@@ -38,7 +38,7 @@ public class AgeMap extends Mapper<LongWritable,Text,Text,Text> {
             context.write(pid, new Text("age:"+age));
             System.out.println("Wrote:"+pid+",age:"+age);
         }
-        else if (filename.contains("/answer")){
+        else if (filename.contains("/answer_view")){
             StringTokenizer iterator = new StringTokenizer(values.toString(),",");
             iterator.nextToken();
             pid = new Text(iterator.nextToken());

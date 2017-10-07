@@ -34,11 +34,10 @@ public class PlaceMap extends Mapper<LongWritable,Text,Text,Text> {
             iterator.nextToken();
             iterator.nextToken();
             place = iterator.nextToken();
-
             System.out.println("Wrote:"+pid+"place:"+place);
             context.write(new Text(pid),new Text("place:"+place));
         }
-        else if (filename.contains("/answer")){
+        else if (filename.contains("/answer_view")){
             StringTokenizer iterator = new StringTokenizer(value,",");
             iterator.nextToken();
             pid = iterator.nextToken();
