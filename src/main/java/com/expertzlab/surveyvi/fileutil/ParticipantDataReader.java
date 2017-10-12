@@ -20,6 +20,7 @@ public class ParticipantDataReader {
 
     Connection con;
     ResultSet res;
+    PreparedStatement statement;
 
     public boolean hasNext() {
 
@@ -36,19 +37,22 @@ public class ParticipantDataReader {
         this.con = con;
     }
     public void loadParticipantList() throws SQLException {
-        PreparedStatement statement = con.prepareStatement("select * from participant");
+        statement = con.prepareStatement("select * from participant");
         res = statement.executeQuery();
 
     }
 
-    public void loadAttendedParticipantList() throws SQLException {
-        PreparedStatement statement = con.prepareStatement("select p.id, p.name, p.age, p.gender, p.address from participant p join attendance a on  p.id = a.participantId");
+    public void loadAttendedParticipantList(long eventId) throws SQLException {
+        statement = con.prepareStatement("select p.id, p.name, p.age, p.gender, p.address from participant p " +
+                "join attendance a on  p.id = a.participantId where eventId=?");
+        statement.setLong(1,eventId);
         res = statement.executeQuery();
 
     }
 
     public void close() throws SQLException{
         res.close();
+        statement.close();
         System.out.println("Executed successfully");
     }
 

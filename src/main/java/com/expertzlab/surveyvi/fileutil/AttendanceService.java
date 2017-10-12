@@ -36,11 +36,11 @@ public class AttendanceService {
         while (pgdr.hasNext()) {
             Program p = pgdr.get();
             prdr = new ProjectDataReader(con, p.getId());
-            prdr.getProjectList();
+            prdr.getProjectListFromProgram();
             while (prdr.hasNext()) {
                 Project pj = prdr.get();
                 edr = new EventDataReader(con, pj.getId());
-                edr.getEventList();
+                edr.getEventListFromProject();
                 while (edr.hasNext()) {
                     Event e = edr.get();
                     pdr = new ParticipantDataReader(con, e.id, "ALL");
@@ -51,7 +51,10 @@ public class AttendanceService {
                         adr.markAttendance();
                     }
                 }
+                edr.close();
             }
+            prdr.close();
         }
+        pgdr.close();
     }
 }

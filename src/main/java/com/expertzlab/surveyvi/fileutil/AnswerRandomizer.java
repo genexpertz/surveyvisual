@@ -1,5 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
+import com.expertzlab.surveyvi.genutil.CountConfig;
 import com.expertzlab.surveyvi.model.Answer;
 
 import java.sql.Connection;
@@ -16,7 +17,7 @@ import java.util.Random;
 public class AnswerRandomizer {
     int pos1;
     int pos2;
-    int recordcount =10;
+    int recordcount = CountConfig.answerCount;
     long lastId = 0;
 
     public AnswerRandomizer(Connection con ) throws SQLException {

@@ -1,5 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
+import com.expertzlab.surveyvi.genutil.CountConfig;
 import com.expertzlab.surveyvi.model.Agent;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -15,7 +16,7 @@ import java.util.Random;
 public class AgentRandomizer {
     int pos1;
     int pos2;
-    int recordcount =10;
+    int recordcount = CountConfig.agentCount;
     long lastId = 0;
 
     public AgentRandomizer(Connection con ) throws SQLException {

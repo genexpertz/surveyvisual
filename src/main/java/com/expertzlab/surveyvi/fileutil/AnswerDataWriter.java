@@ -24,12 +24,12 @@ public class AnswerDataWriter extends Thread {
         try {
                 System.out.println("In Answer thread");
                 PreparedStatement statement = con.prepareStatement("insert into answer values(?,?,?,?,?,?) ");
-                statement.setLong(1, ((Answer) answer).getId());
-                statement.setLong(2, ((Answer) answer).getParticipantId());
-                statement.setLong(3, ((Answer) answer).getQuestionId());
-                statement.setLong(4, ((Answer) answer).getOptionId());
-                statement.setLong(5, ((Answer) answer).getEventId());
-                statement.setLong(6, ((Answer) answer).getProgarmId());
+                statement.setLong(1, answer.getId());
+                statement.setLong(2, answer.getParticipantId());
+                statement.setLong(3, answer.getQuestionId());
+                statement.setLong(4, answer.getOptionId());
+                statement.setLong(5, answer.getEventId());
+                statement.setLong(6, answer.getProgarmId());
                 statement.execute();
                 statement.close();
                 System.out.println("Answer Executed successfully");

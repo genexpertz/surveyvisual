@@ -17,6 +17,8 @@ public class ProjectDataReader {
 
     Connection con;
     ResultSet res;
+    PreparedStatement statement;
+    long progId;
 
     public boolean hasNext() {
 
@@ -27,18 +29,25 @@ public class ProjectDataReader {
         }
     }
 
-    public ProjectDataReader(Connection con, long id)
-    {
+    public ProjectDataReader(Connection con, long id) {
 
         this.con = con;
+        progId = id;
     }
     public void getProjectList() throws SQLException {
-        PreparedStatement statement = con.prepareStatement("select * from project");
+        statement = con.prepareStatement("select * from project");
+        res = statement.executeQuery();
+    }
+
+    public void getProjectListFromProgram() throws SQLException {
+        statement = con.prepareStatement("select * from project where progId=?");
+        statement.setLong(1,progId);
         res = statement.executeQuery();
     }
 
     public void close() throws SQLException{
         res.close();
+        statement.close();
         System.out.println("Executed successfully");
     }
 

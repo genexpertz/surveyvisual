@@ -27,15 +27,15 @@ public class AnsweringService{
         while (pgdr.hasNext()){
             Program p = pgdr.get();
             ProjectDataReader prdr = new ProjectDataReader(con, p.getId());
-            prdr.getProjectList();
+            prdr.getProjectListFromProgram();
             while(prdr.hasNext()){
                 Project pj = prdr.get();
                 EventDataReader edr = new EventDataReader(con,pj.getId());
-                edr.getEventList();
+                edr.getEventListFromProject();
                 while(edr.hasNext()){
                     Event e = edr.get();
                     ParticipantDataReader pdr =  new ParticipantDataReader(con,e.id,"ATTENDED");
-                    pdr.loadAttendedParticipantList();
+                    pdr.loadAttendedParticipantList(e.getId());
                     while(pdr.hasNext()){
                         Participant pt = pdr.get();
                         QuestionDataReader qdr = new QuestionDataReader(con);
@@ -52,12 +52,17 @@ public class AnsweringService{
                             AnswerDataWriter adw = new AnswerDataWriter(con);
                             adw.execute(answer);
                         }
+                        qdr.close();
 
                     }
+                    pdr.close();
                 }
+                edr.close();
             }
+            prdr.close();
 
         }
+        pgdr.close();
 
     }
 

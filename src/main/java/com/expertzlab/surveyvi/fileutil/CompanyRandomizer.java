@@ -1,5 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
+import com.expertzlab.surveyvi.genutil.CountConfig;
 import com.expertzlab.surveyvi.model.Company;
 
 import java.sql.Connection;
@@ -16,7 +17,7 @@ import java.util.Random;
 public class CompanyRandomizer {
     int pos1;
     int pos2;
-    int recordcount =10;
+    int recordcount = CountConfig.companyCount;
     long lastId = 1;
 
     public CompanyRandomizer(Connection con ) throws SQLException {

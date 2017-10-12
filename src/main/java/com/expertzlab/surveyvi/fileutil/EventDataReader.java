@@ -18,6 +18,8 @@ public class EventDataReader {
 
     Connection con;
     ResultSet res;
+    PreparedStatement statement;
+    long projId;
 
     public boolean hasNext() {
 
@@ -30,20 +32,19 @@ public class EventDataReader {
 
     public EventDataReader(Connection con, long id)
     {
-
+        this.projId = id;
         this.con = con;
     }
-    public List getEventList() throws SQLException {
-        PreparedStatement statement = con.prepareStatement("select * from event");
-        res = statement.executeQuery();
-        List list = new ArrayList();
-        list.add(res);
 
-        return list;
+    public void getEventListFromProject() throws SQLException {
+        statement = con.prepareStatement("select * from event where projectId=?");
+        statement.setLong(1,projId);
+        res = statement.executeQuery();
     }
 
     public void close() throws SQLException{
         res.close();
+        statement.close();
         System.out.println("Executed successfully");
     }
 

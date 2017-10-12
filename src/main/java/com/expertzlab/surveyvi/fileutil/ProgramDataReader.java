@@ -18,6 +18,7 @@ public class ProgramDataReader {
 
     Connection con;
     ResultSet res;
+    PreparedStatement statement;
 
     public boolean hasNext() {
 
@@ -34,12 +35,13 @@ public class ProgramDataReader {
         this.con = con;
     }
     public void getProgramList() throws SQLException {
-        PreparedStatement statement = con.prepareStatement("select * from program");
+        statement = con.prepareStatement("select * from program");
         res = statement.executeQuery();
     }
 
     public void close() throws SQLException{
         res.close();
+        statement.close();
         System.out.println("Executed successfully");
     }
 

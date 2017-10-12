@@ -19,6 +19,7 @@ public class QuestionDataReader {
 
     Connection con;
     ResultSet res;
+    PreparedStatement statement;
 
     public boolean hasNext() {
 
@@ -35,12 +36,13 @@ public class QuestionDataReader {
         this.con = con;
     }
     public void getQuestionList() throws SQLException {
-        PreparedStatement statement = con.prepareStatement("select * from question");
+        statement = con.prepareStatement("select * from question");
         res = statement.executeQuery();
     }
 
     public void close() throws SQLException{
         res.close();
+        statement.close();
         System.out.println("Executed successfully");
     }
 

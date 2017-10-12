@@ -1,6 +1,8 @@
 package com.expertzlab.surveyvi.fileutil;
 
+import com.expertzlab.surveyvi.genutil.CountConfig;
 import com.expertzlab.surveyvi.model.Project;
+import org.apache.hadoop.fs.shell.Count;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -16,7 +18,7 @@ import java.util.Random;
 public class ProjectRandomizer {
     int pos1;
     int pos2;
-    int recordcount =8;
+    int recordcount = CountConfig.projectCount;
     long lastId = 1;
 
     ProjectRandomizer(Connection con ) throws SQLException {
