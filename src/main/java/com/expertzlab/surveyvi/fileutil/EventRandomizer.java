@@ -16,7 +16,7 @@ import java.util.Random;
 public class EventRandomizer {
     int pos1;
     int pos2;
-    int recordcount =1;
+    int recordcount =15;
     long lastId = 0;
 
     EventRandomizer(Connection con ) throws SQLException {

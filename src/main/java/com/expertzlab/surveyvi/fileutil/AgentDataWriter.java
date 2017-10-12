@@ -35,6 +35,7 @@ public class AgentDataWriter extends Thread{
                 statement.setString(2,((Agent)agt).getName());
                 //statement.setLong(3,((Agent)agt).getProjectId());
                 statement.execute();
+                statement.close();
                 System.out.println("Agent Executed successfully");
             }
         } catch (SQLException e) {

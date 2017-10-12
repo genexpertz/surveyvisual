@@ -35,6 +35,7 @@ public class ProjectDataWriter extends Thread{
                 statement.setString(2,((Project)pro).getName());
                 statement.setString(3,((Project)pro).getProgId());
                 statement.execute();
+                statement.close();
                 System.out.println("Project Executed successfully");
             }
         } catch (SQLException e) {
