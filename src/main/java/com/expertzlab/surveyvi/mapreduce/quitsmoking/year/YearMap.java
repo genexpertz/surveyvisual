@@ -29,26 +29,23 @@ public class YearMap extends Mapper<LongWritable,Text,Text,Text> {
         String value = values.toString();
         System.out.println("String Values : " + value);
 
+        int qId = 0;
+        int optionId =0;
+        int year = 0;
 
-        if (filename.contains("/event")){
+        if (filename.contains("/answer_view")){
             StringTokenizer iterator = new StringTokenizer(value,",");
-            eventId = iterator.nextToken();
             iterator.nextToken();
             iterator.nextToken();
-            date = iterator.nextToken();
-            String[] date1 = date.split("/");
-            String year = date1[2];
-            context.write(new Text(eventId),new Text("year:"+year));
-
-        }else if (filename.contains("/answer")){
-
-            String[] answerTable = value.split(",");
-            int qId = Integer.parseInt(answerTable[3]);
-            int optionId = Integer.parseInt(answerTable[4]);
-            String eventId = answerTable[5];
+            qId = Integer.parseInt(iterator.nextToken());
+            optionId = Integer.parseInt(iterator.nextToken());
+            iterator.nextToken();
+            iterator.nextToken();
+            iterator.nextToken();
+            year = Integer.parseInt(iterator.nextToken());
 
             if(qId == 1 && optionId == 1){
-                context.write(new Text(eventId),new Text("smoking:"+1));
+                context.write(new Text(""+year),new Text(""+1));
             }
 
         }

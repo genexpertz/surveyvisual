@@ -1,5 +1,6 @@
 package com.expertzlab.surveyvi.mapreduce.quitsmoking.year;
 
+//import com.expertzlab.surveyvi.mapreduce.quitsmoking.YearReducer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
@@ -26,7 +27,6 @@ public class YearDriver {
         Job job = new Job(conf);
         job.setJarByClass(YearDriver.class);
         job.setMapperClass(YearMap.class);
-        job.setCombinerClass(YearCombiner.class);
         job.setReducerClass(YearReducer.class);
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(Text.class);

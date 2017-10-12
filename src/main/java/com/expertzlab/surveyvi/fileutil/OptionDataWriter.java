@@ -36,6 +36,7 @@ public class OptionDataWriter extends Thread {
                 statement.setLong(2,((Options)op).getQuestionId());
                 statement.setInt(3,((Options)op).getWeight());
                 statement.execute();
+                statement.close();
                 System.out.println(" Option Executed successfully");
             }
         } catch (SQLException e) {

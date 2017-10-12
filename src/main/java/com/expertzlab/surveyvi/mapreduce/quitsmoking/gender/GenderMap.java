@@ -15,7 +15,8 @@ public class GenderMap extends Mapper<LongWritable,Text,Text,Text> {
     // private Text docId ;
     String filename;
 
-    protected Text pid;
+    protected String pid;
+    protected String gender;
 
     public void setup() { setup();}
 
@@ -29,27 +30,26 @@ public class GenderMap extends Mapper<LongWritable,Text,Text,Text> {
 
         System.out.println("File Name="+filename);
         String value = values.toString();
-        System.out.println("Value string"+ value);
+        System.out.println("Value string = "+ value);
 
         if(filename.contains("/participant")) {
             StringTokenizer iterator = new StringTokenizer(value, ",");
-            pid = new Text(iterator.nextToken());
+            pid = iterator.nextToken();
             iterator.nextToken();
-            int age = Integer.parseInt(iterator.nextToken());
-            String gender = iterator.nextToken();
-            context.write(pid, new Text("age:"+age));
-            System.out.println("Wrote:"+pid+",age:"+age);
-            //context.write(gender, new Text("gender:")+gender);
+            iterator.nextToken();
+            gender = iterator.nextToken();
+            context.write(new Text(pid), new Text("gender:"+gender));
+            System.out.println("Wrote:"+pid+",gender:"+gender);
         }
-        else if (filename.contains("/answer")){
+        else if (filename.contains("/answer_view")){
             StringTokenizer iterator = new StringTokenizer(values.toString(),",");
             iterator.nextToken();
-            pid = new Text(iterator.nextToken());
+            pid = iterator.nextToken();
             int qId = Integer.parseInt(iterator.nextToken());
             int optId = Integer.parseInt(iterator.nextToken());
 
             if(qId == 1 && optId == 1 ){
-                context.write(pid,new Text("smoking:1"));
+                context.write(new Text(pid),new Text("smoking:1"));
                 System.out.println("wrote:"+pid+",smoking:1");
             }
         }

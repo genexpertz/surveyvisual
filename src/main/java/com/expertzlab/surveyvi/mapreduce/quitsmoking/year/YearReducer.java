@@ -14,17 +14,11 @@ public class YearReducer extends Reducer<Text,Text,Text,Text> {
 
     public void reduce(Text key,Iterable<Text> values,Context context) throws IOException, InterruptedException {
         int sum = 0;
-        Text yearText = new Text();
-        String year = null;
+
         for (Text value : values){
-            String[] kevValue = value.toString().split(":");
-            if("year".equals(kevValue[0])){
-                year = kevValue[1];
-            } else if("smoking".equals(kevValue[0])) {
-                sum++;
-            }
+            sum++;
         }
-        yearText.set(year);
-        context.write(yearText,new Text(""+sum));
+
+        context.write(key,new Text(""+sum));
     }
 }

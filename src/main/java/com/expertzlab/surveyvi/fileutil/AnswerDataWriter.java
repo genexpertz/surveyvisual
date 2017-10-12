@@ -31,6 +31,7 @@ public class AnswerDataWriter extends Thread {
                 statement.setLong(5, ((Answer) answer).getEventId());
                 statement.setLong(6, ((Answer) answer).getProgarmId());
                 statement.execute();
+                statement.close();
                 System.out.println("Answer Executed successfully");
 
         } catch (SQLException e) {

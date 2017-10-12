@@ -16,7 +16,7 @@ import java.util.Random;
 public class ProgramRandomizer {
     int pos1;
     int pos2;
-    int recordcount =2;
+    int recordcount =1;
     long lastId = 1;
 
     ProgramRandomizer(Connection con ) throws SQLException {

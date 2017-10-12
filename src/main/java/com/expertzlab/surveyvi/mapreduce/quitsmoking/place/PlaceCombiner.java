@@ -10,7 +10,8 @@ import java.util.StringTokenizer;
 /**
  * Created by varsha on 10/4/17.
  */
-public class PlaceCombiner extends Reducer<Text,Text,Text,Text> {
+public class PlaceCombiner<T1, T2, T3, T4> extends Reducer<Text,Text,Text,Text> {
+
     public void reduce(Text key,Iterable<Text> values,Context context) throws IOException, InterruptedException {
 
         String place = null;
@@ -32,5 +33,4 @@ public class PlaceCombiner extends Reducer<Text,Text,Text,Text> {
             context.write(new Text(place),new Text("1"));
         }
     }
-
 }

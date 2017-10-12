@@ -38,6 +38,7 @@ public class UserDataWriter extends Thread {
             statement.setString(5,((User)usr).getUsername());
             statement.setString(6,((User)usr).getPassword());
             statement.execute();
+            statement.close();
             System.out.println("User Executed successfully");
         }
         } catch (SQLException e) {

@@ -46,6 +46,7 @@ public class AttendanceDataWriter extends Thread {
             statement.setString(3,attendanceStataus);
             statement.setLong(4, projId);
             statement.execute();
+            statement.close();
             System.out.println("Attendance Executed successfully for: partcipId:"+ partcipId +
                     ",attendance status:"+attendanceStataus);
 
