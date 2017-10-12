@@ -16,7 +16,7 @@ import java.util.Random;
 public class OptionRandomizer {
     int pos1;
     int pos2;
-    int recordcount =20;
+    int recordcount =1;
     long lastId = 1;
 
     OptionRandomizer(Connection con ) throws SQLException {

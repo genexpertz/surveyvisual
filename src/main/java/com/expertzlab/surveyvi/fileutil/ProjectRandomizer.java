@@ -16,7 +16,7 @@ import java.util.Random;
 public class ProjectRandomizer {
     int pos1;
     int pos2;
-    int recordcount =100;
+    int recordcount =1;
     long lastId = 1;
 
     ProjectRandomizer(Connection con ) throws SQLException {
