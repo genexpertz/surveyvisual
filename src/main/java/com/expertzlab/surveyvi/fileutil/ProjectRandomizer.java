@@ -20,6 +20,7 @@ public class ProjectRandomizer {
     int pos2;
     int recordcount = CountConfig.projectCount;
     long lastId = 1;
+    Random randomobj = new Random();
 
     ProjectRandomizer(Connection con ) throws SQLException {
         Statement stmt = con.createStatement();
@@ -40,7 +41,7 @@ public class ProjectRandomizer {
             Project p2 = (Project) list.get(pos2);
             Project p3 = new Project();
             p3.setId(i);
-            p3.setName(p1.getName());
+            p3.setName(p1.getName()+randomobj.nextInt(100));
             p3.setProgId(p1.getProgId());
             l1.add(p3);
         }

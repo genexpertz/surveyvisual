@@ -12,16 +12,16 @@ import java.sql.SQLException;
  */
 public class AttendenceDataWriterTest {
 
-//    Connection con;
-//
-//    @Before
-//    public void prepareConnection() throws SQLException {
-//        con = DBConnectionManager.getConnection();
-//    }
-//
-//    @Test
-//    public void testMarkAttendance() throws SQLException {
-//        AttendanceDataWriter dw =new AttendanceDataWriter(con,1,2,3);
-//        dw.markAttendance();
-//    }
+    Connection con;
+
+    @Before
+    public void prepareConnection() throws SQLException {
+        con = DBConnectionManager.getConnection();
+    }
+
+    @Test
+    public void testMarkAttendance() throws SQLException {
+        AttendanceDataWriter dw =new AttendanceDataWriter(con,1,2,3);
+        dw.markAttendance();
+    }
 }

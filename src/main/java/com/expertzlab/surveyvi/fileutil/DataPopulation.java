@@ -1,6 +1,6 @@
 package com.expertzlab.surveyvi.fileutil;
 
-import com.expertzlab.surveyvi.genutil.DBConnectionManager;
+import  com.expertzlab.surveyvi.genutil.DBConnectionManager;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -34,11 +34,11 @@ public class DataPopulation {
         WriteSampleData wsd = new WriteSampleData(map);
         wsd.writeData();
         Connection con = DBConnectionManager.getConnection();
-        AttendanceService attendanceService = new AttendanceService(con);
-       attendanceService.markAttendance();
+        //AttendanceService attendanceService = new AttendanceService(con);
+        //attendanceService.markAttendance();
 
-        AnsweringService answeringService = new AnsweringService(con);
-        answeringService.answerQuestions();
+        //AnsweringService answeringService = new AnsweringService(con);
+        //answeringService.answerQuestions();
 
     }
 }
