@@ -17,7 +17,7 @@ import static com.sun.xml.internal.ws.dump.LoggingDumpTube.Position.Before;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class AgeMapTest{
+public class    AgeMapTest{
         AgeMap ageMap;
         Mapper.Context context;
         Text value;

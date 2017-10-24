@@ -1,151 +1,339 @@
 library(shiny)
-#library(plotly)
+library(plotly)
 library(shinydashboard)
 
 ui <- dashboardPage(
 dashboardHeader(title = "SurveyVisual"),
-dashboardSidebar(
-sidebarMenu(
-menuItem("Agewise Report", tabName = "overview", icon = icon("group")),
-menuItem("Genderwise Report", tabName = "dashboard", icon = icon("bar-chart-o")),
-menuItem("Placewise Report", tabName = "calender", icon = icon("fa fa-area-chart")),
-menuItem("Yearwise Report", tabName = "dashboardyear", icon = icon("calendar"))
-)
+dashboardSidebar(sidebarMenu(
+menuItem(
+"Agewise Report",
+tabName = "overview",
+icon = icon("group")
 ),
+menuItem(
+"Genderwise Report",
+tabName = "dashboard",
+icon = icon("bar-chart-o")
+),
+menuItem(
+"Placewise Report",
+tabName = "calender",
+icon = icon("fa fa-area-chart")
+),
+menuItem(
+"Yearwise Report",
+tabName = "dashboardyear",
+icon = icon("calendar")
+)
+)),
 dashboardBody(
 tabItems(
-
 # First tab content
-tabItem(tabName = "overview",
+tabItem(
+tabName = "overview",
 h1("Agewise Report"),
 
-selectInput(inputId = "dataset",
+selectInput(
+inputId = "dataset", selected = "2005",
 h3("Choose a year"),
 #label = "Choose a year:",in
-choices = c("2010","2011","2012","2013", "2014", "2015","2016","2017"),
+choices = c("2005","2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"),
 multiple = TRUE
 ),
-textInput("text", "Target percentage :", "")
+selectInput(inputId = "agInput", h3("Choose an age group"),
+choices=c("11-20","21-30","31-40","41-50","51-60","61-70","71-80","81-90")),
+#textInput("text","Target percentage is 10"),
+notificationItem("Target Percentage is 10"),
+submitButton(text = "Submit",icon="refresh"),
+plotOutput("agewisePlot")
 
 ),
 #second tab content
-tabItem(tabName = "dashboard",
+tabItem(
+tabName = "dashboard",
 h1("Genderwise Report"),
 
-selectInput(inputId = "dataset",
+selectInput(
+inputId = "dataset1",
 h3("Choose a year"),
-#label = "Choose a year:",
-choices = c("2010","2011","2012","2013", "2014", "2015","2016","2017"))
+#label = "Choose a year:",in
+choices = c("2005","2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"),
+multiple = TRUE
+),
 
+selectInput(inputId = "gnInput", h3("Choose gender"),
+choices=c("m","f")),
+notificationItem("Target Percentage is 10"),
+submitButton(text = "Submit",icon="refresh"),
+plotOutput("genderwisePlot")
 ),
 
 # Third tab content
-tabItem(tabName = "calender",
+tabItem(
+tabName = "calender",
 h1("Placewise Report"),
 
-selectInput(inputId = "dataset",
+selectInput(
+inputId = "dataset2",
 h3("Choose a year"),
 #label = "Choose a year:",
-choices = c("2010","2011","2012","2013", "2014", "2015","2016","2017"))
+choices = c("2005","2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"),
+multiple = TRUE
+),
+
+selectInput(inputId = "plInput", h3("Choose a place"),
+choices=c("Alappuzha","Kollam","Eranakulam","Idukki","Kottayam")),
+#textInput("text","Target percentage is 10"),
+notificationItem("Target Percentage is 10"),
+submitButton(text = "Submit",icon="refresh"),
+plotOutput("placewisePlot")
 
 ),
 
 # Fourth tab content
-tabItem(tabName = "dashboardyear",
+tabItem(
+tabName = "dashboardyear",
 h1("Yearwise Report"),
 
-selectInput(inputId = "dataset",
+selectInput(
+inputId = "dataset3",
 h3("Choose a year"),
-#label = "Choose a year:",
-choices = c("2010","2011","2012","2013", "2014", "2015","2016","2017"))
-
-)
+label = "Choose a year:",
+choices = c("2005","2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"),
+multiple = TRUE
 ),
-tags$head(tags$style(HTML('.shiny-server-account { display: none; }'))),
+
+notificationItem("Target Percentage is 10"),
+submitButton(text = "Submit",icon=("refresh")),
+plotOutput("yearwisePlot")
+)
+
+),
+tags$head(tags$style(
+HTML('.shiny-server-account { display: none; }')
+)),
 uiOutput("userpanel"),
-plotOutput(outputId="distPlot")
+plotOutput(outputId = "distPlot")
 )
 )
 
 server <- function(input, output) {
 
-    fetchDBData <- reactive({
-        print("Hello")
-    })
-
     output$userpanel <- renderUI({
-        # session$user is non-NULL only in authenticated sessions
-        dbAccess <- ({
+
+        dbAccess <- function(key){
+
             dyn.load("/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so");
+
             library(rJava)
             library(RJDBC)
-            cp <- c("/home/avin/hive/hive-1.1.0-cdh5.4.1/lib/hive-jdbc-1.1.0-cdh5.4.1-standalone.jar","/home/avin/hbase/hbase-1.0.0-cdh5.4.1/lib/hadoop-common-2.6.0-cdh5.4.1.jar")
-            .jinit(classpath=cp)
-            drv <- JDBC("org.apache.hive.jdbc.HiveDriver","/home/avin/hive/hive-1.1.0-cdh5.4.1/lib/hive-jdbc-1.1.0-cdh5.4.1-standalone.jar",identifier.quote="`")
-            conn <- dbConnect(drv, "jdbc:hive2://localhost:10000/surveyvisual","avin","")
-            comma.str = paste(as.character(input$dataset),collapse = ",");
-            selectedyears <- dbSendQuery(conn,paste("select * from agegroupcount where year in (",comma.str,")"))
-            d.frame <- fetch(selectedyears, n=-1)
+            cp <- c("/home/varsha/hive/hive-1.1.0-cdh5.4.1/lib/hive-jdbc-1.1.0-cdh5.4.1-standalone.jar","/home/varsha/hbase/hbase-1.0.0-cdh5.4.1/lib/hadoop-common-2.6.0-cdh5.4.1.jar")
+
+            .jinit(classpath = cp)
+            drv <- JDBC("org.apache.hive.jdbc.HiveDriver","/home/varsha/hive/hive-1.1.0-cdh5.4.1/lib/hive-jdbc-1.1.0-cdh5.4.1-standalone.jar",identifier.quote="`")
+
+            conn <- dbConnect(drv,"jdbc:hive2://localhost:10000/surveyvisual","varsha","")
+
+            #comma.str = paste(as.character(input$dataset), collapse = ",")
+            #print("comma.str")
+            #print(comma.str)
+            selectedyears = c()
+            if(key == "agewise"){
+                comma.str = paste(as.character(input$dataset), collapse = ",")
+                print("comma.str")
+                print(comma.str)
+                selectedyears <-
+                dbSendQuery(conn,
+                paste("select * from agegroup where year in (", comma.str, ")"))
+                #d.frame <- fetch(selectedyears, n = -1)
+                #print(d.frame)
+                #d.frame
+            } else if(key == "genderwise"){
+                comma.str = paste(as.character(input$dataset1), collapse = ",")
+                print("comma.str")
+                print(comma.str)
+                selectedyears <-
+                dbSendQuery(conn,
+                paste("select * from gendergroup where year in (", comma.str, ")"))
+                #d.frame <- fetch(selectedyears, n = -1)
+                #print(d.frame)
+                # d.frame
+            } else if(key == "placewise"){
+                comma.str = paste(as.character(input$dataset2), collapse = ",")
+                print("comma.str")
+                print(comma.str)
+                selectedyears <-
+                dbSendQuery(conn,
+                paste("select * from placegroup where year in (", comma.str, ")"))
+            } else if(key == "yearwise"){
+                comma.str = paste(as.character(input$dataset3), collapse = ",")
+                print("comma.str")
+                print(comma.str)
+                selectedyears <-
+                dbSendQuery(conn,
+                paste("select * from yeargroup where year in (", comma.str, ")"))
+            }
+
+            d.frame <- fetch(selectedyears, n = -1)
             print(d.frame)
-            #take each year count with condition data.f['column']=='2017'
-            #if(input$dataset){
-            #
-            #}
+            d.frame
+        }
+
+        output$agewisePlot <- renderPlot({
+            d.frame = dbAccess("agewise")
             years = input$dataset
             yearList = list()
-            i <- 0
-            ag = '31-40'
-            for(e in years){
-                yearList[[e]] =  subset(d.frame,d.frame$'agegroupcount.year' == e & d.frame$'agegroupcount.agegroup' == ag)
-                i <- i + 1
+            ag = input$agInput
+            print(paste("ag",ag))
+            for (e in years) {
+                yearList[[e]] =  subset(
+                d.frame,
+                d.frame$'agegroup.year' == e &
+                d.frame$'agegroup.agegroup' == ag
+                )
             }
             print('year array-')
             print(yearList)
             cntV = c()
-            yearV= c()
-            for(le in yearList){
-                cntV = append(cntV,le$'agegroupcount.count')
-                print(paste("cntv-",cntV));
-                yearV = append(yearV,le$'agegroupcount.year')
-                print(paste("yearV-",yearV));
+            yearV = c()
+            for (le in yearList) {
+                cntV = append(cntV, le$'agegroup.count')
+                print(paste("cntv-", cntV))
+                yearV = append(yearV, le$'agegroup.year')
+                print(paste("yearV-", yearV))
+
             }
 
             line.count = c()
-            line.count = append(line.count,cntV[1])
-            for(e in cntV ){
-                line.count = append(line.count,e*.9)
-                print(paste("e-",e))
+            line.count = append(line.count, cntV[1])
+            for (e in cntV) {
+                line.count = append(line.count, e * .9)
+                print(paste("e-", e))
             }
             #cut out last element
             line.count = line.count[-length(line.count)]
-
-            print(paste("line-",line.count))
-            output$distPlot <- renderPlot({
-                barplot(cntV,names.arg=yearV)
-                lines(line.count)
-            })
-            #var = data.f$count
-            #barplot(var)
-            # v = (23, 45, 35, 25) //each year count
-            #for(e of var){
-            #  v = data.frame(expr[expr$dataset == "count"])
-            #}
-            #pr = ()
-
-
-            #
-            #print(d.frame)
-
-
+            print(paste("line-", line.count))
+            barplot(cntV,names.arg=yearV,xlab="Year",ylab="Count",col="yellow",main = paste("Year wise count for age-group:",ag))
+            lines(line.count,col="aquamarine4")
         })
 
-        #output$distPlot <- renderPlot({
-        #  x    <- faithful$waiting
-        #  bins <- 2
-        #barplot(d.frame$agegroupcount.count,names.arg=d.frame$agegroupcount.agegroup,xlab="Age Group",ylab="Count",col="blue", main="Smoking habit chart",border="red")
-        #   ggplot(data = d.frame, aes(x = input$dataset , y = , fill = Stage.of.Change)) +
-        #   geom_bar()
-        #  })
+        output$genderwisePlot <- renderPlot({
+            d.frame = dbAccess("genderwise")
+            years = input$dataset1
+            yearList = list()
+            ag = input$gnInput
+            print(paste("ag",ag))
+            for (e in years) {
+                yearList[[e]] =  subset(
+                d.frame,
+                d.frame$'gendergroup.year' == e &
+                d.frame$'gendergroup.gendergroup' == ag
+                )
+            }
+            print('year array-')
+            print(yearList)
+            cntV = c()
+            yearV = c()
+            for (le in yearList) {
+                cntV = append(cntV, le$'gendergroup.count')
+                print(paste("cntv-", cntV))
+
+                yearV = append(yearV, le$'gendergroup.year')
+                print(paste("yearV-", yearV))
+
+            }
+
+            line.count = c()
+            line.count = append(line.count, cntV[1])
+            for (e in cntV) {
+                line.count = append(line.count, e * .9)
+                print(paste("e-", e))
+            }
+            #cut out last element
+            line.count = line.count[-length(line.count)]
+            print(paste("line-", line.count))
+            barplot(cntV,names.arg=yearV,xlab="Year",ylab="Count",col="yellow",main = paste("Gender wise count for age-group:",ag))
+            lines(line.count,col="aquamarine4")
+        })
+
+        output$placewisePlot <- renderPlot({
+            d.frame = dbAccess("placewise")
+            years = input$dataset2
+            yearList = list()
+            ag = input$plInput
+            print(paste("ag",ag))
+            for (e in years) {
+                yearList[[e]] =  subset(
+                d.frame,
+                d.frame$'placegroup.year' == e &
+                d.frame$'placegroup.placegroup' == ag
+                )
+            }
+            print('year array-')
+            print(yearList)
+            cntV = c()
+            yearV = c()
+            for (le in yearList) {
+                cntV = append(cntV, le$'placegroup.count')
+                print(paste("cntv-", cntV))
+
+                yearV = append(yearV, le$'placegroup.year')
+                print(paste("yearV-", yearV))
+
+            }
+
+            line.count = c()
+            line.count = append(line.count, cntV[1])
+            for (e in cntV) {
+                line.count = append(line.count, e * .9)
+                print(paste("e-", e))
+            }
+            #cut out last element
+            line.count = line.count[-length(line.count)]
+            print(paste("line-", line.count))
+            barplot(cntV,names.arg=yearV,xlab="Year",ylab="Count",col="yellow",main = paste("Place wise count for:",ag))
+            lines(line.count,col="aquamarine4")
+        })
+
+
+        output$yearwisePlot <- renderPlot({
+            d.frame = dbAccess("yearwise")
+            years = input$dataset3
+            yearList = list()
+            #ag = input$agInput
+            #print(paste("ag",ag))
+            for (e in years) {
+                yearList[[e]] =  subset(
+                d.frame,
+                d.frame$'yeargroup.year' == e
+                )
+            }
+            print('year array-')
+            print(yearList)
+            cntV = c()
+            yearV = c()
+            for (le in yearList) {
+                cntV = append(cntV, le$'yeargroup.count')
+                print(paste("cntv-", cntV))
+                yearV = append(yearV, le$'yeargroup.year')
+                print(paste("yearV-", yearV))
+
+            }
+
+            line.count = c()
+            line.count = append(line.count, cntV[1])
+            for (e in cntV) {
+                line.count = append(line.count, e * .9)
+                print(paste("e-", e))
+            }
+            #cut out last element
+            line.count = line.count[-length(line.count)]
+            print(paste("line-", line.count))
+            barplot(cntV,names.arg=yearV,xlab="Year",ylab="Count",col="yellow")
+            lines(line.count,col="aquamarine4")
+        })
+
+
     })
 }
 
